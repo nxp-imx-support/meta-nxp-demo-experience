@@ -1,0 +1,19 @@
+i.MX Demos Meta Layer
+=====================
+
+This repository holds all the needed configuration to build the i.MX demos as well as the i.MX Demo Launcher interface.
+
+Supported boards
+----------------
+
+  * i.MX 7ULP EVK
+  * i.MX 8MMini EVK
+  * i.MX 8QXP MEK
+
+Other boards to be included.
+  
+Dependencies
+------------
+
+This should be built on top of the NXP i.MX BSP (sumo).
+
