@@ -15,5 +15,8 @@ Other boards to be included.
 Dependencies
 ------------
 
-This should be built on top of the NXP i.MX BSP (sumo).
-
+This layer depends on meta-fsl-bsp-release:
+  * URI: https://source.codeaurora.org/external/imx/meta-fsl-bsp-release/
+  * layers: meta-fsl-bsp-release
+  * branch: sumo-4.14.78-1.0.0_ga
+  * how to install: https://source.codeaurora.org/external/imx/imx-manifest/tree/README?h=imx-linux-sumo
