@@ -1,0 +1,25 @@
+From 255d32c93cd8f824c44dafe8b3b8cc6f02fe0076 Mon Sep 17 00:00:00 2001
+From: Vanessa Maegima <vanessa.maegima@nxp.com>
+Date: Tue, 11 Jun 2019 17:25:04 -0300
+Subject: [PATCH] weston.ini: Add Demo Launcher icon
+
+Signed-off-by: Vanessa Maegima <vanessa.maegima@nxp.com>
+---
+ weston.ini.in | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/weston.ini.in b/weston.ini.in
+index 83dd56e1..29842ca9 100644
+--- a/weston.ini.in
++++ b/weston.ini.in
+@@ -20,3 +20,7 @@ idle-time=0
+ 
+ [screen-share]
+ command=@bindir@/weston --backend=rdp-backend.so --shell=fullscreen-shell.so --no-clients-resize
++
++[launcher]
++icon=~/.imx-launcher/icon_demo_launcher.png
++path=/usr/bin/demolauncher --platform wayland-egl
+-- 
+2.17.1
+

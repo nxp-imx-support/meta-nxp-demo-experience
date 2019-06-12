@@ -12,11 +12,13 @@ S = "${WORKDIR}/git"
 
 inherit qmake5
 
-DEPENDS += "qtbase qtquickcontrols2 qtconnectivity imx-launcher-demos"
+DEPENDS += "qtbase qtquickcontrols2 qtconnectivity imx-launcher-demos weston"
 
 do_install() {
     install -d -m 755 ${D}${bindir}
     install ${WORKDIR}/build/demolauncher ${D}${bindir}
+    install -d -m 755 ${D}/home/root/.imx-launcher
+    cp ${WORKDIR}/git/images/icon_demo_launcher.png ${D}/home/root/.imx-launcher/
 }
 
-FILES_${PN} += "${bindir}*"
+FILES_${PN} += "${bindir}* /home/root/.imx-launcher/*"
