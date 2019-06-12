@@ -10,6 +10,8 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
+RDEPENDS_${PN} += "bash"
+
 do_install() {
     install -d -m 755 ${D}/home/root/.imx-launcher
     cp -r ${S}/* ${D}/home/root/.imx-launcher
