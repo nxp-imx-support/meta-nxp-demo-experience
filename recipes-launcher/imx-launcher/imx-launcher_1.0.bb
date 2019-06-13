@@ -17,8 +17,6 @@ DEPENDS += "qtbase qtquickcontrols2 qtconnectivity qtquick1 imx-launcher-demos w
 do_install() {
     install -d -m 755 ${D}${bindir}
     install ${WORKDIR}/build/demolauncher ${D}${bindir}
-    install -d -m 755 ${D}/home/root/.imx-launcher
-    cp ${WORKDIR}/git/images/icon_demo_launcher.png ${D}/home/root/.imx-launcher/
 }
 
-FILES_${PN} += "${bindir}* /home/root/.imx-launcher/*"
+FILES_${PN} += "${bindir}*"

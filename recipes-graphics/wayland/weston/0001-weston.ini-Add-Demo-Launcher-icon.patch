@@ -18,7 +18,7 @@ index 83dd56e1..29842ca9 100644
  command=@bindir@/weston --backend=rdp-backend.so --shell=fullscreen-shell.so --no-clients-resize
 +
 +[launcher]
-+icon=/home/root/.imx-launcher/icon_demo_launcher.png
++icon=/home/root/.imx-launcher/icon/icon_demo_launcher.png
 +path=/usr/bin/demolauncher --platform wayland-egl
 -- 
 2.17.1
