@@ -12,7 +12,7 @@ S = "${WORKDIR}/git"
 
 inherit qmake5
 
-DEPENDS += "qtbase qtquickcontrols2 qtconnectivity qtquick1"
+DEPENDS += "qtbase qtquickcontrols2 qtconnectivity"
 RDEPENDS_${PN} += "imx-launcher-demos weston"
 
 do_install() {
