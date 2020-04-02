@@ -1,0 +1,29 @@
+From 5e9abda53957214e85a4e4fc0694f052adb5b2c8 Mon Sep 17 00:00:00 2001
+From: Rogerio Silva <rogerio.silva@nxp.com>
+Date: Thu, 2 Apr 2020 11:34:10 -0300
+Subject: [PATCH] weston.ini: Add NXP Demo Experience and terminal icons
+
+Signed-off-by: Rogerio Silva <rogerio.silva@nxp.com>
+---
+ weston.ini.in | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/weston.ini.in b/weston.ini.in
+index fec42917..d0bde49a 100644
+--- a/weston.ini.in
++++ b/weston.ini.in
+@@ -19,3 +19,11 @@ idle-time=0
+ 
+ [screen-share]
+ command=@bindir@/weston --backend=rdp-backend.so --shell=fullscreen-shell.so --no-clients-resize
++
++[launcher]
++icon=/home/root/.imx-launcher/icon/icon_demo_launcher.png
++path=HOME=/home/root /usr/bin/demoexperience --platform wayland-egl
++
++[launcher]
++icon=/usr/share/weston/icon_terminal.png
++path=/usr/bin/weston-terminal
+-- 
+2.17.1
+
