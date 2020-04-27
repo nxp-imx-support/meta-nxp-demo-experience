@@ -12,8 +12,8 @@ S = "${WORKDIR}/git"
 
 inherit qmake5
 
-DEPENDS += "qtbase qtquickcontrols2 qtconnectivity"
-RDEPENDS_${PN} += "nxp-demos-experience-demos-list weston"
+DEPENDS += "qtbase qtquickcontrols2 qtconnectivity qtgraphicaleffects qtsvg"
+RDEPENDS_${PN} += "nxp-demos-experience-demos-list weston qtgraphicaleffects-qmlplugins qtsvg-plugins"
 
 do_install() {
     install -d -m 755 ${D}${bindir}
