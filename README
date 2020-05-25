@@ -15,8 +15,8 @@ Other boards to be included.
 Dependencies
 ------------
 
-This layer depends on meta-fsl-bsp-release:
-  * URI: https://source.codeaurora.org/external/imx/meta-fsl-bsp-release/
-  * layers: meta-fsl-bsp-release
-  * branch: sumo-4.14.78-1.0.0_ga
-  * how to install: https://source.codeaurora.org/external/imx/imx-manifest/tree/README?h=imx-linux-sumo
+This layer depends on meta-imx:
+  * URI: https://source.codeaurora.org/external/imx/meta-imx/
+  * layers: meta-imx
+  * branch: zeus-5.4.24-2.1.0
+  * how to install: https://source.codeaurora.org/external/imx/imx-manifest/tree/README
