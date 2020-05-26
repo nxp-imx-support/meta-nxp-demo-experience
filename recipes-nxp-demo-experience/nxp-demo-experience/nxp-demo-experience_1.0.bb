@@ -19,7 +19,7 @@ SRCREV_demos = "${AUTOREV}"
 inherit qmake5
 
 DEPENDS += " packagegroup-qt5-imx qtquickcontrols2 qtconnectivity qtgraphicaleffects qtsvg"
-RDEPENDS_${PN} += " weston bash"
+RDEPENDS_${PN} += " weston bash qtgraphicaleffects-qmlplugins qtquickcontrols-qmlplugins qtsvg-plugins"
 
 do_install() {
     install -d -m 755 ${D}/home/root/.nxp-demo-experience
