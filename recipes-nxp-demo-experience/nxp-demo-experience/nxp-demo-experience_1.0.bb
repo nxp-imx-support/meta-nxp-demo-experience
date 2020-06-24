@@ -8,9 +8,12 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 S = "${WORKDIR}/git"
 
 SRCBRANCH = "zeus-5.4.24-2.1.0"
+NXP_DEMO_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;protocol=https"
+NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;protocol=https"
+
 SRC_URI = " \
-    git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;branch=${SRCBRANCH};name=nxp-demo-experience \
-    git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;branch=${SRCBRANCH};destsuffix=demos;name=demos"
+    ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
+    ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos"
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "${AUTOREV}"
