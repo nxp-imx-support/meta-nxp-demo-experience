@@ -10,12 +10,12 @@ S = "${WORKDIR}/git"
 SRCBRANCH = "zeus-5.4.24-2.1.0"
 NXP_DEMO_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;protocol=https"
-NXP_DEMO_WESTON_SRC ?= "file://weston.ini"
+NXP_DEMO_WESTON_SRC ?= "${BASE_WORKDIR}/${MACHINE_ARCH}-poky-linux/weston-init/1.0-r0/image${sysconfdir}/xdg/weston/weston.ini"
 
 SRC_URI = " \
     ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
     ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos \
-    ${NXP_DEMO_WESTON_SRC};destsuffix=icon;name=icon "
+    file://weston;destsuffix=envvar;name=envvar "
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "${AUTOREV}"
@@ -35,8 +35,12 @@ do_install() {
 }
 
 do_install_append_mx8mp() {
-    install -d -m 755 ${D}${sysconfdir}/xdg/weston/
-    cp ${WORKDIR}/weston.ini ${D}${sysconfdir}/xdg/weston/
+    install -d -m 755 ${D}${sysconfdir}/default
+    cp ${WORKDIR}/weston ${D}${sysconfdir}/default/weston
+
+    install -d -m 755 ${D}/home/root/.config
+    cp ${NXP_DEMO_WESTON_SRC} ${D}/home/root/.config/weston.ini
+    echo "\n[launcher]\nicon=/home/root/.nxp-demo-experience/icon/icon_demo_launcher.png\npath=/usr/bin/demoexperience\n\n[launcher]\nicon=/usr/share/weston/terminal.png\npath=/usr/bin/weston-terminal" >> ${D}/home/root/.config/weston.ini
 }
 
-FILES_${PN} += "${bindir}* /home/root/.nxp-demo-experience/* ${sysconfdir}/xdg/weston/"
+FILES_${PN} += "${bindir}* /home/root/.nxp-demo-experience/* ${sysconfdir}/default/* /home/root/.config/*"
