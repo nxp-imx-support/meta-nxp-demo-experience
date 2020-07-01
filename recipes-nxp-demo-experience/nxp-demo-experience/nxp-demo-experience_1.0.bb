@@ -36,7 +36,9 @@ do_install() {
 
 do_install_append_mx8mp() {
     install -d -m 755 ${D}${sysconfdir}/xdg/weston/
-    cp ${WORKDIR}/weston.ini ${D}${sysconfdir}/xdg/weston/
+    cp ${BASE_WORKDIR}/${MACHINE_ARCH}-poky-linux/weston-init/1.0-r0/image${sysconfdir}/xdg/weston/weston.ini ${D}${sysconfdir}/xdg/weston/weston.ini
+    rm ${BASE_WORKDIR}/${MACHINE_ARCH}-poky-linux/weston-init/1.0-r0/image${sysconfdir}/xdg/weston/weston.ini
+    echo "\n[launcher]\nicon=/home/root/.nxp-demo-experience/icon/icon_demo_launcher.png\npath=/usr/bin/demoexperience\n\n[launcher]\nicon=/usr/share/weston/terminal.png\npath=/usr/bin/weston-terminal" >> ${BASE_WORKDIR}/${MACHINE_ARCH}-poky-linux/weston-init/1.0-r0/image${sysconfdir}/xdg/weston/weston.ini
 }
 
 FILES_${PN} += "${bindir}* /home/root/.nxp-demo-experience/* ${sysconfdir}/xdg/weston/"
