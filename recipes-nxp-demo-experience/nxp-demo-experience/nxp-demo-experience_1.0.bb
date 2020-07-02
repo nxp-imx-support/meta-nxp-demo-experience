@@ -15,6 +15,10 @@ SRC_URI = " \
     ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
     ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos \
     file://weston;destsuffix=envvar;name=envvar "
+SRC_URI_append_mx8 = "\
+    file://weston;destsuffix=envvar;name=envvar"
+SRC_URI_append_mx7ulp = "\
+    file://weston;destsuffix=envvar;name=envvar"
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "${AUTOREV}"
@@ -31,9 +35,18 @@ do_install() {
 
     install -d -m 755 ${D}${bindir}
     install ${WORKDIR}/build/demoexperience ${D}${bindir}
+}
 
+do_install_append_mx8() {
+    install -d -m 755 ${D}${sysconfdir}/default
+    cp ${WORKDIR}/weston ${D}${sysconfdir}/default/weston
+}
+
+do_install_append_mx7ulp() {
     install -d -m 755 ${D}${sysconfdir}/default
     cp ${WORKDIR}/weston ${D}${sysconfdir}/default/weston
 }
 
 FILES_${PN} += "${bindir}* /home/root/.nxp-demo-experience/* ${sysconfdir}/default/* "
+FILES_${PN}_append_mx8 = "${sysconfdir}/default/*"
+FILES_${PN}_append_mx7ulp = "${sysconfdir}/default/*"
