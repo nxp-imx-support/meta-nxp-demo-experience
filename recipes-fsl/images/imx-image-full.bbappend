@@ -1,4 +1,6 @@
-ROOTFS_POSTPROCESS_COMMAND += "install_demo; "
+ROOTFS_POSTPROCESS_COMMAND_append_mx8 = "install_demo; "
+ROOTFS_POSTPROCESS_COMMAND_append_mx7ulp = "install_demo; "
+
 
 
 install_demo() {
