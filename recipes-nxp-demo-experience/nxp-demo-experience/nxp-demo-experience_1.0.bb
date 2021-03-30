@@ -13,8 +13,7 @@ NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-e
 
 SRC_URI = " \
     ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
-    ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos \
-    file://weston;destsuffix=envvar;name=envvar "
+    ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos "
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "${AUTOREV}"
@@ -33,16 +32,4 @@ do_install() {
     install ${WORKDIR}/build/demoexperience ${D}${bindir}
 }
 
-do_install_append_mx8() {
-    install -d -m 755 ${D}${sysconfdir}/default
-    cp ${WORKDIR}/weston ${D}${sysconfdir}/default/weston
-}
-
-do_install_append_mx7ulp() {
-    install -d -m 755 ${D}${sysconfdir}/default
-    cp ${WORKDIR}/weston ${D}${sysconfdir}/default/weston
-}
-
 FILES_${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
-FILES_${PN}_append_mx8 = "${sysconfdir}/default/*"
-FILES_${PN}_append_mx7ulp = "${sysconfdir}/default/*"
