@@ -1,4 +1,4 @@
-# Copyright 2020 NXP
+# Copyright 2021 NXP
 
 SUMMARY = "NXP Demo Experience"
 DESCRIPTION = "Launcher for NXP Demo Experience"
@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 S = "${WORKDIR}/git"
 
-SRCBRANCH = "zeus-5.4.24-2.1.0"
+SRCBRANCH = "imx_5.10.y"
 NXP_DEMO_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;protocol=https"
 

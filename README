@@ -26,7 +26,7 @@ Supported boards
 Releases
 --------
 
-Releases are tracked against the i.MX Linux software releases. Releases will be tagged with the release's version number. Supported releases are listed below.
+Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
 * Gatesgarth
   * 5.10.9_1.0.0
@@ -34,7 +34,6 @@ Releases are tracked against the i.MX Linux software releases. Releases will be 
   * 5.4.70_2.3.1
   * 5.4.70_2.3.0
   * 5.4.47_2.2.0
-* Warrior
 
 Install
 -------
