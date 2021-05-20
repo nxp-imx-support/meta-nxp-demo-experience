@@ -28,6 +28,8 @@ Releases
 
 Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
+* Hardknott
+  * 5.10.35_2.0.0
 * Gatesgarth
   * 5.10.9_1.0.0
 * Zeus
