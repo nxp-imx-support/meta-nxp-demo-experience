@@ -40,6 +40,4 @@ Releases are tracked against the i.MX Linux software releases. Supported release
 Install
 -------
 
-The Demo Experience is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release. The User Guides can be found at https://www.nxp.com/design/software/embedded-software/i-mx-software/embedded-linux-for-i-mx-applications-processors:IMXLINUX?tab=In-Depth_Tab.
-
-For a manual install, please follow the directions included in the documentation, which can be found at https://source.codeaurora.org/external/imxsupport/nxp-demo-experience/tree/doc/chapters/3-how_to_build.adoc.
+The Demo Experience is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release. Instructions for a manual install can be found in the user guide included in the source code.
