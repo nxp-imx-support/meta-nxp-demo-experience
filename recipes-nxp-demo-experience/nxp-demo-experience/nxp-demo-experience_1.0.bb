@@ -8,16 +8,17 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 S = "${WORKDIR}/git"
 
 SRCBRANCH = "imx_5.10.y"
-SRCTAG = "5.10.35-2.0.0"
 
 NXP_DEMO_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;protocol=https"
 
 SRC_URI = " \
-    ${NXP_DEMO_SRC};branch=${SRCBRANCH};tag=${SRCTAG};name=nxp-demo-experience \
-    ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;tag=${SRCTAG};name=demos "
+    ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
+    ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos "
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
+SRCREV_nxp-demo-experience = "3615aa6c36f86b71cb2fc8b408579fd35aa328b4"
+SRCREV_demos = "ec26550526bd11af4325a5bf245b1fa0467684a1"
 
 inherit qmake5
 
