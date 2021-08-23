@@ -1,0 +1,110 @@
+NXP Software Content Register
+
+Release: NXP Demo Experience
+Version: 3.1.1
+Date: August 2021
+Outgoing License: LA_OPT_NXP_Software_License v27 July 2021
+
+The following file describes the licenses on various files that are in the
+following repositories:
+
+- nxp-demo-experience (https://source.codeaurora.org/external/imxsupport/
+  nxp-demo-experience)
+- meta-nxp-demo-experience (https://source.codeaurora.org/external/imxsupport/
+  meta-nxp-demo-experience)
+- nxp-demo-experience-demos-list (https://source.codeaurora.org/external/
+  imxsupport/nxp-demo-experience-demos-list)
+- nxp-demo-experience-assets (https://github.com/NXP/
+  nxp-demo-experience-assets)
+
+Files not described here should be assumed to be under the releases
+"Outgoing License" listed above. Licenses can be founds in the repositories
+where they are effective.
+
+# NXP-DEMO-EXPERIENCE
+
+The files provided in this repository are covered by the following license:
+
+The 2-Clause BSD License
+
+# META-NXP-DEMO-EXPERIENCE
+
+The files provided in this repository are covered by the following license:
+
+The MIT License
+
+# NXP-DEMO-EXPERIENCE-DEMOS-LIST
+
+The files provided in this repository are covered by the following license:
+
+The 2-Clause BSD License
+
+# NXP-DEMO-EXPERIENCE-ASSETS
+
+## MODELS AND LABELS
+
+Name:           mobilenet_v1_1.0_224_quant.tflite
+Description:    mobilenet v1 quant model
+Author:         The TensorFlow Authors
+License:        Open Source - Apache License, Version 2.0
+Format:         source code
+Locations:      eIQObjectClassificationTFLite/model/mobilenet_v1_1.0_224_quant.tflite
+                eIQSwitchLabelImage/model/mobilenet_v1_1.0_224_quant.tflite
+                models/mobilenet_v1_1.0_224_quant.tflite    
+
+Name:           ssd_mobilenet_v1_1_default_1.tflite
+Description:    ssd v1 quant model
+Author:         The TensorFlow Authors
+License:        Open Source - Apache License, Version 2.0
+Format:         source code
+Locations:      eIQObjectDetection/model/ssd_mobilenet_v1_1_default_1.tflite
+                eIQVideoSwitchCore/model/ssd_mobilenet_v1_1_default_1.tflite
+
+Name:           mobilenet_ssd_v2_coco_quant_postprocess.tflite
+Description:    ssd v2 quant model
+Author:         The TensorFlow Authors
+License:        Open Source - Apache License, Version 2.0
+Format:         source code
+Locations:      eIQObjectDetectionCOVID19/model/mobilenet_ssd_v2_coco_quant_postprocess.tflite
+                models/mobilenet_ssd_v2_coco_quant_postprocess.tflite
+
+Name:           facemask_int8.tflite
+Description:    ssd v2 quant model
+Author:         NXP Semiconductors
+License:        BSD 3-Clause License
+Format:         source code
+Locations:      eIQObjectDetectionCOVID19/model/facemask_int8.tflite
+
+Name:           Google Coral model assests
+Description:    Selected models and labels from Google Coral's "test-data" repository
+Author:         Google LLC
+License:        Open Source - Apache License, Version 2.0
+Format:         source code
+Locations:      models/brand_model.tflite
+                models/brand_labels.csv
+                models/coco_labels.txt
+                models/imagenet_labels.txt
+
+Name:           PoseNet model and labels
+Description:    The model and labels needed to run the pose demo
+Author:         The TensorFlow Authors
+License:        Open Source - Apache License, Version 2.0
+Format:         source code
+Locations:      models/posenet_resnet50_uint8_float32_quant.tflite
+                models/key_point_labels.txt
+
+## EXECUTABLES
+
+Name:           label_image
+Description:    app core for pyeIQ app switch_image
+Author:         NXP Semiconductors
+License:        BSD 3-Clause License
+Format:         source code
+Locations:      eIQSwitchLabelImage/bin/label_image
+           
+Name:           video_switch_core
+Description:    app core for pyeIQ app switch_video
+Author:         NXP Semiconductors
+License:        BSD 3-Clause License
+Format:         source code
+Locations:      eIQVideoSwitchCore/bin/video_switch_core
