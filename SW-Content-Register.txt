@@ -3,111 +3,61 @@ NXP Software Content Register
 Release: NXP Demo Experience
 Version: 3.1.1
 Date: August 2021
-Outgoing License: LA_OPT_NXP_Software_License v27 July 2021
+Outgoing License: LA_OPT_NXP_Software_License v27 July 2021 - Additional distribution license granted, license in Section 2.3 applies
 License in File: LICENSE
 
-The following file describes the licenses on various files that are in the
-following repositories:
+Release branch: imx_5.10.y
 
-- nxp-demo-experience:
-  https://source.codeaurora.org/external/imxsupport/nxp-demo-experience
-- meta-nxp-demo-experience:
-  https://source.codeaurora.org/external/imxsupport/meta-nxp-demo-experience
-- nxp-demo-experience-demos-list:
-  https://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list
-- nxp-demo-experience-assets:
-  https://github.com/NXP/nxp-demo-experience-assets
+--------------------------------------------
 
-Files not described here should be assumed to be under the releases
-"Outgoing License" listed above. Licenses can be founds in the repositories
-where they are effective.
+Package:                   NXP Demo Experience
+Outgoing License:          BSD-2-Clause
+License File:              nxp-demo-experience/LICENSE
+Package Category:          Demo application
+Type of content:           Source code
+Description and comments:  i.MX demo programs source code
+Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience
+Origin:                    NXP (BSD-2-Clause)
+                           The Qt Company Ltd. (BSD-3-Clause)
 
-# NXP-DEMO-EXPERIENCE
+--------------------------------------------
 
-Name:           NXP Demo Experience Source Files
-Description:    The source files for the NXP Demo Experience
-Author:         NXP
-                The Qt Company Ltd.
-License:        Open Source - BSD-2-Clause
-Format:         Source code
-Locations:      The nxp-demo-experience repo
+Package:                   NXP Demo Experience Yocto Project meta layer
+Outgoing License:          MIT
+License File:              meta-nxp-demo-experience/COPYING.MIT
+Package Category:          Software build scripts
+Type of content:           Bitbake recipes
+Description and comments:  Yocto Project meta layer used to integrate
+                           into the i.MX BSP
+Release Location:          https://source.codeaurora.org/external/imxsupport/meta-nxp-demo-experience
+Origin:                    NXP (MIT)
 
-# META-NXP-DEMO-EXPERIENCE
+--------------------------------------------
 
-Name:           NXP Demo Experience Build Files
-Description:    The files used to build the NXP Demo Experience
-Author:         NXP
-License:        Open Source - MIT
-Format:         Build scripts
-Locations:      The meta-nxp-demo-experience repo
+Package:                   NXP Demo Experience Demo Files
+Outgoing License:          BSD-2-Clause
+License File:              nxp-demo-experience-demos-list/LICENSE
+Package Category:          Configuration
+Type of content:           Scripts, graphics images and data files
+Description and comments:  NXP Demo Experience configuration and
+                           launchers
+Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list
+Origin:                    NXP (BSD-2-Clause)
+                           Font Awesome (CC-BY-SA-4.0) http://fontawesome.com/icons?d=gallery
 
-# NXP-DEMO-EXPERIENCE-DEMOS-LIST
+--------------------------------------------
 
-Name:           NXP Demo Experience Demo Files
-Description:    Demos for the NXP Demo Experience
-Author:         NXP
-License:        Open Source - BSD-2-Clause
-Format:         Demo scripts and images
-Locations:      The nxp-demo-experience-demos-list repo
+Package:                   NXP Demo Experience Assets
+Outgoing License:          LA_OPT_NXP_Software_License v27 July 2021 - Additional distribution license granted, license in Section 2.3 applies
+License File:              nxp-demo-experience-assets/LICENSE
+Package Category:          Demo application
+Type of content:           Machine learning models, videos, graphics
+                           images, compiled executable
+Description and comments:  NXP Demo Experience data, models and utility
+                           program
+Release Location:          https://github.com/NXP/nxp-demo-experience-assets
+Origin:                    NXP (LA_OPT_NXP_Software_License)
+                           The TensorFlow Authors (Apache-2.0)
+                           Google LLC (Apache-2.0)
 
-# NXP-DEMO-EXPERIENCE-ASSETS
-
-## MODELS AND LABELS
-
-Name:           mobilenet_v1_1.0_224_quant.tflite
-Description:    mobilenet v1 quant model
-Author:         The TensorFlow Authors
-License:        Open Source - Apache License, Version 2.0
-Format:         Machine learning model
-Locations:      pyeiq/eIQObjectClassificationTFLite.zip/model/mobilenet_v1_1.0_224_quant.tflite
-                models/mobilenet_v1_1.0_224_quant.tflite    
-
-Name:           ssd_mobilenet_v1_1_default_1.tflite
-Description:    ssd v1 quant model
-Author:         The TensorFlow Authors
-License:        Open Source - Apache License, Version 2.0
-Format:         Machine learning model
-Locations:      pyeiq/eIQObjectDetection.zip/model/ssd_mobilenet_v1_1_default_1.tflite
-                pyeiq/eIQVideoSwitchCore.zip/model/ssd_mobilenet_v1_1_default_1.tflite
-
-Name:           mobilenet_ssd_v2_coco_quant_postprocess.tflite
-Description:    ssd v2 quant model
-Author:         The TensorFlow Authors
-License:        Open Source - Apache License, Version 2.0
-Format:         Machine learning model
-Locations:      pyeiq/eIQObjectDetectionCOVID19.zip/model/mobilenet_ssd_v2_coco_quant_postprocess.tflite
-                models/mobilenet_ssd_v2_coco_quant_postprocess.tflite
-
-Name:           facemask_int8.tflite
-Description:    ssd v2 quant model
-Author:         NXP Semiconductors
-License:        Open Source - BSD 3-Clause License
-Format:         Machine learning model
-Locations:      pyeiq/eIQObjectDetectionCOVID19.zip/model/facemask_int8.tflite
-
-Name:           Google Coral model assests
-Description:    Selected models and labels from Google Coral's "test-data" repository
-Author:         Google LLC
-License:        Open Source - Apache License, Version 2.0
-Format:         Machine learning models and labels
-Locations:      models/brand_model.tflite
-                models/brand_labels.csv
-                models/coco_labels.txt
-                models/imagenet_labels.txt
-
-Name:           PoseNet model and labels
-Description:    The model and labels needed to run the pose demo
-Author:         The TensorFlow Authors
-License:        Open Source - Apache License, Version 2.0
-Format:         Machine learning models and labels
-Locations:      models/posenet_resnet50_uint8_float32_quant.tflite
-                models/key_point_labels.txt
-
-## EXECUTABLES
-           
-Name:           video_switch_core
-Description:    app core for pyeIQ app switch_video
-Author:         NXP Semiconductors
-License:        Open Source - Apache License, Version 2.0
-Format:         Executable
-Locations:      pyeiq/eIQVideoSwitchCore.zip/bin/video_switch_core
+--------------------------------------------
