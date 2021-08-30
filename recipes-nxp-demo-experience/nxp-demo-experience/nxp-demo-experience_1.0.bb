@@ -18,7 +18,7 @@ SRC_URI = " \
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "3615aa6c36f86b71cb2fc8b408579fd35aa328b4"
-SRCREV_demos = "41dda6b512e8a13236a25318ec2e3b74313d1b97"
+SRCREV_demos = "9cc75900b3319c84325b739ef11b966bab024834"
 
 inherit qmake5
 
