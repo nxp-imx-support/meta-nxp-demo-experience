@@ -23,7 +23,7 @@ SRCREV_demos = "9cc75900b3319c84325b739ef11b966bab024834"
 inherit qmake5
 
 DEPENDS += " packagegroup-qt5-imx qtquickcontrols2 qtconnectivity qtgraphicaleffects qtsvg"
-RDEPENDS_${PN} += " weston bash qtgraphicaleffects-qmlplugins qtquickcontrols-qmlplugins qtsvg-plugins"
+RDEPENDS:${PN} += " weston bash qtgraphicaleffects-qmlplugins qtquickcontrols-qmlplugins qtsvg-plugins"
 
 do_install() {
     install -d -m 755 ${D}/home/root/.nxp-demo-experience
@@ -33,4 +33,4 @@ do_install() {
     install ${WORKDIR}/build/demoexperience ${D}${bindir}
 }
 
-FILES_${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
+FILES:${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
