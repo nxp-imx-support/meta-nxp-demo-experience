@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 S = "${WORKDIR}/git"
 
-SRCBRANCH = "imx_5.10.y"
+SRCBRANCH = "imx_5.15.y"
 
 NXP_DEMO_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;protocol=https"
@@ -17,20 +17,20 @@ SRC_URI = " \
     ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos "
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
-SRCREV_nxp-demo-experience = "af4f719ac367917cac613a6c808418726a26bf2d"
+SRCREV_nxp-demo-experience = "8988132284e2e241832d811b76cd3b6d2e0e5d9c"
 SRCREV_demos = "48cd8b1b9be7395442133d348295bae7d82db340"
 
-inherit qmake5
+inherit qt6-qmake
 
-DEPENDS += " packagegroup-qt5-imx qtquickcontrols2 qtconnectivity qtgraphicaleffects qtsvg"
-RDEPENDS:${PN} += " weston bash qtgraphicaleffects-qmlplugins qtquickcontrols-qmlplugins qtsvg-plugins"
+DEPENDS += " packagegroup-qt6-imx qtconnectivity qtsvg"
+RDEPENDS:${PN} += " weston bash qtsvg-plugins"
 
 do_install() {
     install -d -m 755 ${D}/home/root/.nxp-demo-experience
     cp -r ${WORKDIR}/demos/* ${D}/home/root/.nxp-demo-experience
 
     install -d -m 755 ${D}${bindir}
-    install ${WORKDIR}/build/demoexperience ${D}${bindir}
+    install ${WORKDIR}/nxp-demo-experience-1.0/demoexperience ${D}${bindir}
 }
 
 FILES:${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
