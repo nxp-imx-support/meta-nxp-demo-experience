@@ -30,7 +30,7 @@ do_install() {
     cp -r ${WORKDIR}/demos/* ${D}/home/root/.nxp-demo-experience
 
     install -d -m 755 ${D}${bindir}
-    install ${WORKDIR}/nxp-demo-experience-1.0/demoexperience ${D}${bindir}
+    install ${WORKDIR}/build/demoexperience ${D}${bindir}
 }
 
 FILES:${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
