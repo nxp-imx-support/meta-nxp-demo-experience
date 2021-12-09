@@ -23,7 +23,7 @@ SRCREV_demos = "48cd8b1b9be7395442133d348295bae7d82db340"
 inherit qt6-qmake
 
 DEPENDS += " packagegroup-qt6-imx qtconnectivity qtsvg"
-RDEPENDS:${PN} += " weston bash qtsvg-plugins"
+RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat"
 
 do_install() {
     install -d -m 755 ${D}/home/root/.nxp-demo-experience
