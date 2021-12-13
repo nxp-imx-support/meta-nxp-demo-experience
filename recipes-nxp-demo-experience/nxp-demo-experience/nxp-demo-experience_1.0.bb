@@ -1,4 +1,4 @@
-# Copyright 2020, 2021 NXP
+# Copyright 2020-2021 NXP
 
 SUMMARY = "NXP Demo Experience"
 DESCRIPTION = "Launcher for NXP Demo Experience"

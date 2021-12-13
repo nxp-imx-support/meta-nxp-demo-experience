@@ -1,8 +1,8 @@
 NXP Software Content Register
 
 Release: NXP Demo Experience
-Version: 3.2
-Date: November 2021
+Version: 3.3
+Date: December 2021
 Outgoing License: LA_OPT_NXP_Software_License v30 October 2021 - Additional distribution license granted, license in Section 2.3 applies
 License in File: LICENSE
 
