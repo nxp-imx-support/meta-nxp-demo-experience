@@ -17,8 +17,8 @@ SRC_URI = " \
     ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos "
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
-SRCREV_nxp-demo-experience = "8988132284e2e241832d811b76cd3b6d2e0e5d9c"
-SRCREV_demos = "48cd8b1b9be7395442133d348295bae7d82db340"
+SRCREV_nxp-demo-experience = "b2f4cddc790cb7da25af4a39cecf377f26183875"
+SRCREV_demos = "8a3a85aa20a12e7f43757e74f289ff48350d55c3"
 
 inherit qt6-qmake
 

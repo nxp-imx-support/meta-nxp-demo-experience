@@ -13,6 +13,7 @@ Dependencies
 Supported boards
 ----------------
 
+* NXP i.MX 8ULP EVK (imx8ulpevk)
 * NXP i.MX 8MQuad EVK (imx8mqevk)
 * NXP i.MX 8MMini EVK (imx8mmevk)
 * NXP i.MX 8MNano EVK (imx8mnevk)
@@ -28,7 +29,11 @@ Releases
 
 Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
+* Honister
+  * 5.15.y_1.0.0
 * Hardknott
+  * 5.10.72_2.2.0
+  * 5.10.52_2.1.0
   * 5.10.35_2.0.0
 * Gatesgarth
   * 5.10.9_1.0.0
