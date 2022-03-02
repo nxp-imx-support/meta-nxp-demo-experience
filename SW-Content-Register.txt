@@ -3,7 +3,7 @@ NXP Software Content Register
 Release: NXP Demo Experience
 Version: 4.0
 Date: March 2022
-Outgoing License: LA_OPT_NXP_Software_License v30 October 2021 - Additional distribution license granted, license in Section 2.3 applies
+Outgoing License: LA_OPT_NXP_Software_License v34 February 2022 - Additional distribution license granted, license in Section 2.3 applies
 License in File: LICENSE
 
 Release branch: imx_5.15.y
