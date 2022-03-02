@@ -1,7 +1,7 @@
 # Copyright 2021 NXP
 
-ROOTFS_POSTPROCESS_COMMAND:append:mx8 = "install_demo; "
-ROOTFS_POSTPROCESS_COMMAND:append:mx7ulp = "install_demo; "
+ROOTFS_POSTPROCESS_COMMAND:append:mx8-nxp-bsp = "install_demo; "
+ROOTFS_POSTPROCESS_COMMAND:append:mx7ulp-nxp-bsp = "install_demo; "
 
 install_demo() {
     if ! grep -q "icon=/home/root/.nxp-demo-experience/icon/icon_demo_launcher.png" ${IMAGE_ROOTFS}${sysconfdir}/xdg/weston/weston.ini
