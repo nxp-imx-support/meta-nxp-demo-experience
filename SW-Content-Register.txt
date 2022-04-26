@@ -1,16 +1,28 @@
 NXP Software Content Register
 
 Release: NXP Demo Experience
-Version: 4.0
-Date: March 2022
+Version: 4.1
+Date: June 2022
 Outgoing License: LA_OPT_NXP_Software_License v34 February 2022 - Additional distribution license granted, license in Section 2.3 applies
-License in File: LICENSE
+License File: PROJECT_LICENSE
 
-Release branch: imx_5.15.y
+Release branch: kirkstone
 
---------------------------------------------
+--------------- THIS PACKAGE ---------------
 
-Package:                   NXP Demo Experience
+Package:                   NXP Demo Experience Yocto Project Meta Layer
+Outgoing License:          MIT
+License File:              meta-nxp-demo-experience/LICENSE
+Package Category:          Software build scripts
+Type of content:           Bitbake recipes
+Description and comments:  Yocto Project meta layer used to integrate
+                           into the i.MX BSP
+Release Location:          https://source.codeaurora.org/external/imxsupport/meta-nxp-demo-experience
+Origin:                    NXP (MIT)
+
+---------- OTHER REQUIRED PACKAGES ---------
+
+Package:                   NXP Demo Experience Source Code
 Outgoing License:          BSD-2-Clause
 License File:              nxp-demo-experience/LICENSE
 Package Category:          Demo application
@@ -19,20 +31,6 @@ Description and comments:  i.MX demo programs source code
 Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience
 Origin:                    NXP (BSD-2-Clause)
                            The Qt Company Ltd. (BSD-3-Clause)
-
---------------------------------------------
-
-Package:                   NXP Demo Experience Yocto Project meta layer
-Outgoing License:          MIT
-License File:              meta-nxp-demo-experience/COPYING.MIT
-Package Category:          Software build scripts
-Type of content:           Bitbake recipes
-Description and comments:  Yocto Project meta layer used to integrate
-                           into the i.MX BSP
-Release Location:          https://source.codeaurora.org/external/imxsupport/meta-nxp-demo-experience
-Origin:                    NXP (MIT)
-
---------------------------------------------
 
 Package:                   NXP Demo Experience Demo Files
 Outgoing License:          BSD-2-Clause
@@ -44,11 +42,11 @@ Description and comments:  NXP Demo Experience configuration and
 Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list
 Origin:                    NXP (BSD-2-Clause)
                            Font Awesome (CC-BY-SA-4.0) http://fontawesome.com/icons?d=gallery
-
---------------------------------------------
+                           NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
 Package:                   NXP Demo Experience Assets
-Outgoing License:          LA_OPT_NXP_Software_License v27 July 2021 - Additional distribution license granted, license in Section 2.3 applies
+Outgoing License:          LA_OPT_NXP_Software_License v34 February 2022 - Additional distribution license granted, license in Section 2.3 applies
+                           Files may be distributed according to the license noted in the headers or README files
 License File:              nxp-demo-experience-assets/LICENSE
 Package Category:          Demo application
 Type of content:           Machine learning models, videos, graphics
@@ -59,5 +57,4 @@ Release Location:          https://github.com/NXP/nxp-demo-experience-assets
 Origin:                    NXP (LA_OPT_NXP_Software_License)
                            The TensorFlow Authors (Apache-2.0)
                            Google LLC (Apache-2.0)
-
---------------------------------------------
+                           FaceRecognition with FaceNet Android Authors (Apache-2.0)
