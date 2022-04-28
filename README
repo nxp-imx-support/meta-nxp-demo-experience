@@ -29,6 +29,8 @@ Releases
 
 Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
+* Kirkstone
+  * 5.15.32_2.0.0
 * Honister
   * 5.15.5_1.0.0
 * Hardknott
