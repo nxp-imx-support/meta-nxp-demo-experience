@@ -3,7 +3,7 @@ NXP Software Content Register
 Release: NXP Demo Experience
 Version: 4.1
 Date: June 2022
-Outgoing License: LA_OPT_NXP_Software_License v34 February 2022 - Additional distribution license granted, license in Section 2.3 applies
+Outgoing License: LA_OPT_NXP_Software_License v35 May 2022 - Additional distribution license granted, license in Section 2.3 applies
 License File: PROJECT_LICENSE
 
 Release branch: kirkstone
@@ -31,6 +31,7 @@ Description and comments:  i.MX demo programs source code
 Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience
 Origin:                    NXP (BSD-2-Clause)
                            The Qt Company Ltd. (BSD-3-Clause)
+                           The Montserrat Project Authors (OFL-1.1)
 
 Package:                   NXP Demo Experience Demo Files
 Outgoing License:          BSD-2-Clause
