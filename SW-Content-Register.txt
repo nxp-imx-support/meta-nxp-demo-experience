@@ -1,9 +1,9 @@
 NXP Software Content Register
 
 Release: NXP Demo Experience
-Version: 4.1
-Date: June 2022
-Outgoing License: LA_OPT_NXP_Software_License v35 May 2022 - Additional distribution license granted, license in Section 2.3 applies
+Version: 4.2
+Date: September 2022
+Outgoing License: LA_OPT_NXP_Software_License v38 August 2022 - Additional distribution license granted, license in Section 2.3 applies
 License File: PROJECT_LICENSE
 
 Release branch: kirkstone
@@ -46,7 +46,7 @@ Origin:                    NXP (BSD-2-Clause)
                            NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
 Package:                   NXP Demo Experience Assets
-Outgoing License:          LA_OPT_NXP_Software_License v35 May 2022 - Additional distribution license granted, license in Section 2.3 applies
+Outgoing License:          LA_OPT_NXP_Software_License v38 August 2022  - Additional distribution license granted, license in Section 2.3 applies
                            Files may be distributed according to the license noted in the headers or README files
 License File:              nxp-demo-experience-assets/LICENSE
 Package Category:          Demo application

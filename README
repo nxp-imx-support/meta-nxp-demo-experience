@@ -13,6 +13,7 @@ Dependencies
 Supported boards
 ----------------
 
+* NXP i.MX 93 EVK (imx93evk)
 * NXP i.MX 8ULP EVK (imx8ulpevk)
 * NXP i.MX 8MQuad EVK (imx8mqevk)
 * NXP i.MX 8MMini EVK (imx8mmevk)
@@ -47,4 +48,4 @@ Releases are tracked against the i.MX Linux software releases. Supported release
 Install
 -------
 
-The Demo Experience is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release. Instructions for a manual install can be found in the user guide included in the source code.
+The Demo Experience is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release.
