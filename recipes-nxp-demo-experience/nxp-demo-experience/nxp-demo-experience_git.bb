@@ -26,8 +26,9 @@ PV = "4.1+git${SRCPV}"
 inherit qt6-qmake
 
 DEMOS ?= ""
-DEMOS:mx8mp = " dexp-voice-demo"
-DEMOS:mx8mm = " dexp-voice-demo"
+DEMOS:mx8mp = " demo-experience-voice-demo"
+DEMOS:mx8mm = " demo-experience-voice-demo"
+DEMOS:mx8mn = " demo-experience-voice-demo"
 
 DEPENDS += " packagegroup-qt6-imx qtconnectivity qtsvg"
 RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat ${DEMOS}"

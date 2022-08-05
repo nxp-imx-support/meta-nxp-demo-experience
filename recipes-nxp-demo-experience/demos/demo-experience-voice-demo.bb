@@ -11,15 +11,15 @@ DEPENDS += "alsa-lib nxp-afe"
 
 PV = "1.0+${SRCPV}"
 
-NXPAFE_VOICESEEKER_SRC ?= "git://git@bitbucket.sw.nxp.com/mmcsh/imx-voiceseeker.git;protocol=ssh"
+NXPAFE_VOICESEEKER_SRC ?= "git://github.com/NXP/imx-voiceUI.git;protocol=https"
 SRCBRANCH_voice = "voice_2.0"
 
-MODEL_SRC ?= "git://git@bitbucket.sw.nxp.com/micrse/nxp-demo-experience-assets.git;protocol=ssh"
-SRCBRANCH_model = "MICRSE-870-voice-demo"
+MODEL_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
+SRCBRANCH_model = "imx_5.15.y"
 
 SRC_URI = "\
     ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
-    ${MODEL_SRC};branch=${SRCBRANCH_model};name=model;subpath=build/dexp-voice-demo"
+    ${MODEL_SRC};branch=${SRCBRANCH_model};name=model;subpath=build/demo-experience-voice-demo"
 
 SRCREV_FORMAT = "voice_model"
 
@@ -34,7 +34,7 @@ EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
 do_compile () {
-    mv ${WORKDIR}/dexp-voice-demo/VIT_Model_en.h ${WORKDIR}/git/vit/i.MX8M_A53/Lib/VIT_Model_en.h
+    mv ${WORKDIR}/demo-experience-voice-demo/VIT_Model_en.h ${WORKDIR}/git/vit/i.MX8M_A53/Lib/VIT_Model_en.h
     cd ${WORKDIR}/git
     oe_runmake VOICESPOT
 }
