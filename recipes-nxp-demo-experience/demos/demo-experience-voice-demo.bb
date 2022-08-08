@@ -3,27 +3,30 @@
 DESCRIPTION = "NXP Demo Experience Voice App"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://EULA.txt;md5=e4098ac4459cb81b07d3f0c22b3e8370"
+LIC_FILES_CHKSUM = "file://EULA.txt;md5=${FSL_EULA_FILE_MD5SUM_LA_OPT_NXP_SOFTWARE_LICENSE_V38}"
 
 inherit autotools pkgconfig
 
 DEPENDS += "alsa-lib nxp-afe"
+
+RDEPENDS:${PN} = "nxp-afe-voiceseeker"
 
 PV = "1.0+${SRCPV}"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/NXP/imx-voiceUI.git;protocol=https"
 SRCBRANCH_voice = "voice_2.0"
 
-MODEL_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
+#NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
+NXP_DEMO_ASSET_SRC ?= "git://git@bitbucket.sw.nxp.com/micrse/nxp-demo-experience-assets.git;protocol=ssh"
 SRCBRANCH_model = "imx_5.15.y"
 
 SRC_URI = "\
     ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
-    ${MODEL_SRC};branch=${SRCBRANCH_model};name=model;subpath=build/demo-experience-voice-demo"
+    ${NXP_DEMO_ASSET_SRC};branch=${SRCBRANCH_model};name=model;subpath=build/demo-experience-voice-demo"
 
 SRCREV_FORMAT = "voice_model"
 
-SRCREV_voice = "fb63d3ac7ea7e2b836bc74cd97e269ef1f910b34"
+SRCREV_voice = "${AUTOREV}"
 SRCREV_model = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
