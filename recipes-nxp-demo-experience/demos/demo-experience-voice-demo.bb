@@ -16,8 +16,7 @@ PV = "1.0+${SRCPV}"
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/NXP/imx-voiceUI.git;protocol=https"
 SRCBRANCH_voice = "voice_2.0"
 
-#NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-NXP_DEMO_ASSET_SRC ?= "git://git@bitbucket.sw.nxp.com/micrse/nxp-demo-experience-assets.git;protocol=ssh"
+NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 SRCBRANCH_model = "imx_5.15.y"
 
 SRC_URI = "\
