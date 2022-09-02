@@ -21,7 +21,7 @@ SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "${AUTOREV}"
 SRCREV_demos = "${AUTOREV}"
 
-PV = "4.1+git${SRCPV}"
+PV = "4.2+git${SRCPV}"
 
 inherit qt6-qmake
 
