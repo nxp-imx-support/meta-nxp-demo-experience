@@ -1,5 +1,5 @@
-﻿LA_OPT_NXP_Software_License v38 August 2022 
-IMPORTANT.  Read the following NXP Software License Agreement ("Agreement") completely. By selecting the "I Accept" button at the end of this page, or by downloading, installing, or using the Licensed Software, you indicate that you accept the terms of the Agreement and you acknowledge that you have the authority, for yourself or on behalf of your company, to bind your company to these terms. You may then download or install the file. In the event of a conflict between the terms of this Agreement and any license terms and conditions for NXP's proprietary software embedded anywhere in the Licensed Software file, the terms of this Agreement shall control.  If a separate license agreement for the Licensed Software has been signed by you and NXP, then that agreement shall govern your use of the Licensed Software and shall supersede this Agreement.
+﻿LA_OPT_NXP_Software_License v39 August 2022 
+IMPORTANT.  Read the following NXP Software License Agreement ("Agreement") completely. By selecting the "I Accept" button at the end of this page, or by downloading, installing, or using the Licensed Software, you indicate that you accept the terms of the Agreement, and you acknowledge that you have the authority, for yourself or on behalf of your company, to bind your company to these terms. You may then download or install the file. In the event of a conflict between the terms of this Agreement and any license terms and conditions for NXP's proprietary software embedded anywhere in the Licensed Software file, the terms of this Agreement shall control.  If a separate license agreement for the Licensed Software has been signed by you and NXP, then that agreement shall govern your use of the Licensed Software and shall supersede this Agreement.
 
 NXP SOFTWARE LICENSE AGREEMENT
 This is a legal agreement between your employer, of which you are an authorized representative, or, if you have no employer, you as an individual ("you" or "Licensee"), and NXP B.V. ("NXP").  It concerns your rights to use the software provided to you in binary or source code form and any accompanying written materials (the "Licensed Software"). The Licensed Software may include any updates or error corrections or documentation relating to the Licensed Software provided to you by NXP under this Agreement. In consideration for NXP allowing you to access the Licensed Software, you are agreeing to be bound by the terms of this Agreement. If you do not agree to all of the terms of this Agreement, do not download or install the Licensed Software. If you change your mind later, stop using the Licensed Software and delete all copies of the Licensed Software in your possession or control. Any copies of the Licensed Software that you have already distributed, where permitted, and do not destroy will continue to be governed by this Agreement. Your prior use will also continue to be governed by this Agreement.
@@ -150,6 +150,8 @@ MPEG LA: Use of MPEG LA audio or video codec technology is limited to evaluation
 
 MQX RTOS Code: MQX RTOS source code may not be re-distributed by any NXP Licensee under any circumstance, even by a signed written amendment to this Agreement. 
 
+NXP Voice Software: VoiceSpot, VoiceSeeker (including AEC), and Conversa may be used for evaluation or demonstration purposes only. Any commercial distribution rights are subject to a separate royalty agreement obtained from NXP.
+
 NXP Wireless Charging Library: License to the Software is limited to use in inductive coupling or wireless charging applications 
 
 Opus: Use of Opus software must be consistent with the terms of the Opus license which can be found at: http://www.opus-codec.org/license/  
@@ -197,4 +199,4 @@ Texas Instruments: Your use of Texas Instruments Inc. WiLink8 Licensed Software 
 
 TES Electronic Solutions Germany (TES):  TES 3D Surround View software and associated data and documentation may only be used for evaluation purposes and for demonstration to third parties in integrated form on a board package containing an NXP S32V234 device. Licensee may not distribute or sublicense the TES software. Your license to the TES software may be terminated at any time upon notice.
 
-Vivante: Distribution of Vivante software must be a part of, or embedded within, Authorized Systems that include a Vivante Graphics Processing Unit.  
+Vivante: Distribution of Vivante software must be a part of, or embedded within, Authorized Systems that include a Vivante Graphics Processing Unit. 
