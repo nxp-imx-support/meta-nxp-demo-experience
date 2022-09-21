@@ -6,46 +6,48 @@ Date: September 2022
 Outgoing License: LA_OPT_NXP_Software_License v39 August 2022 - Additional distribution license granted, license in Section 2.3 applies
 License File: PROJECT_LICENSE
 
-Release branch: kirkstone
-
 --------------- THIS PACKAGE ---------------
 
 Package:                   NXP Demo Experience Yocto Project Meta Layer
+Release branch:            kirkstone
 Outgoing License:          MIT
 License File:              meta-nxp-demo-experience/LICENSE
 Package Category:          Software build scripts
 Type of content:           Bitbake recipes
 Description and comments:  Yocto Project meta layer used to integrate
                            into the i.MX BSP
-Release Location:          https://source.codeaurora.org/external/imxsupport/meta-nxp-demo-experience
+Release Location:          https://github.com/nxp-imx-support/meta-nxp-demo-experience
 Origin:                    NXP (MIT)
 
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                   NXP Demo Experience Source Code
+Release branch:            lf-5.15.52_2.1.0
 Outgoing License:          BSD-2-Clause
 License File:              nxp-demo-experience/LICENSE
 Package Category:          Demo application
 Type of content:           Source code
 Description and comments:  i.MX demo programs source code
-Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience
+Release Location:          https://github.com/nxp-imx-support/nxp-demo-experience
 Origin:                    NXP (BSD-2-Clause)
                            The Qt Company Ltd. (BSD-3-Clause)
                            The Montserrat Project Authors (OFL-1.1)
 
 Package:                   NXP Demo Experience Demo Files
+Release branch:            lf-5.15.52_2.1.0
 Outgoing License:          BSD-2-Clause
 License File:              nxp-demo-experience-demos-list/LICENSE
 Package Category:          Configuration
 Type of content:           Scripts, graphics images and data files
 Description and comments:  NXP Demo Experience configuration and
                            launchers
-Release Location:          https://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list
+Release Location:          https://github.com/nxp-imx-support/nxp-demo-experience-demos-list
 Origin:                    NXP (BSD-2-Clause)
                            Font Awesome (CC-BY-SA-4.0) http://fontawesome.com/icons?d=gallery
                            NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
 Package:                   NXP Demo Experience Assets
+Release branch:            lf-5.15.52_2.1.0
 Outgoing License:          LA_OPT_NXP_Software_License v39 August 2022  - Additional distribution license granted, license in Section 2.3 applies
                            Files may be distributed according to the license noted in the headers or README files
 License File:              nxp-demo-experience-assets/LICENSE
