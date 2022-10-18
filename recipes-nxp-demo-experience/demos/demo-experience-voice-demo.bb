@@ -17,7 +17,7 @@ NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=htt
 SRCBRANCH_voice = "MM_04.07.01_2208_L5.15.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "lf-5.15.52_2.1.0"
+SRCBRANCH_model = "imx_5.15.y"
 
 SRC_URI = "\
     ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
