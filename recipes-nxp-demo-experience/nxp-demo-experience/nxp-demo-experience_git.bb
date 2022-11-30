@@ -1,5 +1,3 @@
-# Copyright 2020-2022 NXP
-
 SUMMARY = "NXP Demo Experience"
 DESCRIPTION = "Launcher for NXP Demo Experience"
 LICENSE = "MIT"

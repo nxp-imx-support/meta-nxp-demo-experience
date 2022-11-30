@@ -1,5 +1,3 @@
-# Copyright 2021-2022 NXP
-
 DESCRIPTION = "NXP Demo Experience Voice App"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
