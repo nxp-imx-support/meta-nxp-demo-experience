@@ -12,7 +12,7 @@ RDEPENDS:${PN} = "nxp-afe-voiceseeker"
 PV = "1.0+${SRCPV}"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.07.02_2210_L5.15.y"
+SRCBRANCH_voice = "MM_04.07.03_2301_L6.1.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 SRCBRANCH_model = "lf-6.1.1_1.0.0"
@@ -23,7 +23,7 @@ SRC_URI = "\
 
 SRCREV_FORMAT = "voice_model"
 
-SRCREV_voice = "9fbbd5da0ec28c6788c1ee3326d3e965df887927"
+SRCREV_voice = "c2a5ac8f55fc611782230db458adb02daff33b5a"
 SRCREV_model = "${AUTOREV}"
 
 S = "${WORKDIR}/git"

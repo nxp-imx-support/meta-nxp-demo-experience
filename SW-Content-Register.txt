@@ -1,9 +1,9 @@
 NXP Software Content Register
 
 Release: NXP Demo Experience
-Version: 4.3
-Date: December 2022
-Outgoing License: LA_OPT_NXP_Software_License v39 August 2022 - Additional distribution license granted, license in Section 2.3 applies
+Version: 4.4
+Date: March 2023
+Outgoing License: LA_OPT_NXP_Software_License v43 February 2023  - Additional distribution license granted, license in Section 2.3 applies
 License File: PROJECT_LICENSE
 
 --------------- THIS PACKAGE ---------------
@@ -46,7 +46,7 @@ Origin:                     NXP (BSD-2-Clause)
 
 Package:                    NXP Demo Experience Assets
 Release branch:             lf-5.15.71_2.2.0
-Outgoing License:           LA_OPT_NXP_Software_License v39 August 2022  - Additional distribution license granted, license in Section 2.3 applies
+Outgoing License:           LA_OPT_NXP_Software_License v43 February 2023 - Additional distribution license granted, license in Section 2.3 applies
                             Files may be distributed according to the license noted in the headers or README files
 License File:               nxp-demo-experience-assets/LICENSE
 Package Category:           Demo application
