@@ -9,7 +9,7 @@ License File: PROJECT_LICENSE
 --------------- THIS PACKAGE ---------------
 
 Package:                    NXP Demo Experience Yocto Project Meta Layer
-Release branch:             kirkstone
+Release branch:             langdale-6.1.1-1.0.0
 Outgoing License:           MIT
 License File:               meta-nxp-demo-experience/COPYING.MIT
 Package Category:           Software build scripts
