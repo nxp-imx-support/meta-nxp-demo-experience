@@ -52,7 +52,7 @@ License File:               nxp-demo-experience-assets/LICENSE
 Package Category:           Demo application
 Type of content:            Machine learning models, videos, graphics, images, compiled executable
 Description and comments:   NXP Demo Experience data, models and utility program
-Release Location:           https://github.com/NXP/nxp-demo-experience-assets
+Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience-assets
 Origin:                     NXP (propietary)
                             The TensorFlow Authors (Apache-2.0)
                             Google LLC (Apache-2.0)
