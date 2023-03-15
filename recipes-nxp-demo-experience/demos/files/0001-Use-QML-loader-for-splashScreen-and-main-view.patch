@@ -1,0 +1,687 @@
+From 4b1fdc2f035999cd5a0c0ab192cf8c6392d66ba0 Mon Sep 17 00:00:00 2001
+From: Miguel Alonso <miguelangel.alonso@nxp.com>
+Date: Tue, 18 Apr 2023 16:08:25 -0700
+Subject: [PATCH] Use QML loader for splashScreen and main view
+
+---
+ MediaPlayerWrapper.cpp   |   4 +-
+ content/MainView.qml     | 214 +++++++++++++++++++++++++++++++++++
+ content/PlayerInfo.qml   |   8 +-
+ content/SplashScreen.qml | 179 +++++++++++++++++++++++++++++
+ main.qml                 | 169 ++++-----------------------
+ qml.qrc                  |   2 +
+ 6 files changed, 424 insertions(+), 152 deletions(-)
+ create mode 100644 content/MainView.qml
+ create mode 100644 content/SplashScreen.qml
+
+diff --git a/MediaPlayerWrapper.cpp b/MediaPlayerWrapper.cpp
+index 5d2783f..427feda 100644
+--- a/MediaPlayerWrapper.cpp
++++ b/MediaPlayerWrapper.cpp
+@@ -69,6 +69,7 @@ bool MediaPlayerWrapper::initialize()
+     resetModel();
+     const QUrl url(QStringLiteral("qrc:/main.qml"));
+     Engine.load(url);
++
+     if(Engine.rootObjects().isEmpty())
+         return false;
+     return true;
+@@ -156,7 +157,6 @@ void MediaPlayerWrapper::SetPlayingState(const int value)
+     m_PlayingState = value;
+ }
+ 
+-
+ double MediaPlayerWrapper::PlayerMediaTime()
+ {
+     return MediaTime;
+@@ -301,7 +301,7 @@ void MediaPlayerWrapper::setVolume(int volume)
+ 
+ void MediaPlayerWrapper::setDevice(QString device)
+ {
+-    mDevice = device;
++    mDevice = "i.MX-MultimediaPlayer";
+     emit deviceChanged();
+ 
+ }
+diff --git a/content/MainView.qml b/content/MainView.qml
+new file mode 100644
+index 0000000..c9c0b89
+--- /dev/null
++++ b/content/MainView.qml
+@@ -0,0 +1,214 @@
++/****************************************************************************
++**
++** Copyright (C) 2021 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** Copyright 2022 NXP
++** 
++** This file is part of the examples of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:BSD$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** BSD License Usage
++** Alternatively, you may use this file under the terms of the BSD license
++** as follows:
++**
++** "Redistribution and use in source and binary forms, with or without
++** modification, are permitted provided that the following conditions are
++** met:
++**   * Redistributions of source code must retain the above copyright
++**     notice, this list of conditions and the following disclaimer.
++**   * Redistributions in binary form must reproduce the above copyright
++**     notice, this list of conditions and the following disclaimer in
++**     the documentation and/or other materials provided with the
++**     distribution.
++**   * Neither the name of The Qt Company Ltd nor the names of its
++**     contributors may be used to endorse or promote products derived
++**     from this software without specific prior written permission.
++**
++**
++** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++** "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++import QtQuick
++import QtQuick.Controls
++import QtQuick.Layouts
++import QtQuick.Window
++import com.nxp.btplayer 1.0
++
++Window {
++    id: root
++    width: 640
++    height: 480
++    x: Screen.width / 2 - width / 2
++    y: Screen.height / 2 - heigh / 2
++    visible: true
++    title: qsTr("i.MX Multimedia Player")
++
++    Popup {
++        id: mediaError
++        anchors.centerIn: Overlay.overlay
++        Text {
++            id: mediaErrorText
++        }
++    }
++
++    function convertDoubleToInt (x) {
++        return x < 0 ? Math.ceil(x) : Math.floor(x);
++    }
++
++    Rectangle {
++            width: root.width
++            height: root.height/7
++
++            Rectangle{
++                id: stripe1
++                anchors.top: parent.top
++                color: "#f9b500"
++                anchors.left: parent.left
++                width: convertDoubleToInt(root.width * 0.2923)
++                height: convertDoubleToInt(root.height * 0.008)
++            }
++
++            Rectangle{
++                id: stripe2
++                anchors.top: parent.top
++                color: "#928647"
++                anchors.left: stripe1.right
++                width: convertDoubleToInt(root.width * 0.081)
++                height: convertDoubleToInt(root.height * 0.008)
++            }
++            Rectangle{
++                id: stripe3
++                anchors.top: parent.top
++                color: "#7bb1db"
++                anchors.left: stripe2.right
++                width: convertDoubleToInt(root.width * 0.2367)
++                height: convertDoubleToInt(root.height * 0.008)
++            }
++            Rectangle{
++                id: stripe4
++                anchors.top: parent.top
++                color: "#6d9b46"
++                anchors.left: stripe3.right
++                width: convertDoubleToInt(root.width * 0.1397)
++                height: convertDoubleToInt(root.height * 0.008)
++            }
++            Rectangle{
++                id: stripe5
++                anchors.top: parent.top
++                color: "#c9d200"
++                anchors.left: stripe4.right
++                anchors.right: parent.right
++                height: convertDoubleToInt(root.height * 0.008)
++            }
++    }
++
++    PlayerMenuBar {
++        x: 0
++        y: 4
++        id: menuBar
++        anchors.left: parent.left
++        anchors.right: parent.right
++        playerInfo: playerInfo
++        onClosePlayer: root.close()
++    }
++
++    TapHandler {
++        onTapped: {
++            playerInfo.visible = false
++        }
++    }
++
++    Rectangle {
++        x: root.width/10
++        y: root.height/3
++        width: 400
++        height: 150
++
++        Image {
++            id: image
++            x: 10
++            y: 10
++            width: 100
++            height: 100
++            source: "qrc:/rsc/bluetooth.svg"
++            fillMode: Image.PreserveAspectFit
++        }
++
++        Text {
++            id: title
++            x: 140
++            y: 28
++            width: 129
++            height: 16
++            text: MediaPlayerWrapper.title
++            font.pixelSize: 12
++        }
++
++        Text {
++            id: artist
++            x: 140
++            y: 50
++            width: 129
++            height: 16
++            text: MediaPlayerWrapper.artist
++            font.pixelSize: 12
++        }
++
++        Text {
++            id: album
++            x: 140
++            y: 72
++            width: 124
++            height: 16
++            text: MediaPlayerWrapper.album
++            font.pixelSize: 12
++        }
++    }
++
++    PlayerInfo {
++        id: playerInfo
++        visible: true
++        x: 404
++        y: 0
++        width: 221
++        height: 300
++        anchors.right: parent.right
++        anchors.top: menuBar.bottom
++        anchors.rightMargin: 15
++        anchors.topMargin: 13
++    }
++
++    PlaybackControl {
++        id: playbackControl
++        anchors.bottom: parent.bottom
++        anchors.left: parent.left
++        anchors.right: parent.right
++    }
++
++    Component.onCompleted:
++    {
++       root.show()
++    }
++}
+diff --git a/content/PlayerInfo.qml b/content/PlayerInfo.qml
+index aa156b4..1e00eb9 100644
+--- a/content/PlayerInfo.qml
++++ b/content/PlayerInfo.qml
+@@ -71,7 +71,7 @@ Item {
+ 
+         Text {
+             id: showPlayerInfo
+-            visible: true //elements.count === 0
++            visible: true
+             font.italic: true
+             font.pixelSize: 10
+             text: qsTr("Help -> PlayerInfo \n     to show this view")
+@@ -114,7 +114,7 @@ Item {
+                 id: deviceConnected
+                 x: 10
+                 y: 10
+-                visible: true//elements.count === 0
++                visible: true
+                 font.bold:true
+                 font.pointSize: 6
+                 text:
+@@ -123,8 +123,8 @@ Item {
+                 "Voice commands supported :"+
+                     "\n    PLAY MUSIC"+
+                     "\n    PAUSE"+
+-                    "\n    PREVIOUS SOUND"+
+-                    "\n    NEXT SOUND"+
++                    "\n    PREVIOUS SONG"+
++                    "\n    NEXT SONG"+
+                     "\n    VOLUME UP"+
+                     "\n    VOLUME DOWN"+
+                 "\n    MUTE"+
+diff --git a/content/SplashScreen.qml b/content/SplashScreen.qml
+new file mode 100644
+index 0000000..eac3652
+--- /dev/null
++++ b/app/content/SplashScreen.qml
+@@ -0,0 +1,179 @@
++/****************************************************************************
++**
++** Copyright (C) 2021 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** Copyright 2022 NXP
++** 
++** This file is part of the examples of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:BSD$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** BSD License Usage
++** Alternatively, you may use this file under the terms of the BSD license
++** as follows:
++**
++** "Redistribution and use in source and binary forms, with or without
++** modification, are permitted provided that the following conditions are
++** met:
++**   * Redistributions of source code must retain the above copyright
++**     notice, this list of conditions and the following disclaimer.
++**   * Redistributions in binary form must reproduce the above copyright
++**     notice, this list of conditions and the following disclaimer in
++**     the documentation and/or other materials provided with the
++**     distribution.
++**   * Neither the name of The Qt Company Ltd nor the names of its
++**     contributors may be used to endorse or promote products derived
++**     from this software without specific prior written permission.
++**
++**
++** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++** "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++import QtQuick 2.0
++import QtQuick.Controls 2.0
++import QtQuick.Window 2.2
++
++Window {
++    id: splashWindow
++    visible:true
++    width: 640
++    height: 480
++    x: Screen.width / 2 - width / 2
++    y: Screen.height / 2 - heigh / 2
++    flags: Qt.SplashScreen | Qt.WindowStaysOnTopHint
++    modality: Qt.ApplicationModal
++
++    Rectangle{
++        id:dot_1
++        x:splashWindow.width*.3
++        y:splashWindow.height/2-25
++        width:40
++        height:40
++        color:"#808080"
++        radius:100
++        SequentialAnimation{
++            running:true
++            loops:Animation.Infinite
++            ScaleAnimator {
++                target:dot_1
++                from:1
++                to:0
++                duration:840
++            }
++            ScaleAnimator{
++                target:dot_1
++                from:0
++                to:1
++                duration:840
++            }
++        }
++    }
++    Rectangle{
++        id:dot_2
++        x:splashWindow.width*.4
++        y:splashWindow.height/2-25
++        width:40
++        height:40
++        color:"#808080"
++        radius:100
++        SequentialAnimation{
++            running:true
++            PauseAnimation { duration: 120 }
++            SequentialAnimation{
++                loops:Animation.Infinite
++                ScaleAnimator {
++                    target:dot_2
++                    from:1
++                    to:0
++                    duration:840
++                }
++                ScaleAnimator{
++                    target:dot_2
++                    from:0
++                    to:1
++                    duration:840
++                }
++            }
++        }
++    }
++    Rectangle{
++        id:dot_3
++        x:splashWindow.width*.5
++        y:splashWindow.height/2-25
++        width:40
++        height:40
++        color:"#808080"
++        radius:100
++        SequentialAnimation{
++            running:true
++            PauseAnimation { duration: 240 }
++            SequentialAnimation{
++                loops:Animation.Infinite
++                ScaleAnimator {
++                    target:dot_3
++                    from:1
++                    to:0
++                    duration:840
++                }
++                ScaleAnimator{
++                    target:dot_3
++                    from:0
++                    to:1
++                    duration:840
++                }
++            }
++        }
++    }
++    Rectangle{
++        id:dot_4
++        x:splashWindow.width*.6
++        y:splashWindow.height/2-25
++        width:40
++        height:40
++        color:"#808080"
++        radius:100
++        SequentialAnimation{
++            running:true
++            PauseAnimation { duration: 360 }
++            SequentialAnimation{
++                loops:Animation.Infinite
++                ScaleAnimator {
++                    target:dot_4
++                    from:1
++                    to:0
++                    duration:840
++                }
++                ScaleAnimator{
++                    target:dot_4
++                    from:0
++                    to:1
++                    duration:840
++                }
++            }
++        }
++    }
++
++    Component.onCompleted: visible = true
++}
++
+diff --git a/main.qml b/main.qml
+index 3fe3cb9..91faddd 100644
+--- a/main.qml
++++ b/main.qml
+@@ -50,161 +50,38 @@
+ **
+ ****************************************************************************/
+ 
+-import QtQuick
+-import QtQuick.Controls
+-import QtQuick.Layouts
+-import QtQuick.Window
+-import com.nxp.btplayer 1.0
++import QtQuick 2.7
++import QtQuick.Window 2.3
++import QtQuick.Controls 2.2
+ import "content"
+ 
+-Window {
+-    id: root
+-    width: 640
+-    height: 480
++Item {
+     visible: true
+-    property alias menuBar: menuBar
+-    title: qsTr("NXP VIT Multimedia Player")
+ 
+-    Popup {
+-        id: mediaError
+-        anchors.centerIn: Overlay.overlay
+-        Text {
+-            id: mediaErrorText
+-        }
++    Timer {
++        id: timer
++        interval: 12000
++        repeat: false
++        running: true
++        onTriggered: toggleLoaders()
+     }
+ 
+-    function convertDoubleToInt (x) {
+-        return x < 0 ? Math.ceil(x) : Math.floor(x);
++    Loader {
++        id: loader1
++        active: true
++        source: "qrc:/content/SplashScreen.qml"
++        anchors.fill: parent
+     }
+ 
+-    Rectangle {
+-            width: root.width
+-            height: root.height/7
+-
+-            Rectangle{
+-                id: stripe1
+-                anchors.top: parent.top
+-                color: "#f9b500"
+-                anchors.left: parent.left
+-                width: convertDoubleToInt(root.width * 0.2923)
+-                height: convertDoubleToInt(root.height * 0.008)
+-            }
+-
+-            Rectangle{
+-                id: stripe2
+-                anchors.top: parent.top
+-                color: "#928647"
+-                anchors.left: stripe1.right
+-                width: convertDoubleToInt(root.width * 0.081)
+-                height: convertDoubleToInt(root.height * 0.008)
+-            }
+-            Rectangle{
+-                id: stripe3
+-                anchors.top: parent.top
+-                color: "#7bb1db"
+-                anchors.left: stripe2.right
+-                width: convertDoubleToInt(root.width * 0.2367)
+-                height: convertDoubleToInt(root.height * 0.008)
+-            }
+-            Rectangle{
+-                id: stripe4
+-                anchors.top: parent.top
+-                color: "#6d9b46"
+-                anchors.left: stripe3.right
+-                width: convertDoubleToInt(root.width * 0.1397)
+-                height: convertDoubleToInt(root.height * 0.008)
+-            }
+-            Rectangle{
+-                id: stripe5
+-                anchors.top: parent.top
+-                color: "#c9d200"
+-                anchors.left: stripe4.right
+-                anchors.right: parent.right
+-                height: convertDoubleToInt(root.height * 0.008)
+-            }
+-    }
+-
+-    PlayerMenuBar {
+-        x: 0
+-        y: 4
+-        id: menuBar
+-        anchors.left: parent.left
+-        anchors.right: parent.right
+-        playerInfo: playerInfo
+-        onClosePlayer: root.close()
+-    }
+-
+-    TapHandler {
+-        onTapped: {
+-            playerInfo.visible = false
+-        }
+-    }
+-
+-    Rectangle {
+-        x: root.width/10
+-        y: root.height/3
+-        width: 400
+-        height: 150
+-
+-        Image {
+-            id: image
+-            x: 10
+-            y: 10
+-            width: 100
+-            height: 100
+-            source: "qrc:/rsc/bluetooth.svg"
+-            fillMode: Image.PreserveAspectFit
+-        }
+-
+-        Text {
+-            id: title
+-            x: 140
+-            y: 28
+-            width: 129
+-            height: 16
+-            text: MediaPlayerWrapper.title
+-            font.pixelSize: 12
+-        }
+-
+-        Text {
+-            id: artist
+-            x: 140
+-            y: 50
+-            width: 129
+-            height: 16
+-            text: MediaPlayerWrapper.artist
+-            font.pixelSize: 12
+-        }
+-
+-        Text {
+-            id: album
+-            x: 140
+-            y: 72
+-            width: 124
+-            height: 16
+-            text: MediaPlayerWrapper.album
+-            font.pixelSize: 12
+-        }
+-    }
+-
+-    PlayerInfo {
+-        id: playerInfo
+-        visible: true
+-        x: 404
+-        y: 0
+-        width: 221
+-        height: 300
+-        anchors.right: parent.right
+-        anchors.top: menuBar.bottom
+-        anchors.rightMargin: 15
+-        anchors.topMargin: 13
++    Loader {
++        id: loader2
++        active: false
++        source: "qrc:/content/MainView.qml"
++        anchors.fill: parent
+     }
+ 
+-    PlaybackControl {
+-        id: playbackControl
+-        
+-        anchors.bottom: parent.bottom
+-        anchors.left: parent.left
+-        anchors.right: parent.right
++    function toggleLoaders() {
++        loader1.active = !loader1.active
++        loader2.active = !loader2.active
+     }
+ }
+diff --git a/qml.qrc b/qml.qrc
+index c82f5a1..a1c2565 100644
+--- a/qml.qrc
++++ b/qml.qrc
+@@ -15,5 +15,7 @@
+         <file>rsc/forward-step.svg</file>
+         <file>rsc/pause.svg</file>
+         <file>rsc/nxp.png</file>
++        <file>content/SplashScreen.qml</file>
++        <file>content/MainView.qml</file>
+     </qresource>
+ </RCC>
+-- 
+2.25.1
+

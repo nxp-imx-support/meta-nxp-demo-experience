@@ -10,6 +10,7 @@ SRCBRANCH = "lf-6.1.1_1.0.0"
 NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience-demos-list.git;protocol=https"
 
+
 SRC_URI = " \
     ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
     ${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};destsuffix=demos;name=demos "
@@ -24,8 +25,9 @@ PV = "4.4+git${SRCPV}"
 inherit qt6-qmake
 
 DEMOS ?= ""
-DEMOS:mx8mp-nxp-bsp = " demo-experience-voice-demo"
-DEMOS:mx8mm-nxp-bsp = " demo-experience-voice-demo"
+DEMOS:mx8mp-nxp-bsp = " demo-experience-voice-demo demo-experience-demo-btplayer"
+DEMOS:mx8mm-nxp-bsp = " demo-experience-voice-demo demo-experience-demo-btplayer"
+DEMOS:mx93-nxp-bsp = " demo-experience-demo-btplayer"
 
 DEPENDS += " packagegroup-qt6-imx qtconnectivity qtsvg"
 RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat ${DEMOS}"
