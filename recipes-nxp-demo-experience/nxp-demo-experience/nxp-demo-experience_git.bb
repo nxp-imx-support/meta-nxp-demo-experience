@@ -9,8 +9,8 @@ S = "${WORKDIR}/git"
 
 SRCBRANCH = "lf-5.15.5_1.0.0"
 
-NXP_DEMO_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience;protocol=https"
-NXP_DEMO_LIST_SRC ?= "git://source.codeaurora.org/external/imxsupport/nxp-demo-experience-demos-list;protocol=https"
+NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
+NXP_DEMO_LIST_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience-demos-list.git;protocol=https"
 
 SRC_URI = " \
     ${NXP_DEMO_SRC};branch=${SRCBRANCH};name=nxp-demo-experience \
