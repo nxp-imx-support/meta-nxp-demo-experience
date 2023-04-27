@@ -2,7 +2,7 @@
 
 DESCRIPTION = "Example of Voice Intelligent Technology"
 SECTION = "multimedia"
-LICENSE = "PROPIETARY"
+LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://EULA.txt;md5=5a0bf11f745e68024f37b4724a5364fe"
 
 SRCBRANCH = "MM_04.07.02_2210_L5.15.y"
