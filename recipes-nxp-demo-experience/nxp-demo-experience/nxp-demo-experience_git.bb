@@ -30,7 +30,7 @@ DEMOS:mx8mm-nxp-bsp = " demo-experience-voice-demo demo-experience-demo-btplayer
 DEMOS:mx93-nxp-bsp = " demo-experience-demo-btplayer"
 
 DEPENDS += " packagegroup-qt6-imx qtconnectivity qtsvg"
-RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat ${DEMOS}"
+RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat ${DEMOS} python3-packaging python3-paramiko iproute2 iproute2-tc python3-matplotlib"
 
 do_install() {
     install -d -m 755 ${D}/home/root/.nxp-demo-experience
