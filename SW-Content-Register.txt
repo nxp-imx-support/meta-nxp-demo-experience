@@ -21,7 +21,7 @@ Origin:                     NXP (MIT)
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                    NXP Demo Experience Source Code
-Release branch:             lf-6.1.1_1.0.0
+Release branch:             lf-6.1.22_2.0.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience/LICENSE
 Package Category:           Demo application
@@ -33,7 +33,7 @@ Origin:                     NXP (BSD-2-Clause)
                             The Qt Company Ltd. (BSD-3-Clause, LGPL-3.0-only)
 
 Package:                    NXP Demo Experience Demo Files
-Release branch:             lf-6.1.1_1.0.0
+Release branch:             lf-6.1.22_2.0.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience-demos-list/LICENSE
 Package Category:           Configuration
@@ -45,7 +45,7 @@ Origin:                     NXP (BSD-2-Clause)
                             NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
 Package:                    NXP Demo Experience Assets
-Release branch:             lf-6.1.1_1.0.0
+Release branch:             lf-6.1.22_2.0.0
 Outgoing License:           LA_OPT_NXP_Software_License v43 February 2023 - Additional distribution license granted, license in Section 2.3 applies
                             Files may be distributed according to the license noted in the headers or README files
 License File:               nxp-demo-experience-assets/LICENSE
