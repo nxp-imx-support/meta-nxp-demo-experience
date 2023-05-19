@@ -47,7 +47,7 @@ new file mode 100755
 index 0000000..c6512bd
 --- /dev/null
 +++ b/bt-init.sh
-@@ -0,0 +1,228 @@
+@@ -0,0 +1,226 @@
 +#!/bin/sh
 +
 +# Copyright 2022 NXP                                                                                                              
@@ -61,14 +61,12 @@ index 0000000..c6512bd
 +        # Init Bluetooth
 +        modprobe moal mod_para=nxp/wifi_mod_para.conf
 +        sleep 3
-+        hciattach /dev/tty$1 any 115200 flow
++        modprobe btnxpuart
 +        hciconfig hci0 up
 +        sleep 1
 +        #Set Baud Rate to 3000000
 +        hcitool -i hci0 cmd 0x3f 0x0009 0xc0 0xc6 0x2d 0x00
 +        sleep 2
-+        killall hciattach
-+        hciattach /dev/tty$1 any -s 3000000 3000000 flow
 +        sleep 1
 +        hciconfig hci0 up
 +        #SSP(Simple secure pairing) : New way to create linkkey using simple secure pairing
@@ -299,7 +297,7 @@ new file mode 100755
 index 0000000..f6e743a
 --- /dev/null
 +++ b/init.sh
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,44 @@
 +#!/bin/sh
 +
 +# Copyright 2022 NXP
@@ -318,6 +316,9 @@ index 0000000..f6e743a
 +elif [[ $evk == "imx93-11x11-lpddr4x-evk" || $evk == "imx93evk" ]]
 +then
 +        cp -v /unit_tests/nxp-afe/asound.conf_imx93 /etc/asound.conf
++elif  [[ $evk == "imx8mm-lpddr4-evk" || $evk == "imx8mmevk" ]]
++then
++        cp -v /unit_tests/nxp-afe/asound.conf_imx8mm /etc/asound.conf
 +else
 +        cp -v /unit_tests/nxp-afe/asound.conf /etc/asound.conf
 +fi
