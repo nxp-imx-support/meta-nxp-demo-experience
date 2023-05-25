@@ -6,7 +6,7 @@ This repository holds all the needed configuration to build the i.MX demos as we
 Dependencies
 ------------
 * nxp-demo-experience: https://github.com/nxp-imx-support/nxp-demo-experience 
-* nxp-demo-experience-demos-list: https://github.com/nxp-imx-support/imxsupport/nxp-demo-experience-demos-list
+* nxp-demo-experience-demos-list: https://github.com/nxp-imx-support/nxp-demo-experience-demos-list
 * meta-imx: https://github.com/nxp-imx/meta-imx/
 
 
