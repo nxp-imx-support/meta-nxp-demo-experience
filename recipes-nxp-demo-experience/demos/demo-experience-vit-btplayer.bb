@@ -3,18 +3,16 @@
 DESCRIPTION = "Example of Voice Intelligent Technology"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://EULA.txt;md5=5a0bf11f745e68024f37b4724a5364fe"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=63a38e9f392d8813d6f1f4d0d6fbe657"
 
-SRCBRANCH = "MM_04.07.02_2210_L5.15.y"
+SRCBRANCH = "MM_04.08.00_2305_L6.1.y"
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
-SRC_URI = "git://github.com/nxp-imx/imx-voiceui.git;protocol=https;branch=${SRCBRANCH} \
-					file://0001-Update-ExApp-Makefile-to-Build-Demo.patch \
-					file://0001-Add-Functionality-for-VITBTPlayer.patch \
-                                        file://0001-Add-i.MX93-support.patch \
-					file://0002-Modify-Makefile.patch \
-	  			"
-SRCREV = "ea810018d436a47fa19b40910cc6ce427c43bfc9"
+SRC_URI = "git://bitbucket.sw.nxp.com/mmcsh/imx-voiceseeker.git;protocol=ssh;branch=${SRCBRANCH} \
+					file://0001-Add-Functionality-for-VITBTPlayer-iMX8M.patch \
+					file://0001-Add-i.MX93-support.patch \
+        "
+SRCREV = "abfafd8957c9779c5f796e194fbd87c0c24d7767"
 
 S = "${WORKDIR}/git"
 

@@ -65,7 +65,7 @@ index 0000000..c6512bd
 +        hciconfig hci0 up
 +        sleep 1
 +        #Set Baud Rate to 3000000
-+        hcitool -i hci0 cmd 0x3f 0x0009 0xc0 0xc6 0x2d 0x00
++        #hcitool -i hci0 cmd 0x3f 0x0009 0xc0 0xc6 0x2d 0x00
 +        sleep 2
 +        sleep 1
 +        hciconfig hci0 up
@@ -335,9 +335,9 @@ index 0000000..f6e743a
 +
 +if [[ $evk == "imx93-11x11-lpddr4x-evk" || $evk == "imx93evk" ]]
 +then
-+        /home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo/i.MX9X_A55/btp_vit -ddefault -l ENGLISH -t 1000000 -i IMX9XA55 &
++        /home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo/i.MX9X_A55/btp_vit -ddefault -l ENGLISH -t 100000 -i IMX9XA55 &
 +else
-+        /home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo/i.MX8M_A53/btp_vit -ddefault -l ENGLISH -t 1000000 &
++        /home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo/i.MX8M_A53/btp_vit -ddefault -l ENGLISH -t 100000 &
 +fi
 +
 +sleep 2
