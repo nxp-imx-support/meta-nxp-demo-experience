@@ -5,10 +5,12 @@ SECTION = "multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://EULA.txt;md5=5a0bf11f745e68024f37b4724a5364fe"
 
-SRCBRANCH = "MM_04.08.00_2305_L6.1.y"
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
-SRC_URI = "git://github.com/nxp-imx/imx-voiceui.git;protocol=https;branch=${SRCBRANCH} \
+NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
+SRCBRANCH_voice = "MM_04.08.00_2305_L6.1.y"
+
+SRC_URI = "${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice} \
 					file://0001-Update-ExApp-Makefile-to-Build-Demo.patch \
 					file://0001-Add-Functionality-for-VITBTPlayer.patch \
                                         file://0001-Add-i.MX93-support.patch \
