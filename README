@@ -30,6 +30,8 @@ Releases
 
 Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
+* Mickledore
+  * 6.1.22_2.0.0
 * Langdale
   * 6.1.1_1.0.0
 * Kirkstone
