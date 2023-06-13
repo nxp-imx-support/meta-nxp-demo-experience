@@ -1,5 +1,3 @@
-# Copyright 2020-2023 NXP
-
 DESCRIPTION = "Example of Voice Intelligent Technology"
 SECTION = "multimedia"
 LICENSE = "Proprietary"

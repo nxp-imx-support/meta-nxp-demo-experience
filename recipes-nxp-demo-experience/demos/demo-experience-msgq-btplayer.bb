@@ -1,5 +1,3 @@
-# Copyright 2020-2023 NXP
-
 SUMARY = "Message queue command sender"
 DESCRIPTION = "The MsgQ app it's used by Btplayer app to send the MAC address of the current mobile device connected through bt"
 SECTION = "Multimedia"

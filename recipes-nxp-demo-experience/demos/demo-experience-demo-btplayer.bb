@@ -1,5 +1,3 @@
-# Copyright 2020-2023 NXP
-
 SUMARY = "BTPlayer demo"
 DESCRIPTION = "Recipe of btplayer demo application"
 SECTION = "Multimedia"
