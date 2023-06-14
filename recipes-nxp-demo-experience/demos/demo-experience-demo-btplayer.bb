@@ -10,7 +10,7 @@ SRC_URI = "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https;b
           file://0001-Use-QML-loader-for-splashScreen-and-main-view.patch \
           file://0001-Add-Multimedia-Player-title.patch \
           "
-SRCREV = "e6178bc98212713cef4cdf34072c0dca203065fd"
+SRCREV = "c44624a761609b176b14386d81fa7180b65770a8"
 
 S = "${WORKDIR}/git/app"
 
