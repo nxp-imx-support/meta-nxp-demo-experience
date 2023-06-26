@@ -1,9 +1,8 @@
 SUMARY = "BTPlayer demo"
 DESCRIPTION = "Recipe of btplayer demo application"
 SECTION = "Multimedia"
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
-SRCBRANCH = "master"
+LICENSE = "BSD-3-Clause"
+LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;md5=550794465ba0ec5312d6919e203a55f9"
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
 SRC_URI = "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https;branch=${SRCBRANCH} \
@@ -11,6 +10,7 @@ SRC_URI = "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https;b
           file://0001-Add-Multimedia-Player-title.patch \
           "
 SRCREV = "c44624a761609b176b14386d81fa7180b65770a8"
+SRCBRANCH = "master"
 
 S = "${WORKDIR}/git/app"
 

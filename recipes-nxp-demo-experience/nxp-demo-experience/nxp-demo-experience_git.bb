@@ -1,6 +1,6 @@
 SUMMARY = "NXP Demo Experience"
 DESCRIPTION = "Launcher for NXP Demo Experience"
-LICENSE = "MIT"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
 
 S = "${WORKDIR}/git"

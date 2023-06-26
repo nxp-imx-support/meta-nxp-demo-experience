@@ -359,3 +359,34 @@ index 0000000..883e02b
 +
 +echo "Disconnect"
 +bluetoothctl disconnect
+diff --git a/content/PlayerMenuBar.qml b/content/PlayerMenuBar.qml
+index 8297907..c4239d4 100755
+--- a/content/PlayerMenuBar.qml
++++ b/content/PlayerMenuBar.qml
+@@ -205,7 +205,7 @@ Item {
+                     y: 28
+                     font.pointSize:7
+                     wrapMode: Text.WordWrap
+-                    text: qsTr("  The Qt Company Ltd. (LGPL-3.0-only)");
++                    text: qsTr("  The Qt Company Ltd. (BSD-3-Clause)");
+                 }
+                 Label {
+                     x: 0
+@@ -220,7 +220,7 @@ Item {
+                     y: 56
+                     font.pointSize:7
+                     wrapMode: Text.WordWrap
+-                    text: qsTr("LA_OPT_NXP_Software_License v38 August 2022\n");
++                    text: qsTr("LA_OPT_NXP_Software_License v46 June 2023\n");
+                 }
+                 Label {
+                     x: 0
+@@ -243,7 +243,7 @@ Item {
+                     font.italic: true
+                     font.pointSize:7
+                     color: 'gray'
+-                    text: "Copyright 2022 NXP"
++                    text: "Copyright 2022-2023 NXP"
+                     }
+             }
+        }
