@@ -1,17 +1,16 @@
-i.MX Demos Meta Layer
-======================
+# i.MX Demos Meta Layer
+
+[![GitHub](https://img.shields.io/github/license/nxp-imx-support/meta-nxp-demo-experience)](./LICENSE)
 
 This repository holds all the needed configuration to build the i.MX demos as well as the i.MX Demo Launcher interface.
 
-Dependencies
-------------
-* nxp-demo-experience: https://github.com/nxp-imx-support/nxp-demo-experience 
+## Dependencies
+
+* nxp-demo-experience: https://github.com/nxp-imx-support/nxp-demo-experience
 * nxp-demo-experience-demos-list: https://github.com/nxp-imx-support/nxp-demo-experience-demos-list
 * meta-imx: https://github.com/nxp-imx/meta-imx/
 
-
-Supported boards
-----------------
+## Supported boards
 
 * NXP i.MX 93 EVK (imx93evk)
 * NXP i.MX 8ULP EVK (imx8ulpevk)
@@ -25,8 +24,7 @@ Supported boards
 * NXP i.MX 8DXL EVK (imdx8dxlevk)
 * NXP i.MX 7ULP EVK (imx7ulpevk)
   
-Releases
---------
+## Releases
 
 Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
@@ -51,7 +49,6 @@ Releases are tracked against the i.MX Linux software releases. Supported release
   * 5.4.70_2.3.0
   * 5.4.47_2.2.0
 
-Install
--------
+## Install
 
 The Demo Experience is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release.
