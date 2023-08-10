@@ -10,10 +10,10 @@ DEPENDS += "alsa-lib nxp-afe"
 RDEPENDS:${PN} = "nxp-afe-voiceseeker"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.08.00_2305_L6.1.y"
+SRCBRANCH_voice = "MM_04.08.01_2308_L6.1.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "next"
+SRCBRANCH_model = "lf-6.1.36_2.1.0"
 
 SRC_URI = "\
 	${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -23,8 +23,8 @@ SRC_URI:append:imx93-11x11-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-Cortex
 
 SRCREV_FORMAT = "voice_model"
 
-SRCREV_voice = "${AUTOREV}"
-SRCREV_model = "${AUTOREV}"
+SRCREV_voice = "f43c722686009a6553a3189ba7b0449b1f66341d"
+SRCREV_model = "95b27a79a0956edee61d01a539302410bb9e0766"
 
 S = "${WORKDIR}/git"
 MODEL_DIR = "${WORKDIR}/demo-experience-smart-kitchen"
