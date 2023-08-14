@@ -4,30 +4,19 @@ Release: NXP Demo Experience
 Version: 4.5
 Date: June 2023
 Outgoing License: LA_OPT_NXP_Software_License v46 June 2023  - Additional distribution license granted, license in Section 2.3 applies
-License File: LICENSE
+License File: DEXP-LICENSE
 
 --------------- THIS PACKAGE ---------------
 
 Package:                    NXP Demo Experience Yocto Project Meta Layer
 Release branch:             mickledore-6.1.22-2.0.0
-Outgoing License:           LA_OPT_NXP_Software_License v46 June 2023  - Additional distribution license granted, license in Section 2.3 applies
+Outgoing License:           MIT
 License File:               LICENSE
 Package Category:           Software build scripts
 Type of content:            Bitbake recipes
 Description and comments:   Yocto Project meta layer used to integrate into the i.MX BSP
 Release Location:           https://github.com/nxp-imx-support/meta-nxp-demo-experience
 Origin:                     NXP (MIT) Yocto Recipes
-                            VIT_Model (proprietary)
-                            The Qt Company Ltd. (BSD-3-Clause)
-
-Package:                    VIT_Model
-Version:                    2023.1.0
-Outgoing License:           LA_OPT_NXP_Software_License v46 June 2023 - Additional distribution license granted, license in Section 2.3 applies
-License File:               LICENSE
-Package Category:           Model Data
-Type of Content:            Source code (patch)
-Description and comments:   Generated VIT Model data defining WakeWord (Text2Model) and Voice Commands list (text2Model) for Voice Intelligent Technology (VIT).
-Origin:                     NXP (proprietary) Generated from https://vit.nxp.com/
 
 ---------- OTHER REQUIRED PACKAGES ---------
 
@@ -68,4 +57,4 @@ Origin:                     NXP (propietary)
                             The TensorFlow Authors (Apache-2.0)
                             Google LLC (Apache-2.0)
                             FaceRecognition with FaceNet Android Authors (Apache-2.0)
-                            MediaPipe (Apache-2.0) https://google.github.io/mediapipe/solutions/models
+                            MediaPipe (Apache-2.0) https://developers.google.com/mediapipe/solutions
