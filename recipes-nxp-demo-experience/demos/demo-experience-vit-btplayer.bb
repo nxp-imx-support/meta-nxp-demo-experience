@@ -4,7 +4,7 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=63a38e9f392d8813d6f1f4d0d6fbe657"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.08.00_2308_L6.1.y"
+SRCBRANCH_voice = "MM_04.08.01_2308_L6.1.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 SRCBRANCH_model = "next"
@@ -23,7 +23,7 @@ SRC_URI = "\
 SRC_URI:append:imx93-11x11-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
 
 SRCREV_FORMAT = "voice_model_player"
-SRCREV_voice = "abfafd8957c9779c5f796e194fbd87c0c24d7767"
+SRCREV_voice = "f43c722686009a6553a3189ba7b0449b1f66341d"
 SRCREV_model = "${AUTOREV}"
 SRCREV_player = "378da8c0d32384038e2bc20cac7cba5c391dec9d"
 
