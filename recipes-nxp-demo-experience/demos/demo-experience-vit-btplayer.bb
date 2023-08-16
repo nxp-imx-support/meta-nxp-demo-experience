@@ -7,7 +7,7 @@ NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=htt
 SRCBRANCH_voice = "MM_04.08.01_2308_L6.1.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "next"
+SRCBRANCH_model = "lf-6.1.36_2.1.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 SRCBRANCH_player = "next"
@@ -24,7 +24,7 @@ SRC_URI:append:imx93-11x11-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-Cortex
 
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "f43c722686009a6553a3189ba7b0449b1f66341d"
-SRCREV_model = "${AUTOREV}"
+SRCREV_model = "d692677c657536db62be369073e1accde047cdfe"
 SRCREV_player = "378da8c0d32384038e2bc20cac7cba5c391dec9d"
 
 S = "${WORKDIR}/git"
