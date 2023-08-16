@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31
 
 S = "${WORKDIR}/git"
 
-SRCBRANCH = "lf-6.1.22_2.0.0"
+SRCBRANCH = "lf-6.1.36_2.1.0"
 
 NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience-demos-list.git;protocol=https"
@@ -17,8 +17,8 @@ SRC_URI = " \
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 
-SRCREV_nxp-demo-experience = "${AUTOREV}"
-SRCREV_demos = "${AUTOREV}"
+SRCREV_nxp-demo-experience = "9f883cf1bfdd70c7a787a3aae6ab55209aa5e46f"
+SRCREV_demos = "52e74ff6dd2eeea76e5b6d64351118bb798e6e6b"
 
 PV = "4.5+git${SRCPV}"
 
