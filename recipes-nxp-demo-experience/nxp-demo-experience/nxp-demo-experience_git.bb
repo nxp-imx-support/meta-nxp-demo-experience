@@ -20,7 +20,7 @@ SRCREV_FORMAT = "nxp-demo-experience_demos"
 SRCREV_nxp-demo-experience = "9f883cf1bfdd70c7a787a3aae6ab55209aa5e46f"
 SRCREV_demos = "52e74ff6dd2eeea76e5b6d64351118bb798e6e6b"
 
-PV = "4.5+git${SRCPV}"
+PV = "4.6+git${SRCPV}"
 
 inherit qt6-qmake
 
