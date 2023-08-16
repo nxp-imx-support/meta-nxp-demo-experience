@@ -10,7 +10,7 @@ NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;proto
 SRCBRANCH_model = "lf-6.1.36_2.1.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
-SRCBRANCH_player = "next"
+SRCBRANCH_player = "master"
 
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 

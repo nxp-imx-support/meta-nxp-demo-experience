@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;m
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
-SRCBRANCH = "next"
+SRCBRANCH = "master"
 SRCREV = "378da8c0d32384038e2bc20cac7cba5c391dec9d"
 
 SRC_URI = "${NXP_BTPLAYER_SRC};branch=${SRCBRANCH} \
