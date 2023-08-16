@@ -29,6 +29,7 @@ This repository holds all the needed configuration to build the i.MX demos as we
 Releases are tracked against the i.MX Linux software releases. Supported releases are listed below.
 
 * Mickledore
+  * 6.1.36_2.1.0
   * 6.1.22_2.0.0
 * Langdale
   * 6.1.1_1.0.0

@@ -1,15 +1,15 @@
 NXP Software Content Register
 
 Release: NXP Demo Experience
-Version: 4.5
-Date: June 2023
-Outgoing License: LA_OPT_NXP_Software_License v46 June 2023  - Additional distribution license granted, license in Section 2.3 applies
+Version: 4.6
+Date: September 2023
+Outgoing License: LA_OPT_NXP_Software_License v48 July 2023 - Additional distribution license granted, license in Section 2.3 applies
 License File: DEXP-LICENSE
 
 --------------- THIS PACKAGE ---------------
 
 Package:                    NXP Demo Experience Yocto Project Meta Layer
-Release branch:             mickledore-6.1.22-2.0.0
+Release branch:             mickledore-6.1.36-2.1.0
 Outgoing License:           MIT
 License File:               LICENSE
 Package Category:           Software build scripts
@@ -21,7 +21,7 @@ Origin:                     NXP (MIT) Yocto Recipes
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                    NXP Demo Experience Source Code
-Release branch:             lf-6.1.22_2.0.0
+Release branch:             lf-6.1.36_2.1.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience/LICENSE
 Package Category:           Demo application
@@ -33,7 +33,7 @@ Origin:                     NXP (BSD-2-Clause)
                             The Qt Company Ltd. (BSD-3-Clause)
 
 Package:                    NXP Demo Experience Demo Files
-Release branch:             lf-6.1.22_2.0.0
+Release branch:             lf-6.1.36_2.1.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience-demos-list/LICENSE
 Package Category:           Configuration
@@ -45,8 +45,8 @@ Origin:                     NXP (BSD-2-Clause)
                             NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
 Package:                    NXP Demo Experience Assets
-Release branch:             lf-6.1.22_2.0.0
-Outgoing License:           LA_OPT_NXP_Software_License v46 June 2023 - Additional distribution license granted, license in Section 2.3 applies
+Release branch:             lf-6.1.36_2.1.0
+Outgoing License:           LA_OPT_NXP_Software_License v48 July 2023 - Additional distribution license granted, license in Section 2.3 applies
                             Files may be distributed according to the license noted in the headers or README files
 License File:               nxp-demo-experience-assets/LICENSE
 Package Category:           Demo application
