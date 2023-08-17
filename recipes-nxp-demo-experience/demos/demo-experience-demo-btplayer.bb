@@ -5,13 +5,12 @@ LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;md5=550794465ba0ec5312d6919e203a55f9"
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
-SRC_URI = "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https;branch=${SRCBRANCH} \
-          file://0001-Use-QML-loader-for-splashScreen-and-main-view.patch \
-          file://0001-Add-Multimedia-Player-title.patch \
-          "
-SRCREV = "c44624a761609b176b14386d81fa7180b65770a8"
+NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 SRCBRANCH = "master"
+SRCREV = "378da8c0d32384038e2bc20cac7cba5c391dec9d"
 
+SRC_URI = "${NXP_BTPLAYER_SRC};branch=${SRCBRANCH} \
+          "
 S = "${WORKDIR}/git/app"
 
 DEMOS ?= ""
@@ -28,11 +27,11 @@ do_install() {
     install ${WORKDIR}/git/scripts/Enable_VIT_Auto_Start.sh ${D}${BTDEMODIR}
     install ${WORKDIR}/git/scripts/Enable_VoiceSeeker.sh ${D}${BTDEMODIR}
     install ${WORKDIR}/git/scripts/volume.sh ${D}${BTDEMODIR}
-    install ${WORKDIR}/git/app/init.sh ${D}${BTDEMODIR}
-    install ${WORKDIR}/git/app/Restore_AFEConfig.sh ${D}${BTDEMODIR}
-    install ${WORKDIR}/git/app/Config.ini ${D}${BTDEMODIR}
-    install ${WORKDIR}/git/app/bt-init.sh ${D}${BTDEMODIR}
-    install ${WORKDIR}/git/app/stop.sh ${D}${BTDEMODIR}
+    install ${WORKDIR}/git/scripts/init.sh ${D}${BTDEMODIR}
+    install ${WORKDIR}/git/scripts/Restore_AFEConfig.sh ${D}${BTDEMODIR}
+    install ${WORKDIR}/git/scripts/Config.ini ${D}${BTDEMODIR}
+    install ${WORKDIR}/git/scripts/bt-init.sh ${D}${BTDEMODIR}
+    install ${WORKDIR}/git/scripts/stop.sh ${D}${BTDEMODIR}
 }
 
 FILES:${PN} += "${BTDEMODIR} "
