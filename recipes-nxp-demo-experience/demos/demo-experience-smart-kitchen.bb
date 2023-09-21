@@ -4,12 +4,12 @@ SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;md5=550794465ba0ec5312d6919e203a55f9"
 
-NXP_SMART_KITCHEN_SRC ?= "gitsm://github.com/nxp-imx-support/smart-kitchen.git"
+NXP_SMART_KITCHEN_SRC = "git://github.com/nxp-imx-support/smart-kitchen.git;protocol=https"
 SRCBRANCH = "master"
 DEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/smart-kitchen"
 
 
-SRC_URI = "${NXP_SMART_KITCHEN_SRC};protocol=ssh;branch=${SRCBRANCH} \
+SRC_URI = "${NXP_SMART_KITCHEN_SRC};branch=${SRCBRANCH} \
 			file://0001-Added-custom_tick_get-function.patch"
 
 SRCREV = "be52b921b1efccf1c6c0656e354182ce564502bc"
