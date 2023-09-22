@@ -21,7 +21,10 @@ SRC_URI = "\
         file://0001-Change-Recipe-Target-Sysroot-path.patch \
         "
 
+SRC_URI:append:imx93evk = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
+SRC_URI:append:imx93-9x9-lpddr4-qsb = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
 SRC_URI:append:imx93-11x11-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
+SRC_URI:append:imx93-14x14-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
 
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "f43c722686009a6553a3189ba7b0449b1f66341d"
