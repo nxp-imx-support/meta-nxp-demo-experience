@@ -1,6 +1,6 @@
 NXP Software Content Register
 
-Release: NXP Demo Experience
+Release: GoPoint for i.MX Application Processors
 Version: 4.6
 Date: September 2023
 Outgoing License: LA_OPT_NXP_Software_License v48 July 2023 - Additional distribution license granted, license in Section 2.3 applies
@@ -8,7 +8,7 @@ License File: DEXP-LICENSE
 
 --------------- THIS PACKAGE ---------------
 
-Package:                    NXP Demo Experience Yocto Project Meta Layer
+Package:                    GoPoint for i.MX Application Processors Yocto Project Meta Layer
 Release branch:             mickledore-6.1.36-2.1.0
 Outgoing License:           MIT
 License File:               LICENSE
@@ -20,7 +20,7 @@ Origin:                     NXP (MIT) Yocto Recipes
 
 ---------- OTHER REQUIRED PACKAGES ---------
 
-Package:                    NXP Demo Experience Source Code
+Package:                    GoPoint for i.MX Application Processors Source Code
 Release branch:             lf-6.1.36_2.1.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience/LICENSE
@@ -32,7 +32,7 @@ Origin:                     NXP (BSD-2-Clause)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
                             The Qt Company Ltd. (BSD-3-Clause)
 
-Package:                    NXP Demo Experience Demo Files
+Package:                    GoPoint for i.MX Application Processors Demo Files
 Release branch:             lf-6.1.36_2.1.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience-demos-list/LICENSE
@@ -44,14 +44,14 @@ Origin:                     NXP (BSD-2-Clause)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
                             NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
-Package:                    NXP Demo Experience Assets
+Package:                    GoPoint for i.MX Application Processors Assets
 Release branch:             lf-6.1.36_2.1.0
 Outgoing License:           LA_OPT_NXP_Software_License v48 July 2023 - Additional distribution license granted, license in Section 2.3 applies
                             Files may be distributed according to the license noted in the headers or README files
 License File:               nxp-demo-experience-assets/LICENSE
 Package Category:           Demo application
 Type of content:            Machine learning models, videos, graphics, images, compiled executable
-Description and comments:   NXP Demo Experience data, models and utility program
+Description and comments:   GoPoint for i.MX Application Processors data, models and utility program
 Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience-assets
 Origin:                     NXP (propietary)
                             The TensorFlow Authors (Apache-2.0)

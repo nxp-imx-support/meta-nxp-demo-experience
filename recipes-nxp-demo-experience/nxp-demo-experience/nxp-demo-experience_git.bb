@@ -1,5 +1,5 @@
-SUMMARY = "NXP Demo Experience"
-DESCRIPTION = "Launcher for NXP Demo Experience"
+SUMMARY = "GoPoint for i.MX Application Processors"
+DESCRIPTION = "Launcher for GoPoint for i.MX Application Processors"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
 
@@ -38,6 +38,8 @@ do_install() {
 
     install -d -m 755 ${D}${bindir}
     install ${WORKDIR}/build/demoexperience ${D}${bindir}
+
+    ln -sf ${D}${bindir}/demoexperience ${D}${bindir}/gopoint
 }
 
 FILES:${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
