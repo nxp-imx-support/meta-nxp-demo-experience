@@ -1,4 +1,5 @@
 # i.MX Demos Meta Layer
+### NOTE: The NXP Demo Experience is now GoPoint for i.MX Application Processors.
 
 [![GitHub](https://img.shields.io/github/license/nxp-imx-support/meta-nxp-demo-experience)](./LICENSE)
 
@@ -52,4 +53,4 @@ Releases are tracked against the i.MX Linux software releases. Supported release
 
 ## Install
 
-The Demo Experience is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release.
+GoPoint for i.MX Application Processors is now apart of the i.MX Linux software releases as of 5.4.47_2.2.0. To install, follow the i.MX Yocto Project User Guide for that release.
