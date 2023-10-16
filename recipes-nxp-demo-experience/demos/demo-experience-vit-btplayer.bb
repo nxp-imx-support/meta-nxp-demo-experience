@@ -10,6 +10,7 @@ NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;proto
 SRCBRANCH_model = "next"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
+NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH_player = "master"
 
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
@@ -17,7 +18,7 @@ BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 SRC_URI = "\
         ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
         ${NXP_DEMO_ASSET_SRC};branch=${SRCBRANCH_model};name=model;subpath=build/demo-experience-voice-demo-bt-player \
-        ${NXP_BTPLAYER_SRC};branch=${SRCBRANCH_player};name=player;subpath=voiceAction \
+        ${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH_player};name=player;subpath=voiceAction \
         file://0001-Change-Recipe-Target-Sysroot-path.patch \
         "
 
