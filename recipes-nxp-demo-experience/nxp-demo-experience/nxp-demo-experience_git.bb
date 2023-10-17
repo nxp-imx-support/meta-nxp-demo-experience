@@ -39,7 +39,7 @@ do_install() {
     install -d -m 755 ${D}${bindir}
     install ${WORKDIR}/build/demoexperience ${D}${bindir}
 
-    ln -sf ${D}${bindir}/demoexperience ${D}${bindir}/gopoint
+    ln -sfr ${D}${bindir}/demoexperience ${D}${bindir}/gopoint
 }
 
 FILES:${PN} += "${bindir}* /home/root/.nxp-demo-experience/* "
