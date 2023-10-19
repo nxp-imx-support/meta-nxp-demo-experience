@@ -4,7 +4,7 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=db4762b09b6bda63da103963e6e081de"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.08.01_2308_L6.1.y"
+SRCBRANCH_voice = "voice_2.0"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 SRCBRANCH_model = "next"
@@ -61,8 +61,8 @@ do_patch() {
 }
 
 do_compile() {
-    cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/i.MX8M_A53/Lib/VIT_Model_en.h
-    cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/i.MX9X_A55/Lib/VIT_Model_en.h
+    cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
+    cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
     cd ${WORKDIR}/git
     make
     cd ${WORKDIR}/voiceAction

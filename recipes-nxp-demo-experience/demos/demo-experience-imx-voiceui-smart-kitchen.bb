@@ -10,7 +10,7 @@ DEPENDS += "alsa-lib nxp-afe"
 RDEPENDS:${PN} = "nxp-afe-voiceseeker"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.08.01_2308_L6.1.y"
+SRCBRANCH_voice = "voice_2.0"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 SRCBRANCH_model = "next"
@@ -35,8 +35,8 @@ EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
 do_compile () {
-	cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/i.MX9X_A55/Lib/VIT_Model_en.h
-	cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/i.MX8M_A53/Lib/VIT_Model_en.h
+	cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
+    cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
 	cd ${WORKDIR}/git
 	make
 }
