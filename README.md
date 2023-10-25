@@ -1,7 +1,7 @@
 # i.MX Demos Meta Layer
 ### NOTE: The NXP Demo Experience is now GoPoint for i.MX Application Processors.
 
-[![GitHub](https://img.shields.io/github/license/nxp-imx-support/meta-nxp-demo-experience)](./LICENSE)
+[![GitHub](https://img.shields.io/github/license/nxp-imx-support/meta-nxp-demo-experience)](./LICENSE.txt)
 
 This repository holds all the needed configuration to build the i.MX demos as well as the i.MX Demo Launcher interface.
 
