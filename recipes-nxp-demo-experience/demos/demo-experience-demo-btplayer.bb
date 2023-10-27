@@ -8,7 +8,7 @@ BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH = "master"
-SRCREV = "${AUTOREV}"
+SRCREV = "c140ffae7b97dc90ac49ba1fcffd91f9a1e983fd"
 
 SRC_URI = "${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH} \
           "
