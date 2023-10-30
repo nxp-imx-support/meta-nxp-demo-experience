@@ -22,8 +22,6 @@ SRC_URI = "\
         file://0001-Change-Recipe-Target-Sysroot-path.patch \
         "
 
-SRC_URI:append:imx93-11x11-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
-
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "5eac64dc0f93c755941770c46d5e315aec523b3d"
 SRCREV_model = "ae00efcfea078931a3ce0a7c1a6c5c59ef192195"
@@ -46,14 +44,6 @@ EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=/usr/lib/"
 
 EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
-
-do_patch:mx93-generic-bsp() {
-
-    mv ${WORKDIR}/0001-changed-BUILD_ARCH-CortexA55.patch ${WORKDIR}/git
-    cd ${WORKDIR}/git && git apply 0001-changed-BUILD_ARCH-CortexA55.patch
-    mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
-    cd ${WORKDIR}/voiceAction && git apply 0001-Change-Recipe-Target-Sysroot-path.patch
-}
 
 do_patch() {
     mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
