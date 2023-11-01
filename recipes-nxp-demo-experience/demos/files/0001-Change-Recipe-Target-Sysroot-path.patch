@@ -11,9 +11,9 @@ index d246a2a..e835177 100644
 -       -I/${OECORE_TARGET_SYSROOT}/usr/include/dbus-1.0/ \
 -       -I/${OECORE_TARGET_SYSROOT}/usr/lib/dbus-1.0/include/
 +IFLAGS=-I../recipe-sysroot/usr/include/glib-2.0 \
-+       -I../recipe-sysroot/usr/lib/glib-2.0/include -lglib-2.0 \
++       -I../recipe-sysroot${libdir}/glib-2.0/include -lglib-2.0 \
 +       -I../recipe-sysroot/usr/include/dbus-1.0/ \
-+       -I../recipe-sysroot/usr/lib/dbus-1.0/include/
++       -I../recipe-sysroot${libdir}/dbus-1.0/include/
  
  CFLAGS=-std=gnu99 \
  	 -Wno-unused-variable \
@@ -21,7 +21,7 @@ index d246a2a..e835177 100644
  
  $(EXE) : $(EXE_OBJ_FILES)
  	$(CC) $(CFLAGS)  $^  \
-+		-L../recipe-sysroot/usr/lib -ldbus-1 \
++		-L../recipe-sysroot${libdir} -ldbus-1 \
 +		-lglib-2.0 \
  	 -lm  \
  	  -o $@

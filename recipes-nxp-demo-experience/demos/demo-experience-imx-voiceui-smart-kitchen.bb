@@ -29,7 +29,7 @@ SRCREV_model = "${AUTOREV}"
 S = "${WORKDIR}/git"
 MODEL_DIR = "${WORKDIR}/demo-experience-smart-kitchen"
 
-EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=/usr/lib/"
+EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=${libdir}"
 
 EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
