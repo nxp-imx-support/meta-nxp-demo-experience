@@ -28,7 +28,7 @@ SRCREV_model = "ae00efcfea078931a3ce0a7c1a6c5c59ef192195"
 
 S = "${WORKDIR}/git"
 
-EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=/usr/lib/"
+EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=${libdir}"
 
 EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
