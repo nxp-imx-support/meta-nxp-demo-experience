@@ -13,7 +13,7 @@ NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protoc
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH_player = "master"
 
-BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
+IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
 SRC_URI = "\
         ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -70,27 +70,27 @@ do_compile() {
 }
 
 do_install() {
-        install -d -m 0755 ${D}${BTDEMODIR}
-        install -d -m 0755 ${D}${BTDEMODIR}/i.MX8M_A53
-        install -d -m 0755 ${D}${BTDEMODIR}/i.MX9X_A55
-        install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${BTDEMODIR}/i.MX8M_A53
-        install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${BTDEMODIR}/i.MX9X_A55
-        install -m 0755 ${WORKDIR}/git/release/HeyNXP_1_params.bin ${D}${BTDEMODIR}
-        install -m 0755 ${WORKDIR}/git/release/HeyNXP_en-US_1.bin ${D}${BTDEMODIR}
-        install -m 0755 ${WORKDIR}/git/release/libvoiceseekerlight.so.2.0 ${D}${BTDEMODIR}
-        install -m 0755 ${WORKDIR}/voiceAction/build/btp ${D}${BTDEMODIR}
-        install -m 0755 ${WORKDIR}/voiceAction/bridgeVoiceUI/WakeWordNotify ${D}${BTDEMODIR}
-        install -m 0755 ${WORKDIR}/voiceAction/bridgeVoiceUI/WWCommandNotify ${D}${BTDEMODIR}
+        install -d -m 0755 ${D}${IMX_VOICE_PLAYER_DIR}
+        install -d -m 0755 ${D}${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53
+        install -d -m 0755 ${D}${IMX_VOICE_PLAYER_DIR}/i.MX9X_A55
+        install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53
+        install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${IMX_VOICE_PLAYER_DIR}/i.MX9X_A55
+        install -m 0755 ${WORKDIR}/git/release/HeyNXP_1_params.bin ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${WORKDIR}/git/release/HeyNXP_en-US_1.bin ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${WORKDIR}/git/release/libvoiceseekerlight.so.2.0 ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${WORKDIR}/voiceAction/build/btp ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${WORKDIR}/voiceAction/bridgeVoiceUI/WakeWordNotify ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${WORKDIR}/voiceAction/bridgeVoiceUI/WWCommandNotify ${D}${IMX_VOICE_PLAYER_DIR}
 }
 
-FILES:${PN} += "${BTDEMODIR}/i.MX8M_A53/voice_ui_app"
-FILES:${PN} += "${BTDEMODIR}/i.MX9X_A55/voice_ui_app"
-FILES:${PN} += "${BTDEMODIR}/HeyNXP_1_params.bin"
-FILES:${PN} += "${BTDEMODIR}/HeyNXP_en-US_1.bin"
-FILES:${PN} += "${BTDEMODIR}/libvoiceseekerlight.so.2.0"
-FILES:${PN} += "${BTDEMODIR}/btp"
-FILES:${PN} += "${BTDEMODIR}/WakeWordNotify"
-FILES:${PN} += "${BTDEMODIR}/WWCommandNotify"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53/voice_ui_app"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/i.MX9X_A55/voice_ui_app"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/HeyNXP_1_params.bin"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/HeyNXP_en-US_1.bin"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/libvoiceseekerlight.so.2.0"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/btp"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/WakeWordNotify"
+FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/WWCommandNotify"
 
 INSANE_SKIP_${PN} += "ldflags"
 TARGET_CC_ARCH += "${LDFLAGS}"
