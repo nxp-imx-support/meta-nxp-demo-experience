@@ -1,5 +1,5 @@
-DESCRIPTION = "NXP Demo Experience Voice App"
-SECTION = "multimedia"
+DESCRIPTION = "GoPoint Voice App"
+SECTION = "Multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=db4762b09b6bda63da103963e6e081de"
 

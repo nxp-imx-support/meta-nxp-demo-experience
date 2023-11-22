@@ -1,7 +1,7 @@
 SUMMARY = "GoPoint for i.MX Application Processors"
 DESCRIPTION = "Launcher for GoPoint for i.MX Application Processors"
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f16dd419c71c562a26de3144de8f8ab8"
 
 S = "${WORKDIR}/git"
 
