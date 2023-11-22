@@ -2,7 +2,7 @@ SUMARY = "Smart Kitchen demo"
 DESCRIPTION = "Recipe of Smart Kitchen demo application"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;md5=550794465ba0ec5312d6919e203a55f9"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=bfc86b98f9b03945e2b6cf6aa6a2030b"
 
 NXP_SMART_KITCHEN_SRC ?= "gitsm://github.com/nxp-imx-support/smart-kitchen.git"
 SRCBRANCH = "master"

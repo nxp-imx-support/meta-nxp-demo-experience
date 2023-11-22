@@ -2,7 +2,7 @@ SUMARY = "BTPlayer demo"
 DESCRIPTION = "Recipe of btplayer demo application"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;md5=550794465ba0ec5312d6919e203a55f9"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE.txt;md5=02214c96bef56300b0c1f4c6887d3114"
 BTDEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
