@@ -25,7 +25,7 @@ SRC_URI = "\
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "5eac64dc0f93c755941770c46d5e315aec523b3d"
 SRCREV_model = "ecd46cc4a7d0233eb4b5484c061d595857dd43b5"
-SRCREV_player = "3b494ff80b48b83a5e130063b83608490c0d77e8"
+SRCREV_player = "39379726940b76cfd457d55c12a92b105f4edccb"
 
 S = "${WORKDIR}/git"
 
