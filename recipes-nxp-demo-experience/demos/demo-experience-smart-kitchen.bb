@@ -12,7 +12,7 @@ DEMODIR = "/home/root/.nxp-demo-experience/scripts/multimedia/smart-kitchen"
 SRC_URI = "${NXP_SMART_KITCHEN_SRC};branch=${SRCBRANCH} \
 			file://0001-Added-custom_tick_get-function.patch"
 
-SRCREV = "c3ed48654807037c61117cca6b3eded7cc274b86"
+SRCREV = "a89e956e7782cb63a3e890845e7db18a4eabc88f"
 
 S = "${WORKDIR}/git"
 
