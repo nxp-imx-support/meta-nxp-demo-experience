@@ -24,7 +24,7 @@ SRC_URI = "\
 
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "5eac64dc0f93c755941770c46d5e315aec523b3d"
-SRCREV_model = "ae00efcfea078931a3ce0a7c1a6c5c59ef192195"
+SRCREV_model = "ecd46cc4a7d0233eb4b5484c061d595857dd43b5"
 SRCREV_player = "3b494ff80b48b83a5e130063b83608490c0d77e8"
 
 S = "${WORKDIR}/git"
@@ -54,9 +54,9 @@ do_compile() {
     cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
     cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
     cd ${WORKDIR}/git
-    make
+    oe_runmake
     cd ${WORKDIR}/voiceAction
-    make
+    oe_runmake
 }
 
 do_install() {

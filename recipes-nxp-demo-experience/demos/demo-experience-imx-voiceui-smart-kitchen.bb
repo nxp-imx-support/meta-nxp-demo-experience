@@ -21,8 +21,8 @@ SRC_URI = "\
 
 SRCREV_FORMAT = "voice_model"
 
-SRCREV_voice = "${AUTOREV}"
-SRCREV_model = "${AUTOREV}"
+SRCREV_voice = "5eac64dc0f93c755941770c46d5e315aec523b3d"
+SRCREV_model = "ecd46cc4a7d0233eb4b5484c061d595857dd43b5"
 
 S = "${WORKDIR}/git"
 MODEL_DIR = "${WORKDIR}/demo-experience-smart-kitchen"
@@ -34,9 +34,9 @@ EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
 do_compile () {
 	cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
-    cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
+  cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
 	cd ${WORKDIR}/git
-	make
+	oe_runmake
 }
 
 do_install() {
