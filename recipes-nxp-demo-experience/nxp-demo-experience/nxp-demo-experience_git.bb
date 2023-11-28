@@ -18,7 +18,7 @@ SRC_URI = " \
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 
 SRCREV_nxp-demo-experience = "3e00acde71d0fa045ff7e015bdab4dcb1db49c74"
-SRCREV_demos = "12c51e8fcedec265d0d2ecd7d161bd3d6ddacd79"
+SRCREV_demos = "976175ce23d684f65f6c738a9d32f002cd13f402"
 
 PV = "4.7+git${SRCPV}"
 
