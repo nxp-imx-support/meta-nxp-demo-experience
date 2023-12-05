@@ -47,13 +47,13 @@ EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=/usr/lib/"
 EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
-do_patch:mx93-generic-bsp() {
-
-    mv ${WORKDIR}/0001-changed-BUILD_ARCH-CortexA55.patch ${WORKDIR}/git
-    cd ${WORKDIR}/git && git apply 0001-changed-BUILD_ARCH-CortexA55.patch
-    mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
-    cd ${WORKDIR}/voiceAction && git apply 0001-Change-Recipe-Target-Sysroot-path.patch
-}
+#do_patch:mx93-generic-bsp() {
+#
+#    mv ${WORKDIR}/0001-changed-BUILD_ARCH-CortexA55.patch ${WORKDIR}/git
+#    cd ${WORKDIR}/git && git apply 0001-changed-BUILD_ARCH-CortexA55.patch
+#    mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
+#    cd ${WORKDIR}/voiceAction && git apply 0001-Change-Recipe-Target-Sysroot-path.patch
+#}
 
 do_patch() {
     mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
