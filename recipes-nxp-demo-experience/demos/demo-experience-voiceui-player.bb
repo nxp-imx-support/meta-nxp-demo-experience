@@ -13,7 +13,7 @@ NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protoc
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH_player = "master"
 
-IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
+IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/imx-voiceplayer"
 
 SRC_URI = "\
         ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \

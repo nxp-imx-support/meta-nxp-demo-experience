@@ -25,15 +25,15 @@ inherit qt6-qmake
 
 DEMOS ?= ""
 DEMOS:mx8mp-nxp-bsp = " demo-experience-voice-demo \
-                        demo-experience-demo-btplayer \
+                        demo-experience-voice-player \
                         demo-experience-smart-kitchen \
                         demo-experience-imx-smart-fitness \
 "
 DEMOS:mx8mm-nxp-bsp = " demo-experience-voice-demo \
-                        demo-experience-demo-btplayer \
+                        demo-experience-voice-player \
                         demo-experience-smart-kitchen \
 "
-DEMOS:mx93-nxp-bsp = "  demo-experience-demo-btplayer \
+DEMOS:mx93-nxp-bsp = "  demo-experience-voice-player \
                         demo-experience-smart-kitchen \
                         demo-experience-imx-smart-fitness \
 "

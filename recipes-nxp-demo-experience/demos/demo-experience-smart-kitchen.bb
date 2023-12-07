@@ -23,7 +23,7 @@ DEPENDS = "wayland libxkbcommon libxdg-shell wayland-protocols xdg-utils"
 RDEPENDS:${PN}+= " bash demo-experience-imx-voiceui-smart-kitchen python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
 
 do_patch() {
-	mv ${WORKDIR}/0001-Added-custom_tick_get-function.patch ${WORKDIR}/git/lvgl
+	cp ${WORKDIR}/0001-Added-custom_tick_get-function.patch ${WORKDIR}/git/lvgl
 	cd ${WORKDIR}/git/lvgl/ && git am 0001-Added-custom_tick_get-function.patch
 	cd ${WORKDIR}/git/
 	cp -r wayland-client/* lv_drivers/wayland/

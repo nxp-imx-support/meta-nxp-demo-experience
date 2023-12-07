@@ -3,10 +3,9 @@ DESCRIPTION = "Recipe for i.MX Voice Player application"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE.txt;md5=02214c96bef56300b0c1f4c6887d3114"
-IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo"
+IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/imx-voiceplayer"
 
-NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
-NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
+NXP_IMX_VOICEPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 SRCBRANCH = "master"
 SRCREV = "${AUTOREV}"
 
@@ -16,13 +15,13 @@ S = "${WORKDIR}/git/app"
 
 DEMOS ?= ""
 DEPENDS += "  packagegroup-qt6-imx qtconnectivity qtsvg"
-RDEPENDS:${PN}+= " demo-experience-msgq-btplayer demo-experience-vit-btplayer bash"
+RDEPENDS:${PN}+= " demo-experience-msgq-player demo-experience-voiceui-player bash"
 
 inherit qt6-qmake
 
 do_install() {
-    install -d -m 755 ${D}/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo
-    install ${WORKDIR}/build/Btplayer ${D}${IMX_VOICE_PLAYER_DIR}
+    install -d -m 755 ${D}/home/root/.nxp-demo-experience/scripts/multimedia/imx-voiceplayer
+    install ${WORKDIR}/build/VoicePlayer ${D}${IMX_VOICE_PLAYER_DIR}
     
     install ${WORKDIR}/git/scripts/connect.sh ${D}${IMX_VOICE_PLAYER_DIR}
     install ${WORKDIR}/git/scripts/Enable_VIT_Auto_Start.sh ${D}${IMX_VOICE_PLAYER_DIR}
