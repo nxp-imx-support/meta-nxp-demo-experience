@@ -1,5 +1,6 @@
 ROOTFS_POSTPROCESS_COMMAND:append:mx93-nxp-bsp = "install_demo_93; "
 ROOTFS_POSTPROCESS_COMMAND:append:mx8-nxp-bsp = "install_demo; "
+ROOTFS_POSTPROCESS_COMMAND:append:mx95-nxp-bsp = "install_demo; "
 ROOTFS_POSTPROCESS_COMMAND:append:mx7ulp-nxp-bsp = "install_demo; "
 
 install_demo() {
