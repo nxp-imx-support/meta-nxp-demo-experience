@@ -8,7 +8,7 @@ License File: DEXP-LICENSE.txt
 
 --------------- THIS PACKAGE ---------------
 
-Package:                    GoPoint for i.MX Application Processors Yocto Project Meta Layer
+Package:                    meta-nxp-demo-experience
 Release branch:             mickledore-6.1.55-2.2.0
 Outgoing License:           MIT
 License File:               LICENSE.txt
@@ -20,7 +20,7 @@ Origin:                     NXP (MIT) Yocto Recipes
 
 ---------- OTHER REQUIRED PACKAGES ---------
 
-Package:                    GoPoint for i.MX Application Processors Source Code
+Package:                    nxp-demo-experience
 Release branch:             lf-6.1.55_2.2.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience/LICENSE.txt
@@ -32,7 +32,7 @@ Origin:                     NXP (BSD-2-Clause)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
                             The Qt Company Ltd. (BSD-3-Clause)
 
-Package:                    GoPoint for i.MX Application Processors Demo Files
+Package:                    nxp-demo-experience-demos-list
 Release branch:             lf-6.1.55_2.2.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience-demos-list/LICENSE.txt
@@ -40,11 +40,11 @@ Package Category:           Configuration
 Type of content:            Scripts, graphics images and data files
 Description and comments:   NXP Demo Experience configuration and launchers
 Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience-demos-list
-Origin:                     NXP (BSD-2-Clause)
+Origin:                     NXP (BSD-2-Clause, BSD-3-Clause, Apache-2.0)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
                             NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
-Package:                    GoPoint for i.MX Application Processors Assets
+Package:                    nxp-demo-experience-assets
 Release branch:             lf-6.1.55_2.2.0
 Outgoing License:           LA_OPT_NXP_Software_License v50 November 2023 - Additional distribution license granted, license in Section 2.3 applies
                             Files may be distributed according to the license noted in the headers or README files
