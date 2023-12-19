@@ -22,8 +22,6 @@ SRC_URI = "\
         file://0001-Change-Recipe-Target-Sysroot-path.patch \
         "
 
-SRC_URI:append:imx93-11x11-lpddr4x-evk = " file://0001-changed-BUILD_ARCH-CortexA55.patch "
-
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "${AUTOREV}"
 SRCREV_model = "${AUTOREV}"
@@ -47,14 +45,6 @@ EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=${libdir}"
 EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
-#do_patch:mx93-generic-bsp() {
-#
-#    mv ${WORKDIR}/0001-changed-BUILD_ARCH-CortexA55.patch ${WORKDIR}/git
-#    cd ${WORKDIR}/git && git apply 0001-changed-BUILD_ARCH-CortexA55.patch
-#    mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
-#    cd ${WORKDIR}/voiceAction && git apply 0001-Change-Recipe-Target-Sysroot-path.patch
-#}
-
 do_patch() {
     mv ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
     cd ${WORKDIR}/voiceAction && git apply 0001-Change-Recipe-Target-Sysroot-path.patch
@@ -64,9 +54,9 @@ do_compile() {
     cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
     cp ${WORKDIR}/demo-experience-voice-demo-bt-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
     cd ${WORKDIR}/git
-    make
+    oe_runmake
     cd ${WORKDIR}/voiceAction
-    make
+    oe_runmake
 }
 
 do_install() {

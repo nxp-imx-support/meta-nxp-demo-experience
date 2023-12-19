@@ -38,3 +38,4 @@ index 9c89eb6..212e9e2 100644
      break;
    case 9: /* START PLAYER */
      popen("/home/root/.nxp-demo-experience/scripts/multimedia/btplayerdemo/Btplayer -platform wayland &", R_MODE);
+
