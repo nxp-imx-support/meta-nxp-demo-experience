@@ -7,7 +7,7 @@ IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/imx-v
 
 NXP_IMX_VOICEPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 SRCBRANCH = "master"
-SRCREV = "${AUTOREV}"
+SRCREV = "f3cff5ec52c456ef993b2a88200a424244d8ae5f"
 
 SRC_URI = "${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH} \
           "

@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f16dd419c71c562a26de3144de8f8ab8"
 
 S = "${WORKDIR}/git"
 
-SRCBRANCH = "next"
+SRCBRANCH = "lf-6.6.3_1.0.0"
 
 NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
 NXP_DEMO_LIST_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience-demos-list.git;protocol=https"
@@ -16,10 +16,10 @@ SRC_URI = " \
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 
-SRCREV_nxp-demo-experience = "${AUTOREV}"
-SRCREV_demos = "${AUTOREV}"
+SRCREV_nxp-demo-experience = "a47553f2eda4d1a17df76f7c5f41c244a34c537b"
+SRCREV_demos = "bcfd81d0086b7e27d702f571304eb9f480fa1ff6"
 
-PV = "next+git${SRCPV}"
+PV = "lf-6.6.3_1.0.0+git${SRCPV}"
 
 inherit qt6-qmake
 

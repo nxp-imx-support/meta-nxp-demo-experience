@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE.txt;md5=02214c96bef56300b0c1f4
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH = "master"
-SRCREV = "${AUTOREV}"
+SRCREV = "f3cff5ec52c456ef993b2a88200a424244d8ae5f"
 
 IMX_VOICE_PLAYER_DIR = "/home/root/.nxp-demo-experience/scripts/multimedia/imx-voiceplayer"
 
