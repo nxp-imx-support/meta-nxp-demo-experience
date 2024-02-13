@@ -24,22 +24,29 @@ PV = "lf-6.6.3_1.0.0+git${SRCPV}"
 inherit qt6-qmake
 
 DEMOS ?= ""
+
+DEMOS:mx8qm-nxp-bsp = " nnstreamer-examples \
+"
+
 DEMOS:mx8mp-nxp-bsp = " demo-experience-voice-demo \
                         demo-experience-voice-player \
                         demo-experience-smart-kitchen \
                         demo-experience-imx-smart-fitness \
+                        nnstreamer-examples \
 "
 DEMOS:mx8mm-nxp-bsp = " demo-experience-voice-demo \
                         demo-experience-voice-player \
                         demo-experience-smart-kitchen \
+                        nnstreamer-examples \
 "
 DEMOS:mx93-nxp-bsp = "  demo-experience-voice-player \
                         demo-experience-smart-kitchen \
                         demo-experience-imx-smart-fitness \
+                        nnstreamer-examples \
 "
 
 DEPENDS += " packagegroup-qt6-imx qtconnectivity qtsvg"
-RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat ${DEMOS} python3-packaging python3-paramiko iproute2 iproute2-tc python3-matplotlib"
+RDEPENDS:${PN} += " weston bash qtsvg-plugins qt5compat ${DEMOS} python3-packaging python3-paramiko iproute2 iproute2-tc python3-matplotlib "
 
 do_install() {
     install -d -m 755 ${D}/home/root/.nxp-demo-experience
