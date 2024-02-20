@@ -10,7 +10,9 @@ NXP_IMX_NNSTREANER_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;
 SRCBRANCH = "main"
 SRCREV = "1450073874cf6ef0be85eeca407bb3b0f2b4ba1a"
 
-SRC_URI = "${NXP_IMX_NNSTREANER_SRC};branch=${SRCBRANCH}"
+SRC_URI = "${NXP_IMX_NNSTREANER_SRC};branch=${SRCBRANCH} \
+	   file://0001-MICRSE-2243-Use-GoPoint-downloads-folder.patch \
+           file://0002-MICRSE-2243-Allow-camera-to-get-swapped-out.patch"
 S = "${WORKDIR}/git"
 
 DEPENDS = "\
