@@ -1,7 +1,7 @@
 SUMMARY = "GoPoint for i.MX Application Processors"
 DESCRIPTION = "Launcher for GoPoint for i.MX Application Processors"
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f16dd419c71c562a26de3144de8f8ab8"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=8414149b19eabc57ab1350562aa605b1"
 
 S = "${WORKDIR}/git"
 
@@ -16,8 +16,8 @@ SRC_URI = " \
 
 SRCREV_FORMAT = "nxp-demo-experience_demos"
 
-SRCREV_nxp-demo-experience = "a47553f2eda4d1a17df76f7c5f41c244a34c537b"
-SRCREV_demos = "bcfd81d0086b7e27d702f571304eb9f480fa1ff6"
+SRCREV_nxp-demo-experience = "70d4df66c0e5448bfd80fc138d8ee508423e711d"
+SRCREV_demos = "e1ff4cbe0f645457fb6f5041b26559b0ff2b02bc"
 
 PV = "lf-6.6.3_1.0.0+git${SRCPV}"
 
