@@ -15,7 +15,7 @@ making complex use cases accessible to anyone. Users might need some basic knowl
 equipment on Evaluation Kits (EVKs), such as changing Device Tree Blob (DTB) files.
 
 For more information about GoPoint, please refer to
-[GoPoint for i.MX Applications Processors User's Guide](https://www.nxp.com/docs/en/user-guide/GPNTUG.pdf?_gl=1*gz87wm*_ga*ODQxOTk0OTQwLjE3MDQ5ODk3NzA.*_ga_WM5LE0KMSH*MTcwNDk4OTc2OS4xLjEuMTcwNDk4OTgyOS4wLjAuMA..).
+[GoPoint for i.MX Applications Processors User's Guide](https://www.nxp.com/docs/en/user-guide/GPNTUG.pdf).
 
 ## GoPoint for i.MX Applications Processors - Meta Layer
 
