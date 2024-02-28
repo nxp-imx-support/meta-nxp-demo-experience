@@ -1,59 +1,59 @@
 NXP Software Content Register
 
-Release: GoPoint for i.MX Application Processors
-Version: 4.7
-Date: December 2023
-Outgoing License: LA_OPT_NXP_Software_License v50 November 2023 - Additional distribution license granted, license in Section 2.3 applies
+Release: GoPoint for i.MX Applications Processors
+Version: 4.8
+Date: March 2024
+Outgoing License: LA_OPT_NXP_Software_License v53 December 2023 - Additional distribution license granted - Section 2.3 applies
 License File: DEXP-LICENSE.txt
 
 --------------- THIS PACKAGE ---------------
 
 Package:                    meta-nxp-demo-experience
-Release branch:             mickledore-6.1.55-2.2.0
+Release branch:             nanbield-6.6.3-1.0.0
 Outgoing License:           MIT
 License File:               LICENSE.txt
 Package Category:           Software build scripts
 Type of content:            Bitbake recipes
-Description and comments:   Yocto Project meta layer used to integrate into the i.MX BSP
+Description and comments:   Yocto Project meta layer used to integrate GoPoint into the i.MX BSP
 Release Location:           https://github.com/nxp-imx-support/meta-nxp-demo-experience
 Origin:                     NXP (MIT) Yocto Recipes
 
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                    nxp-demo-experience
-Release branch:             lf-6.1.55_2.2.0
+Release branch:             lf-6.6.3_1.0.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience/LICENSE.txt
 Package Category:           Demo application
 Type of content:            Source code
-Description and comments:   i.MX demo programs source code
+Description and comments:   GoPoint for i.MX Applications Processors launcher source code
 Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience
 Origin:                     NXP (BSD-2-Clause)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
                             The Qt Company Ltd. (BSD-3-Clause)
 
 Package:                    nxp-demo-experience-demos-list
-Release branch:             lf-6.1.55_2.2.0
+Release branch:             lf-6.6.3_1.0.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience-demos-list/LICENSE.txt
 Package Category:           Configuration
-Type of content:            Scripts, graphics images and data files
-Description and comments:   NXP Demo Experience configuration and launchers
+Type of content:            Scripts, source code, graphics images and data files
+Description and comments:   GoPoint for i.MX Applications Processors configuration and launchers
 Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience-demos-list
 Origin:                     NXP (BSD-2-Clause, BSD-3-Clause, Apache-2.0)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
-                            NNStreamer (LGPL-2.1-only) https://github.com/nnstreamer/nnstreamer-example/
 
 Package:                    nxp-demo-experience-assets
-Release branch:             lf-6.1.55_2.2.0
-Outgoing License:           LA_OPT_NXP_Software_License v50 November 2023 - Additional distribution license granted, license in Section 2.3 applies
-                            Files may be distributed according to the license noted in the headers or README files
+Release branch:             lf-6.6.3_1.0.0
+Outgoing License:           LA_OPT_NXP_Software_License v53 December 2023 - Additional distribution license granted - Section 2.3 applies
+                            Files may be distributed according to the license noted in the headers or README.md files
 License File:               nxp-demo-experience-assets/LICENSE.txt
 Package Category:           Demo application
-Type of content:            Machine learning models, videos, graphics, images, compiled executable
-Description and comments:   GoPoint for i.MX Application Processors data, models and utility program
+Type of content:            Machine learning models, videos, graphics, images, compiled executables
+Description and comments:   GoPoint for i.MX Applications Processors data, models and utility program
 Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience-assets
 Origin:                     NXP (propietary)
+                            VIT_Model (BSD-3-Clause)
                             The TensorFlow Authors (Apache-2.0)
                             Google LLC (Apache-2.0)
                             FaceRecognition with FaceNet Android Authors (Apache-2.0)
