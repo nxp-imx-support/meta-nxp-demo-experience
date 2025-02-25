@@ -1,0 +1,37 @@
+From 0e89e192bc7b414321387afa240796290f12d353 Mon Sep 17 00:00:00 2001
+From: Tom Hochstein <tom.hochstein@nxp.com>
+Date: Wed, 20 Nov 2024 14:24:45 -0600
+Subject: [PATCH] Makefile: Handle multilib
+
+For multilib, the lib folder name has an extension, like /usr/lib32.
+
+Upstream-Status: Pending
+Signed-off-by: Tom Hochstein <tom.hochstein@nxp.com>
+---
+ Makefile | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index c582203..756e200 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,12 +1,14 @@
+ BLDDIR=build
+ 
++libdir ?= /usr/lib
++
+ TEST_FILES= \
+ 	BTPVA_action_executor.c
+ 
+ IFLAGS=-I/${OECORE_TARGET_SYSROOT}/usr/include/glib-2.0 \
+-       -I/${OECORE_TARGET_SYSROOT}/usr/lib/glib-2.0/include -lglib-2.0 \
++       -I/${OECORE_TARGET_SYSROOT}${libdir}/glib-2.0/include -lglib-2.0 \
+        -I/${OECORE_TARGET_SYSROOT}/usr/include/dbus-1.0/ \
+-       -I/${OECORE_TARGET_SYSROOT}/usr/lib/dbus-1.0/include/
++       -I/${OECORE_TARGET_SYSROOT}${libdir}/dbus-1.0/include/
+ 
+ CFLAGS=-std=gnu99 \
+ 	 -Wno-unused-variable \
+-- 
+2.34.1
+

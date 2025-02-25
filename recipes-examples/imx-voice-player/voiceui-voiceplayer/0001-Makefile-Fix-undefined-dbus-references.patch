@@ -1,0 +1,27 @@
+From 87275a309da9ae5230177e7b381d5a67bc6290e6 Mon Sep 17 00:00:00 2001
+From: Tom Hochstein <tom.hochstein@nxp.com>
+Date: Wed, 20 Nov 2024 13:38:29 -0600
+Subject: [PATCH] Makefile: Fix undefined dbus references
+
+Upstream-Status: Pending
+Signed-off-by: Tom Hochstein <tom.hochstein@nxp.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index d246a2a..c582203 100644
+--- a/Makefile
++++ b/Makefile
+@@ -49,7 +49,7 @@ $(BLDDIR)/.mkdir :
+ 
+ $(EXE) : $(EXE_OBJ_FILES)
+ 	$(CC) $(CFLAGS)  $^  \
+-	 -lm  \
++	 -lm -ldbus-1 \
+ 	  -o $@
+ 
+ $(BLDDIR)/%.o : %.c $(BLDDIR)/compiler_flags
+-- 
+2.34.1
+

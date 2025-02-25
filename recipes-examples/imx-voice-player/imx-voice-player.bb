@@ -7,7 +7,7 @@ IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 
 NXP_IMX_VOICEPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 SRCBRANCH = "master"
-SRCREV = "a70dba74eeff1b90f47425bae9779c4daa9c1aa0"
+SRCREV = "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
 
 SRC_URI = "${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH} \
           "

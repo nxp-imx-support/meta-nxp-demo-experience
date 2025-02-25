@@ -26,7 +26,7 @@ RDEPENDS:${PN}+= "bash"
 EXTRA_OEMAKE = "ELE_ROOT=${STAGING_DIR_HOST}"
 
 do_patch() {
-	mv ${WORKDIR}/0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch ${WORKDIR}/git/lv_drivers
+	mv ${UNPACKDIR}/0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch ${WORKDIR}/git/lv_drivers
 	cd ${WORKDIR}/git/lv_drivers && git apply 0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch
 	cd ${WORKDIR}/git/
 	cp -rf protocols/ lv_drivers/wayland/

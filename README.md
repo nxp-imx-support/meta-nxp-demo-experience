@@ -23,7 +23,7 @@ up equipment on Evaluation Kits (EVKs), such as changing Device Tree
 Blob (DTB) files.
 
 For more information about GoPoint, please refer to [GoPoint for i.MX
-Applications Processors User’s Guide](https://www.nxp.com/IMXLINUX).
+Applications Processors User’s Guide](https://www.nxp.com/doc/GPNTUG).
 
 ## GoPoint for i.MX Applications Processors - Meta Layer
 
@@ -53,6 +53,7 @@ releases are listed below:
 
 | Release | Yocto Project Version | Linux Software Release |
 |----|----|----|
+| Styhead | 5.1 | 6.12.0_1.0.0 |
 | Scarthgap | 5.0 | 6.6.23_2.0.0<br>6.6.36_2.1.0<br>6.6.52_2.2.0 |
 | Nanbield | 4.3 | 6.6.3_1.0.0 |
 | Mickledore | 4.2 | 6.1.55_2.2.0<br>6.1.36_2.1.0<br>6.1.22_2.0.0 |

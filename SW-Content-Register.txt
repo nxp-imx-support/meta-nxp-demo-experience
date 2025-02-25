@@ -1,17 +1,17 @@
 NXP Software Content Register
 
 Release: GoPoint for i.MX Applications Processors
-Version: 4.11
-Date: December 2024
-Outgoing License: LA_OPT_Online Code Hosting NXP_Software_License - v1.2 October 2023
+Version: 4.12
+Date: March 2025
+Outgoing License: LA_OPT_Online Code Hosting NXP_Software_License - v1.3 December 2024
 License File: LICENSE.txt
 
 --------------- THIS PACKAGE ---------------
 
 Package:                    meta-nxp-demo-experience
-Release branch:             scarthgap-6.6.52-2.2.0
+Release branch:             styhead-6.12.3-1.0.0
 Outgoing License:           MIT
-License File:               ./licenses/MIT.txt
+License File:               ./licenses/LICENSE.txt
 Package Category:           Software build scripts
 Type of content:            Bitbake recipes
 Description and comments:   Yocto Project meta layer used to integrate GoPoint into the i.MX BSP
@@ -21,8 +21,8 @@ Origin:                     NXP (MIT) Yocto Recipes
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                    nxp-demo-experience
-Release branch:             lf-6.6.52_2.2.0
-Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.2 October 2023
+Release branch:             lf-6.12.3_1.0.0
+Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.3 December 2024
 License File:               nxp-demo-experience/LICENSE.txt
 Package Category:           Demo application
 Type of content:            Source code
@@ -32,21 +32,19 @@ Origin:                     NXP (BSD-3-Clause)
                             The Qt Company Ltd. (BSD-3-Clause)
 
 Package:                    nxp-demo-experience-demos-list
-Release branch:             lf-6.6.52_2.2.0
-Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.2 October 2023
+Release branch:             lf-6.12.3_1.0.0
+Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.3 December 2024
 License File:               nxp-demo-experience-demos-list/LICENSE.txt
 Package Category:           Configuration
 Type of content:            Scripts, source code, graphics images and data files
 Description and comments:   GoPoint for i.MX Application Processors configuration and launchers
 Release Location:           https://github.com/nxp-imx-support/nxp-demo-experience-demos-list
-Origin:                     NXP (Proprietary, BSD-3-Clause, Apache-2.0, LGPL-2.1)
+Origin:                     NXP (Proprietary, BSD-3-Clause, Apache-2.0)
                             Patrick Levin (MIT) https://github.com/patlevin/face-detection-tflite
-                            GStreamer (LGPL-2.1-or-later) - http://gstreamer.freedesktop.org/src/gstreamer/
-                            NNStreamer (LGPL-2.1) - https://github.com/nnstreamer/nnstreamer/
 
 Package:                    nxp-demo-experience-assets
-Release branch:             lf-6.6.52_2.2.0
-Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.2 October 2023
+Release branch:             lf-6.12.3_1.0.0
+Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.3 December 2024
 License File:               nxp-demo-experience-assets/LICENSE.txt
 Package Category:           Demo application
 Type of content:            Machine learning models, videos, graphics, images, compiled executables

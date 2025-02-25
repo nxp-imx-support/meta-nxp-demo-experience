@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE.txt;md5=50abc977283affbd6ec84a
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH = "master"
-SRCREV = "a70dba74eeff1b90f47425bae9779c4daa9c1aa0"
+SRCREV = "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
 
 IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 

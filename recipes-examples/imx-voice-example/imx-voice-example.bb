@@ -15,7 +15,7 @@ NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=htt
 SRCBRANCH_voice = "MM_04.08.03_2312_L6.6.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "lf-6.6.52_2.2.0"
+SRCBRANCH_model = "lf-6.12.3_1.0.0"
 
 SRC_URI = "\
     ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -24,7 +24,7 @@ SRC_URI = "\
 SRCREV_FORMAT = "voice_model"
 
 SRCREV_voice = "5eac64dc0f93c755941770c46d5e315aec523b3d"
-SRCREV_model = "6c7fd68c3ff56b2219b44ad55e4f6067c8ad3463"
+SRCREV_model = "cce123ab86c3861d46b8f29a88866bf9bf771f71"
 
 S = "${WORKDIR}/git"
 
@@ -34,7 +34,7 @@ EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
 do_compile () {
-    mv ${WORKDIR}/demo-experience-voice-demo/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
+    mv ${UNPACKDIR}/demo-experience-voice-demo/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
     cd ${WORKDIR}/git
     oe_runmake VOICESPOT
 }

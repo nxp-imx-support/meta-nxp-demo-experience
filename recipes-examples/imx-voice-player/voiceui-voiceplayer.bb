@@ -7,11 +7,11 @@ NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=htt
 SRCBRANCH_voice = "MM_04.09.00_2405_L6.6.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "lf-6.6.52_2.2.0"
+SRCBRANCH_model = "lf-6.12.3_1.0.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
-SRCBRANCH_player = "master"
+SRCBRANCH_player = "next"
 
 IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 
@@ -19,12 +19,13 @@ SRC_URI = "\
         ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
         ${NXP_DEMO_ASSET_SRC};branch=${SRCBRANCH_model};name=model;subpath=build/demo-experience-voice-player \
         ${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH_player};name=player;subpath=voiceAction \
-        file://0001-Change-Recipe-Target-Sysroot-path.patch \
+        file://0001-Makefile-Fix-undefined-dbus-references.patch;patchdir=${UNPACKDIR}/voiceAction \
+        file://0002-Makefile-Handle-multilib.patch;patchdir=${UNPACKDIR}/voiceAction \
         "
 
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "cc51bc7475c0134fcb006ba28a16b2dcd418cf3a"
-SRCREV_model = "6c7fd68c3ff56b2219b44ad55e4f6067c8ad3463"
+SRCREV_model = "cce123ab86c3861d46b8f29a88866bf9bf771f71"
 SRCREV_player = "a70dba74eeff1b90f47425bae9779c4daa9c1aa0"
 
 S = "${WORKDIR}/git"
@@ -44,19 +45,15 @@ EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=${libdir}"
 
 EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
-
-do_patch() {
-    cp ${WORKDIR}/0001-Change-Recipe-Target-Sysroot-path.patch ${WORKDIR}/voiceAction
-    cd ${WORKDIR}/voiceAction && git apply 0001-Change-Recipe-Target-Sysroot-path.patch
-}
+EXTRA_OEMAKE:append = " OECORE_TARGET_SYSROOT=${STAGING_DIR_HOST}"
 
 
 do_compile() {
-    cp ${WORKDIR}/demo-experience-voice-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
-    cp ${WORKDIR}/demo-experience-voice-player/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
-    cd ${WORKDIR}/git
+    cp ${UNPACKDIR}/demo-experience-voice-player/VIT_Model_en.h ${S}/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
+    cp ${UNPACKDIR}/demo-experience-voice-player/VIT_Model_en.h ${S}/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
+    cd ${S}
     oe_runmake
-    cd ${WORKDIR}/voiceAction
+    cd ${UNPACKDIR}/voiceAction
     oe_runmake
 }
 
@@ -64,12 +61,12 @@ do_install() {
         install -d -m 0755 ${D}${IMX_VOICE_PLAYER_DIR}
         install -d -m 0755 ${D}${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53
         install -d -m 0755 ${D}${IMX_VOICE_PLAYER_DIR}/i.MX9X_A55
-        install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53
-        install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${IMX_VOICE_PLAYER_DIR}/i.MX9X_A55
-        install -m 0755 ${WORKDIR}/git/release/libvoiceseekerlight.so.2.0 ${D}${IMX_VOICE_PLAYER_DIR}
-        install -m 0755 ${WORKDIR}/voiceAction/build/btp ${D}${IMX_VOICE_PLAYER_DIR}
-        install -m 0755 ${WORKDIR}/voiceAction/bridgeVoiceUI/WakeWordNotify ${D}${IMX_VOICE_PLAYER_DIR}
-        install -m 0755 ${WORKDIR}/voiceAction/bridgeVoiceUI/WWCommandNotify ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${S}/release/voice_ui_app ${D}${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53
+        install -m 0755 ${S}/release/voice_ui_app ${D}${IMX_VOICE_PLAYER_DIR}/i.MX9X_A55
+        install -m 0755 ${S}/release/libvoiceseekerlight.so.2.0 ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${UNPACKDIR}/voiceAction/build/btp ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${UNPACKDIR}/voiceAction/bridgeVoiceUI/WakeWordNotify ${D}${IMX_VOICE_PLAYER_DIR}
+        install -m 0755 ${UNPACKDIR}/voiceAction/bridgeVoiceUI/WWCommandNotify ${D}${IMX_VOICE_PLAYER_DIR}
 }
 
 FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/i.MX8M_A53/voice_ui_app"
@@ -83,3 +80,5 @@ FILES:${PN} += "${IMX_VOICE_PLAYER_DIR}/WWCommandNotify"
 
 INSANE_SKIP_${PN} += "ldflags"
 TARGET_CC_ARCH += "${LDFLAGS}"
+
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
