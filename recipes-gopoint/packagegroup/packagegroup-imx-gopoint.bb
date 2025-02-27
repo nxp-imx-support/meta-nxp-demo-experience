@@ -26,6 +26,7 @@ DEMOS:append:mx93-nxp-bsp = "  imx-voice-player \
                         imx-nnstreamer-examples \
                         imx-ebike \
                         imx-ele-app \
+                        imx-smart-fitness \
 "
 DEMOS:append:mx95-nxp-bsp = " imx-video-to-texture \
                         imx-nnstreamer-examples \
