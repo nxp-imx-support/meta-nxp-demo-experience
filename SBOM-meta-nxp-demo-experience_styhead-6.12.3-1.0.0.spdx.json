@@ -1,0 +1,42 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2025-03-04T09:22:06Z",
+    "creators": [
+      "Organization: NXP"
+    ],
+    "licenseListVersion": "3.20"
+  },
+  "name": "meta-nxp-demo-experience-styhead-6.12.3-1.0.0",
+  "dataLicense": "CC0-1.0",
+  "hasExtractedLicensingInfos": [
+    {
+      "licenseId": "LicenseRef-3189476f-5b70-4a90-9c18-5da934503c05",
+      "extractedText": "NONE",
+      "name": "LA_OPT_Online Code Hosting NXP_Software_License - v1.3 December 2024"
+    }
+  ],
+  "documentNamespace": "https://nxp.com/spdx/5fcfc808-a4f1-45c2-b889-f90e33b98104",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-package-5fcfc808-a4f1-45c2-b889-f90e33b98104",
+      "name": "meta-nxp-demo-experience",
+      "versionInfo": "styhead-6.12.3-1.0.0",
+      "licenseConcluded": "(LicenseRef-3189476f-5b70-4a90-9c18-5da934503c05)",
+      "licenseDeclared": "(LicenseRef-3189476f-5b70-4a90-9c18-5da934503c05)",
+      "downloadLocation": "https://github.com/nxp-imx-support/meta-nxp-demo-experience",
+      "originator": "Organization: NXP",
+      "supplier": "NOASSERTION",
+      "externalRefs": [],
+      "filesAnalyzed": false
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-package-5fcfc808-a4f1-45c2-b889-f90e33b98104"
+    }
+  ]
+}
