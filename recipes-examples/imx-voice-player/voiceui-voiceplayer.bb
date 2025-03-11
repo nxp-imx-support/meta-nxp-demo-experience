@@ -11,7 +11,7 @@ SRCBRANCH_model = "lf-6.12.3_1.0.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
-SRCBRANCH_player = "next"
+SRCBRANCH_player = "master"
 
 IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 
