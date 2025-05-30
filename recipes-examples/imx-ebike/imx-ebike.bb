@@ -11,7 +11,7 @@ DEMODIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/ebike-vit"
 
 SRC_URI = "${NXP_EBIKE_VIT_SRC}"
 
-SRCREV = "6c5917c8afa70ed0ac832184f6b8e289cb740905"
+SRCREV = "721652143fd4d6fbc43c49617031b263e762c2d4"
 
 S = "${WORKDIR}/git"
 

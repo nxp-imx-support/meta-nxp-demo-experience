@@ -53,6 +53,7 @@ releases are listed below:
 
 | Release | Yocto Project Version | Linux Software Release |
 |----|----|----|
+| Walnascar | 5.2 | 6.12.20_2.0.0 |
 | Styhead | 5.1 | 6.12.0_1.0.0 |
 | Scarthgap | 5.0 | 6.6.23_2.0.0<br>6.6.36_2.1.0<br>6.6.52_2.2.0 |
 | Nanbield | 4.3 | 6.6.3_1.0.0 |

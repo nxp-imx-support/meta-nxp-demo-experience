@@ -1,20 +1,20 @@
 DESCRIPTION = "Voice App for Smart Kitchen"
 SECTION = "Multimedia"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=10c0fda810c63b052409b15a5445671a"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ca53281cc0caa7e320d4945a896fb837"
 
-inherit autotools pkgconfig
+inherit pkgconfig
 
 DEPENDS += "alsa-lib nxp-afe"
 
 RDEPENDS:${PN} = "nxp-afe-voiceseeker"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.09.00_2405_L6.6.y"
+SRCBRANCH_voice = "MM_04.09.03_2412_L6.12.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 
-SRCBRANCH_model = "lf-6.12.3_1.0.0"
+SRCBRANCH_model = "lf-6.12.20_2.0.0"
 
 SRC_URI = "\
 	${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -22,8 +22,8 @@ SRC_URI = "\
 
 SRCREV_FORMAT = "voice_model"
 
-SRCREV_voice = "cc51bc7475c0134fcb006ba28a16b2dcd418cf3a"
-SRCREV_model = "cce123ab86c3861d46b8f29a88866bf9bf771f71"
+SRCREV_voice = "737c156469eeede28fe1a0777c968becf6fea886"
+SRCREV_model = "4cf399a41ce1fd3ef02b340b104391fddf9bc73d"
 
 S = "${WORKDIR}/git"
 MODEL_DIR = "${UNPACKDIR}/demo-experience-smart-kitchen"

@@ -14,7 +14,7 @@ SRC_URI = "${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH} \
 S = "${WORKDIR}/git/app"
 
 DEMOS ?= ""
-DEPENDS += "  packagegroup-qt6-imx qtconnectivity qtsvg"
+DEPENDS += "  packagegroup-qt6-imx qtdeclarative qtconnectivity qtsvg"
 RDEPENDS:${PN}+= " msgq-voiceplayer voiceui-voiceplayer bash"
 
 inherit qt6-qmake

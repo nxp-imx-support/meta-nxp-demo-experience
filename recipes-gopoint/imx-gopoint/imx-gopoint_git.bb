@@ -1,11 +1,11 @@
 SUMMARY = "GoPoint for i.MX Application Processors"
 DESCRIPTION = "Launcher for GoPoint for i.MX Application Processors"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ece4d92215ee8177e48fbf5fc100ad20"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d8ff2d641cc45adce1b1882be29d1e35"
 
 NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
-NXP_DEMO_BRANCH ?= "lf-6.12.3_1.0.0"
-NXP_DEMO_SRCREV ?= "${AUTOREV}"
+NXP_DEMO_BRANCH ?= "lf-6.12.20_2.0.0"
+NXP_DEMO_SRCREV ?= "7b8af3182bddc1949ffc37dd85e018c1420a5bf0"
 
 PV = "${NXP_DEMO_BRANCH}+git${NXP_DEMO_SRCREV}"
 

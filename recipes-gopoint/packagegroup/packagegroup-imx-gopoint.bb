@@ -14,6 +14,7 @@ DEMOS:append:mx8mp-nxp-bsp = " imx-voice-example \
                         imx-smart-fitness \
                         imx-nnstreamer-examples \
                         imx-ebike \
+                        imx-lane-detection \
 "
 DEMOS:append:mx8mm-nxp-bsp = " imx-voice-example \
                         imx-smart-kitchen \
