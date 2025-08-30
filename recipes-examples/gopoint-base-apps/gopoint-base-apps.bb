@@ -5,15 +5,15 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d8ff2d641cc45adce1b1882be29d1e35"
 
 S = "${WORKDIR}/git"
 
-SRCBRANCH = "lf-6.12.20_2.0.0"
+SRCBRANCH = "lf-6.12.34_2.1.0"
 
 NXP_DEMO_LIST_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience-demos-list.git;protocol=https"
 
 SRC_URI = "${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};name=demos"
 
-SRCREV = "aca31ada35af098614257824d45e6a22f9b73e67"
+SRCREV = "e454ca2e8d3788eec09480281380b67e19ae158b"
 
-PV = "lf-6.12.20_2.0.0+git${SRCREV}"
+PV = "4.14+git${SRCREV}"
 
 RDEPENDS:${PN} += "bash python3-packaging python3-paramiko iproute2 iproute2-tc python3-matplotlib "
 

@@ -1,4 +1,4 @@
-# Copyright 2024 NXP
+# Copyright 2024-2025 NXP
 DESCRIPTION = "Package for GoPoint for i.MX Application Processors"
 
 inherit packagegroup
@@ -15,6 +15,7 @@ DEMOS:append:mx8mp-nxp-bsp = " imx-voice-example \
                         imx-nnstreamer-examples \
                         imx-ebike \
                         imx-lane-detection \
+                        imx-car-navigation \
 "
 DEMOS:append:mx8mm-nxp-bsp = " imx-voice-example \
                         imx-smart-kitchen \
@@ -28,6 +29,7 @@ DEMOS:append:mx93-nxp-bsp = "  imx-voice-player \
                         imx-ebike \
                         imx-ele-app \
                         imx-smart-fitness \
+                        imx-car-navigation \
 "
 DEMOS:append:mx95-nxp-bsp = " imx-video-to-texture \
                         imx-nnstreamer-examples \

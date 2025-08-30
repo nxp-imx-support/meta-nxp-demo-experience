@@ -1,0 +1,5 @@
+PREFERRED_VERSION_python-canopen = "2.3.0"
+PREFERRED_VERSION_python-python-can = "4.5.0"
+PREFERRED_VERSION_python-wrapt = "1.17.2"
+PREFERRED_VERSION_python-packaging = "25.0"
+PREFERRED_VERSION_python-typing-extensions = "4.13.2"

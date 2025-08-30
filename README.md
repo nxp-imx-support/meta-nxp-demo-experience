@@ -42,7 +42,7 @@ This repository holds all the needed configurations to build the
 
 | i.MX Series | Product |
 |----|----|
-| i.MX 9 | i.MX 93 EVK<br>i.MX 95 EVK |
+| i.MX 9 | i.MX 91 EVK<br>i.MX 93 EVK<br>i.MX 95 EVK |
 | i.MX 8 | i.MX 8M Mini EVK<br>i.MX 8M Nano EVK<br>i.MX 8M Plus EVK<br>i.MX 8ULP EVK<br>i.MX 8M Quad EVK<br>i.MX 8QuadMax MEK<br>i.MX 8QuadXPlus MEK |
 | i.MX 7 | i.MX 7ULP EVKB |
 
@@ -53,7 +53,7 @@ releases are listed below:
 
 | Release | Yocto Project Version | Linux Software Release |
 |----|----|----|
-| Walnascar | 5.2 | 6.12.20_2.0.0 |
+| Walnascar | 5.2 | 6.12.20_2.0.0<br>6.12.34_2.1.0 |
 | Styhead | 5.1 | 6.12.0_1.0.0 |
 | Scarthgap | 5.0 | 6.6.23_2.0.0<br>6.6.36_2.1.0<br>6.6.52_2.2.0 |
 | Nanbield | 4.3 | 6.6.3_1.0.0 |

@@ -8,7 +8,7 @@ IMX_NNSTREANER_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/nnstreamer"
 
 NXP_NNSTREAMER_EXAMPLES_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "b8dafc13bb93b06826f9fc6b91056270cecc0fbd"
+SRCREV = "b22fe8444c4f7b527f0d7e55bc109c0cb735bf78"
 
 SRC_URI = "${NXP_NNSTREAMER_EXAMPLES_SRC};branch=${SRCBRANCH}"
 S = "${WORKDIR}/git"
