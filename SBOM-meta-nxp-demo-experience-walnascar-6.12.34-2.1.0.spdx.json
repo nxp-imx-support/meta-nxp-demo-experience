@@ -2,13 +2,13 @@
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
   "creationInfo": {
-    "created": "2025-06-17T21:05:38Z",
+    "created": "2025-09-09T23:53:45Z",
     "creators": [
       "Organization: NXP"
     ],
     "licenseListVersion": "3.20"
   },
-  "name": "meta-nxp-demo-experience-walnascar-6.12.20-2.0.0",
+  "name": "meta-nxp-demo-experience-walnascar-6.12.34-2.1.0",
   "dataLicense": "CC0-1.0",
   "hasExtractedLicensingInfos": [
     {
@@ -17,15 +17,15 @@
       "name": "LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025"
     }
   ],
-  "documentNamespace": "https://nxp.com/spdx/b4630762-00e5-47bb-bb52-e3f888d1a9aa",
+  "documentNamespace": "https://nxp.com/spdx/d09e1987-a59c-4d49-bbee-384f4f166983",
   "packages": [
     {
-      "SPDXID": "SPDXRef-package-b4630762-00e5-47bb-bb52-e3f888d1a9aa",
+      "SPDXID": "SPDXRef-package-d09e1987-a59c-4d49-bbee-384f4f166983",
       "name": "meta-nxp-demo-experience",
-      "versionInfo": "walnascar-6.12.20-2.0.0",
+      "versionInfo": "walnascar-6.12.34-2.1.0",
       "licenseConcluded": "(LicenseRef-babf777f-042b-42df-a5bf-638993427038)",
       "licenseDeclared": "(LicenseRef-babf777f-042b-42df-a5bf-638993427038)",
-      "downloadLocation": "https://github.com/nxp-imx-support/meta-nxp-demo-experience",
+      "downloadLocation": "NOASSERTION",
       "originator": "Organization: NXP",
       "supplier": "NOASSERTION",
       "externalRefs": [],
@@ -36,7 +36,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-package-b4630762-00e5-47bb-bb52-e3f888d1a9aa"
+      "relatedSpdxElement": "SPDXRef-package-d09e1987-a59c-4d49-bbee-384f4f166983"
     }
   ]
 }
