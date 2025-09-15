@@ -13,7 +13,7 @@ SRC_URI = "${NXP_EBIKE_VIT_SRC};branch=${SRCBRANCH};name=ebike \
            git://github.com/lvgl/lv_drivers.git;protocol=https;branch=release/v8.3;destsuffix=git/lv_drivers;name=drivers \
            file://0001-Include-unistd-h-header.patch"
 
-SRCREV_ebike = "03ad74200604f14173a744717a80571a74e0a18c"
+SRCREV_ebike = "721652143fd4d6fbc43c49617031b263e762c2d4"
 SRCREV_lvgl = "4d96c27ce35dd2ea6b34926f24a647e7ea7c4b0c"
 SRCREV_drivers = "d52dc4f6b9b78cebd1183fb7fe5c0c3969cc47a2"
 SRCREV_FORMAT = "ebike_lvgl_drivers"
