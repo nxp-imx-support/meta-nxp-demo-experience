@@ -15,6 +15,7 @@ TARGET_CC_ARCH += "${LDFLAGS}"
 S = "${WORKDIR}/git"
 
 do_configure[noexec] = "1"
+do_compile[network] = "1"
 
 do_compile() {
         cd ${S}
