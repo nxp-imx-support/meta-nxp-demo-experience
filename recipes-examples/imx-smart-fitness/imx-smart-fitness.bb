@@ -1,4 +1,4 @@
-SUMARY = "i.MX Smart Fitness"
+SUMMARY = "i.MX Smart Fitness"
 DESCRIPTION = "Recipe for i.MX Smart Fitness application on i.MX"
 SECTION = "Machine Learning"
 LICENSE = "Apache-2.0"

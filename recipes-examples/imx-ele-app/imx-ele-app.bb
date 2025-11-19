@@ -1,4 +1,4 @@
-SUMARY = "EdgeLock Enclave(ELE) security demo"
+SUMMARY = "EdgeLock Enclave(ELE) security demo"
 DESCRIPTION = "Recipe of ELE demo application"
 SECTION = "Security"
 LICENSE = "Proprietary"

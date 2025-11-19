@@ -1,4 +1,4 @@
-SUMARY = "NNStreamer Examples"
+SUMMARY = "NNStreamer Examples"
 DESCRIPTION = "Recipe for i.MX NNStreamer Examples"
 SECTION = "Machine Learning"
 LICENSE = "BSD-3-Clause"
@@ -8,7 +8,7 @@ IMX_NNSTREANER_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/nnstreamer"
 
 NXP_NNSTREAMER_EXAMPLES_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "b22fe8444c4f7b527f0d7e55bc109c0cb735bf78"
+SRCREV = "062ebd146f6519c437db6516f257f20d63dda1dd"
 
 SRC_URI = "${NXP_NNSTREAMER_EXAMPLES_SRC};branch=${SRCBRANCH}"
 S = "${WORKDIR}/git"

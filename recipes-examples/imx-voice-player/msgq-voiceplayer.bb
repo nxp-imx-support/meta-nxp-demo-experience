@@ -1,4 +1,4 @@
-SUMARY = "Message queue command sender"
+SUMMARY = "Message queue command sender"
 DESCRIPTION = "MsgQ app used by i.MX Voice Player to send MAC address of current mobile device connected through bluetooth"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"

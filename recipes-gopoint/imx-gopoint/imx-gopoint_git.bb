@@ -4,8 +4,8 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d8ff2d641cc45adce1b1882be29d1e35"
 
 NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
-NXP_DEMO_BRANCH ?= "lf-6.12.34_2.1.0"
-NXP_DEMO_SRCREV ?= "6db3c7e3274d98ff3e2d85bfd7dd0424f3c7b38d"
+NXP_DEMO_BRANCH ?= "lf-6.12.49_2.2.0"
+NXP_DEMO_SRCREV ?= "4cf1e2d12db220c6719adb1632aa3da374043c9d"
 
 PV = "${NXP_DEMO_BRANCH}+git${NXP_DEMO_SRCREV}"
 

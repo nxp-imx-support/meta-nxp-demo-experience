@@ -1,4 +1,4 @@
-SUMARY = "Smart Kitchen demo"
+SUMMARY = "Smart Kitchen demo"
 DESCRIPTION = "Recipe of Smart Kitchen demo application"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"

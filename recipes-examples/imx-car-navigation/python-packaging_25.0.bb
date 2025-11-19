@@ -2,7 +2,7 @@
 SUMMARY = "Core utilities for Python packages"
 HOMEPAGE = "None"
 AUTHOR = "None <Donald Stufft <donald@stufft.io>>"
-LICENSE = "LGPL3"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.APACHE;md5=2ee41112a44fe7014dce33e26468ba93"
 
 SRC_URI = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
@@ -11,6 +11,6 @@ SRC_URI[sha256sum] = "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295
 
 S = "${WORKDIR}/packaging-25.0"
 
-RDEPENDS_${PN} = ""
+RDEPENDS:${PN} = ""
 
-inherit setuptools3
+inherit python_pep517

@@ -1,4 +1,4 @@
-SUMARY = "E-Bike VIT demo"
+SUMMARY = "E-Bike VIT demo"
 DESCRIPTION = "Recipe of E-Bike VIT demo application"
 SECTION = "Multimedia"
 LICENSE = "Proprietary"

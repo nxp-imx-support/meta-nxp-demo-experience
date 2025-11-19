@@ -1,4 +1,4 @@
-SUMARY = "i.MX Video to Texture"
+SUMMARY = "i.MX Video to Texture"
 DESCRIPTION = "Recipe for i.MX Video to Texture application on i.MX"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"

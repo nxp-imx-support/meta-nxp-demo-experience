@@ -8,14 +8,11 @@ inherit setuptools3
 SRC_URI = "git://github.com/CANopenNode/CANopenLinux.git;branch=master;protocol=https"
 SRCREV = "52ffe7acb039dd669bc523440272296081fa8f00"
 
-RDEPENDS:${PN} += " python-canopen"
-
 TARGET_CC_ARCH += "${LDFLAGS}"
 
 S = "${WORKDIR}/git"
 
 do_configure[noexec] = "1"
-do_compile[network] = "1"
 
 do_compile() {
         cd ${S}

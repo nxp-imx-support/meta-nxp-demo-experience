@@ -1,4 +1,4 @@
-SUMARY = "i.MX Voice Player for i.MX"
+SUMMARY = "i.MX Voice Player for i.MX"
 DESCRIPTION = "Recipe for i.MX Voice Player application"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"
