@@ -2,13 +2,13 @@
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
   "creationInfo": {
-    "created": "2025-09-09T23:53:45Z",
+    "created": "2025-11-28T04:38:50Z",
     "creators": [
       "Organization: NXP"
     ],
     "licenseListVersion": "3.20"
   },
-  "name": "meta-nxp-demo-experience-walnascar-6.12.34-2.1.0",
+  "name": "meta-nxp-demo-experience-walnascar-6.12.49-2.2.0",
   "dataLicense": "CC0-1.0",
   "hasExtractedLicensingInfos": [
     {
@@ -17,12 +17,12 @@
       "name": "LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025"
     }
   ],
-  "documentNamespace": "https://nxp.com/spdx/d09e1987-a59c-4d49-bbee-384f4f166983",
+  "documentNamespace": "https://nxp.com/spdx/ba574c61-6164-4cf5-a6f0-360d4c5978e7",
   "packages": [
     {
-      "SPDXID": "SPDXRef-package-d09e1987-a59c-4d49-bbee-384f4f166983",
+      "SPDXID": "SPDXRef-package-ba574c61-6164-4cf5-a6f0-360d4c5978e7",
       "name": "meta-nxp-demo-experience",
-      "versionInfo": "walnascar-6.12.34-2.1.0",
+      "versionInfo": "walnascar-6.12.49-2.2.0",
       "licenseConcluded": "(LicenseRef-babf777f-042b-42df-a5bf-638993427038)",
       "licenseDeclared": "(LicenseRef-babf777f-042b-42df-a5bf-638993427038)",
       "downloadLocation": "NOASSERTION",
@@ -36,7 +36,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-package-d09e1987-a59c-4d49-bbee-384f4f166983"
+      "relatedSpdxElement": "SPDXRef-package-ba574c61-6164-4cf5-a6f0-360d4c5978e7"
     }
   ]
 }
