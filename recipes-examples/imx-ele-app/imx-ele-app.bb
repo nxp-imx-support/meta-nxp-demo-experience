@@ -14,21 +14,20 @@ SRC_URI = "${NXP_ELE_DEMO_SRC};branch=${SRCBRANCH}\
 
 SRCREV = "2134feeef0c7a89b02664c97b5083c6a47094b85"
 
-S = "${WORKDIR}/git"
 
 DEMOS ?= ""
 
 DEPENDS = "openssl wayland libxkbcommon"
 DEPENDS:append = " imx-secure-enclave"
 
-RDEPENDS:${PN}+= "bash"
+RDEPENDS:${PN} += "bash"
 
 EXTRA_OEMAKE = "ELE_ROOT=${STAGING_DIR_HOST}"
 
 do_patch() {
-	mv ${UNPACKDIR}/0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch ${WORKDIR}/git/lv_drivers
-	cd ${WORKDIR}/git/lv_drivers && git apply 0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch
-	cd ${WORKDIR}/git/
+	mv ${UNPACKDIR}/0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch ${S}/lv_drivers
+	cd ${S}/lv_drivers && git apply 0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch
+	cd ${S}
 	cp -rf protocols/ lv_drivers/wayland/
 }
 

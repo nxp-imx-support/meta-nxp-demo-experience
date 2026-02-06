@@ -32,6 +32,7 @@ DEMOS:append:mx93-nxp-bsp = "  imx-voice-player \
                         imx-ele-app \
                         imx-smart-fitness \
                         imx-car-navigation \
+                        imx-wifi-selector \
 "
 DEMOS:append:mx95-nxp-bsp = " imx-video-to-texture \
                         imx-nnstreamer-examples \

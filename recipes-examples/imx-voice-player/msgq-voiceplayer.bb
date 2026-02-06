@@ -2,7 +2,7 @@ SUMMARY = "Message queue command sender"
 DESCRIPTION = "MsgQ app used by i.MX Voice Player to send MAC address of current mobile device connected through bluetooth"
 SECTION = "Multimedia"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE.txt;md5=50abc977283affbd6ec84a32b458cb61"
+LIC_FILES_CHKSUM = "file://${UNPACKDIR}/${BP}/LICENSE.txt;md5=50abc977283affbd6ec84a32b458cb61"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
@@ -14,9 +14,13 @@ IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 SRC_URI = "${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH} \
           "
 
-S = "${WORKDIR}/git/msgq"
+S = "${UNPACKDIR}/${BP}/msgq"
 
 inherit pkgconfig cmake
+
+EXTRA_OECMAKE += "\
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+"
 
 do_install() {
     install -d -m 755 ${D}${IMX_VOICE_PLAYER_DIR}

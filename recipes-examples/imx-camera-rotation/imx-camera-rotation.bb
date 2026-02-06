@@ -11,7 +11,6 @@ SRCBRANCH = "main"
 SRCREV = "a4cb6559cff20ed4a6056b6f0f4364bbf008037d"
 
 SRC_URI = "${NXP_IMX_VIDEO_ROTATION_SRC};branch=${SRCBRANCH}"
-S = "${WORKDIR}/git"
 
 DEPENDS = "\
         qtbase \

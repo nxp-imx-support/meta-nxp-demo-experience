@@ -15,11 +15,11 @@ NXP_IMX_LANE_DETECTION_SRC ?= "git://github.com/nxp-imx-support/imx-lane-detecti
 SRCBRANCH = "master"
 SRCREV = "07c4c8fe644218402b2105fd6acb67ec6ddad6ab"
 
-S = "${WORKDIR}/git"
 
 inherit pkgconfig cmake
 
-EXTRA_OECMAKE = "-DCMAKE_SYSROOT=${PKG_CONFIG_SYSROOT_DIR}"
+EXTRA_OECMAKE = "-DCMAKE_SYSROOT=${PKG_CONFIG_SYSROOT_DIR} \
+                 -DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
 IMX_LANE_DETECTION_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/imx_lane_detection"
 

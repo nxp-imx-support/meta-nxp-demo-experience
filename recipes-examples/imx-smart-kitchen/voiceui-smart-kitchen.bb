@@ -10,11 +10,11 @@ DEPENDS += "alsa-lib nxp-afe"
 RDEPENDS:${PN} = "nxp-afe-voiceseeker"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.10.02_2510_L6.12.49"
+SRCBRANCH_voice = "MM_04.10.03_2512_L6.18.2"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
 
-SRCBRANCH_model = "lf-6.12.49_2.2.0"
+SRCBRANCH_model = "lf-6.18.2_1.0.0"
 
 SRC_URI = "\
 	${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -22,10 +22,9 @@ SRC_URI = "\
 
 SRCREV_FORMAT = "voice_model"
 
-SRCREV_voice = "f2ff8703685b511371c3475f8c52c73dc1d21f32"
-SRCREV_model = "eb433849ba76bbe3100fb6ffbd48183468ac53e5"
+SRCREV_voice = "94639a8ea4a65a218f60b900269a7dc4bf97fefb"
+SRCREV_model = "0050fde71c50b4077e3dc59f9084c94468ed4996"
 
-S = "${WORKDIR}/git"
 MODEL_DIR = "${UNPACKDIR}/demo-experience-smart-kitchen"
 
 EXTRA_CONF = "--enable-armv8 --bindir=/unit_tests/ --libdir=${libdir}"
@@ -34,15 +33,15 @@ EXTRA_OEMAKE:mx8-nxp-bsp = "BUILD_ARCH=CortexA53"
 EXTRA_OEMAKE:mx93-nxp-bsp = "BUILD_ARCH=CortexA55"
 
 do_compile () {
-	cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
-	cp ${MODEL_DIR}/VIT_Model_en.h ${WORKDIR}/git/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
-	cd ${WORKDIR}/git
+	cp ${MODEL_DIR}/VIT_Model_en.h ${UNPACKDIR}/${BP}/vit/platforms/iMX8M_CortexA53/lib/VIT_Model_en.h
+	cp ${MODEL_DIR}/VIT_Model_en.h ${UNPACKDIR}/${BP}/vit/platforms/iMX9_CortexA55/lib/VIT_Model_en.h
+	cd ${S}
 	oe_runmake
 }
 
 do_install() {
     install -d ${D}${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen
-    install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen
+    install -m 0755 ${UNPACKDIR}/${BP}/release/voice_ui_app ${D}${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen
 }
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"

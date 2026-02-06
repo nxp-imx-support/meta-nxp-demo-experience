@@ -11,7 +11,6 @@ SRCBRANCH = "main"
 SRCREV = "5ac9a93c6c651e97278dffc0e2b979b3a6e16475"
 
 SRC_URI = "${NXP_IMX_SMART_FITNESS_SRC};branch=${SRCBRANCH}"
-S = "${WORKDIR}/git"
 
 DEPENDS = "\
         glib-2.0 \

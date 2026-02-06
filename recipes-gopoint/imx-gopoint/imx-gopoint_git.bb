@@ -4,15 +4,14 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d8ff2d641cc45adce1b1882be29d1e35"
 
 NXP_DEMO_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience.git;protocol=https"
-NXP_DEMO_BRANCH ?= "lf-6.12.49_2.2.0"
-NXP_DEMO_SRCREV ?= "4cf1e2d12db220c6719adb1632aa3da374043c9d"
+NXP_DEMO_BRANCH ?= "lf-6.18.2_1.0.0"
+NXP_DEMO_SRCREV ?= "921cde4538e6c189472206ae79113979b5072d6f"
 
 PV = "${NXP_DEMO_BRANCH}+git${NXP_DEMO_SRCREV}"
 
 SRC_URI = "${NXP_DEMO_SRC};branch=${NXP_DEMO_BRANCH};name=nxp-demo-experience"
 SRCREV = "${NXP_DEMO_SRCREV}"
 
-S = "${WORKDIR}/git"
 
 inherit qt6-qmake
 
@@ -22,7 +21,7 @@ DEPENDS += " \
     ncurses \
 "
 
-RDEPENDS:${PN}+= " qtbase \
+RDEPENDS:${PN} += " qtbase \
     qtdeclarative \
     ncurses \
     qt5compat \

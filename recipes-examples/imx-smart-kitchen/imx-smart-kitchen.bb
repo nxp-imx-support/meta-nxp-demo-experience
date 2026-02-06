@@ -17,19 +17,18 @@ SRC_URI = "${NXP_SMART_KITCHEN_SRC};branch=${SRCBRANCH} \
 
 SRCREV = "1f42aceae2e79f4b5c7cd29c169cc3ebd1fce78a"
 
-S = "${WORKDIR}/git"
 
 DEMOS ?= ""
 
 DEPENDS = "wayland libxkbcommon libxdg-shell wayland-protocols xdg-utils"
 
-RDEPENDS:${PN}+= " bash voiceui-smart-kitchen python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
+RDEPENDS:${PN} += " bash voiceui-smart-kitchen python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
 
 do_patch() {
-	cp ${UNPACKDIR}/0001-Added-custom_tick_get-function.patch ${WORKDIR}/git/lvgl
-	cp ${UNPACKDIR}/0001-Update-lv_anim_set_exec_cb-with-correct-function-typ.patch ${WORKDIR}/git/
-	cd ${WORKDIR}/git/lvgl/ && git apply 0001-Added-custom_tick_get-function.patch
-	cd ${WORKDIR}/git/
+	cp ${UNPACKDIR}/0001-Added-custom_tick_get-function.patch ${UNPACKDIR}/${BP}/lvgl
+	cp ${UNPACKDIR}/0001-Update-lv_anim_set_exec_cb-with-correct-function-typ.patch ${UNPACKDIR}/${BP}/
+	cd ${UNPACKDIR}/${BP}/lvgl/ && git apply 0001-Added-custom_tick_get-function.patch
+	cd ${S}
 	cp -r wayland-client/* lv_drivers/wayland/
   git apply 0001-Update-lv_anim_set_exec_cb-with-correct-function-typ.patch
 }

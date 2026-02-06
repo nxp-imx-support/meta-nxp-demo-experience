@@ -8,10 +8,9 @@ IMX_NNSTREANER_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/nnstreamer"
 
 NXP_NNSTREAMER_EXAMPLES_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "062ebd146f6519c437db6516f257f20d63dda1dd"
+SRCREV = "61b7eef0f58d1564931cd06c25ab26e31c93ce59"
 
 SRC_URI = "${NXP_NNSTREAMER_EXAMPLES_SRC};branch=${SRCBRANCH}"
-S = "${WORKDIR}/git"
 
 DEPENDS = "\
         tensorflow-lite \
@@ -30,13 +29,16 @@ RDEPENDS:${PN} = "\
 
 inherit pkgconfig cmake
 
-EXTRA_OECMAKE = "-DCMAKE_SYSROOT=${PKG_CONFIG_SYSROOT_DIR}"
+EXTRA_OECMAKE += "\
+    -DCMAKE_SYSROOT=${PKG_CONFIG_SYSROOT_DIR} \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+"
 
 do_install() {
     install -d ${D}${IMX_NNSTREANER_DIR}
 
-    cp ${WORKDIR}/git/LICENSE ${D}${IMX_NNSTREANER_DIR}
-    cp ${WORKDIR}/git/SCR*.txt ${D}${IMX_NNSTREANER_DIR}
+    cp ${S}/LICENSE ${D}${IMX_NNSTREANER_DIR}
+    cp ${S}/SCR*.txt ${D}${IMX_NNSTREANER_DIR}
 
     install -d ${D}${IMX_NNSTREANER_DIR}/classification
     install -m 0755 ${WORKDIR}/build/classification/example_classification_mobilenet_v1_tflite ${D}${IMX_NNSTREANER_DIR}/classification

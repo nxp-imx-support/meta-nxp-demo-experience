@@ -4,13 +4,13 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ca53281cc0caa7e320d4945a896fb837"
 
 NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=https"
-SRCBRANCH_voice = "MM_04.10.02_2510_L6.12.49"
+SRCBRANCH_voice = "MM_04.10.03_2512_L6.18.2"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "lf-6.12.49_2.2.0"
+SRCBRANCH_model = "lf-6.18.2_1.0.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
-NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
+NXP_IMX_VOICEPLAYER_SRC ?= "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
 SRCBRANCH_player = "master"
 
 IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
@@ -24,11 +24,10 @@ SRC_URI = "\
         "
 
 SRCREV_FORMAT = "voice_model_player"
-SRCREV_voice = "f2ff8703685b511371c3475f8c52c73dc1d21f32"
-SRCREV_model = "eb433849ba76bbe3100fb6ffbd48183468ac53e5"
+SRCREV_voice = "94639a8ea4a65a218f60b900269a7dc4bf97fefb"
+SRCREV_model = "0050fde71c50b4077e3dc59f9084c94468ed4996"
 SRCREV_player = "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
 
-S = "${WORKDIR}/git"
 
 DEPENDS += " \
     portaudio-v19 \

@@ -9,7 +9,7 @@ SRC_URI = "https://files.pythonhosted.org/packages/1a/b3/733e5f98c995d7f3e82853b
 SRC_URI[md5sum] = "808c04aa0394210be9eeb46fb6e3bf96"
 SRC_URI[sha256sum] = "792084a93c138d5b2a406ddd2d4eb5ce208f03bd8fda60f81ad2bb8d56c6b827"
 
-S = "${WORKDIR}/canopen-2.3.0"
+S = "${UNPACKDIR}/canopen-2.3.0"
 
 RDEPENDS:${PN} = "python-python-can"
 

@@ -10,7 +10,6 @@ NXP_IMX_VIDEO_TO_TEXTURE_SRC ?= "git://github.com/nxp-imx-support/imx-video-to-t
 SRCBRANCH = "main"
 
 SRC_URI = "${NXP_IMX_VIDEO_TO_TEXTURE_SRC};branch=${SRCBRANCH}"
-S = "${WORKDIR}/git"
 SRCREV = "ee77a45391994177934ce19b15c554be866a49ff"
 
 DEPENDS = "\
