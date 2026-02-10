@@ -10,7 +10,7 @@ NXP_DEMO_LIST_SRC ?= "git://github.com/nxp-imx-support/nxp-demo-experience-demos
 
 SRC_URI = "${NXP_DEMO_LIST_SRC};branch=${SRCBRANCH};name=demos"
 
-SRCREV = "1afe00bcaca6c4dc6abcb12563396692c6939f35"
+SRCREV = "8610a9de784c62f0d7ae6d6404511e5305c7ffda"
 
 PV = "lf-6.18.2_1.0.0+git${SRCREV}"
 
