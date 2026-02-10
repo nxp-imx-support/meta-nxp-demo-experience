@@ -8,7 +8,7 @@ IMX_WIFI_SELECTOR_DIR = "${GPNT_APPS_FOLDER}/scripts/communication/wifi_selector
 
 NXP_IMX_WIFI_SELECTOR_SRC ?= "git://github.com/nxp-imx-support/imx-wifi-selector.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "add8dd7d6f060db204a7aaf1b548877a72574ded"
+SRCREV = "c9d850b11fce7a40cbbbbeb8a3fdf97faeea6c77"
 
 SRC_URI = "${NXP_IMX_WIFI_SELECTOR_SRC};branch=${SRCBRANCH}"
 
