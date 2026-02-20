@@ -10,7 +10,7 @@ NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;proto
 SRCBRANCH_model = "lf-6.18.2_1.0.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
-NXP_IMX_VOICEPLAYER_SRC ?= "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
+NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH_player = "master"
 
 IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
