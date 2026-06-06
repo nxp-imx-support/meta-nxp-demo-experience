@@ -1,4 +1,4 @@
-# Copyright 2024 NXP
+# Copyright 2024-2026 NXP
 DESCRIPTION = "Package for GoPoint for i.MX Application Processors"
 
 inherit packagegroup
@@ -6,10 +6,8 @@ inherit packagegroup
 DEMOS ?= "gopoint-base-apps "
 
 DEMOS:append:mx8qm-nxp-bsp = " imx-nnstreamer-examples \
-                               imx-video-to-texture \
 "
-DEMOS:append:mx8mp-nxp-bsp = " imx-voice-example \
-                        imx-smart-kitchen \
+DEMOS:append:mx8mp-nxp-bsp = " imx-smart-kitchen \
                         imx-voice-player \
                         imx-smart-fitness \
                         imx-nnstreamer-examples \
@@ -17,9 +15,12 @@ DEMOS:append:mx8mp-nxp-bsp = " imx-voice-example \
                         imx-lane-detection \
                         imx-car-navigation \
                         imx-camera-rotation \
+                        imx-ara2-vision-examples \
+                        imx-llm-edge-studio \
+                        imx-vlm-edge-studio \
+                        imx-smart-device-gateway \
 "
-DEMOS:append:mx8mm-nxp-bsp = " imx-voice-example \
-                        imx-smart-kitchen \
+DEMOS:append:mx8mm-nxp-bsp = " imx-smart-kitchen \
                         imx-voice-player \
                         imx-nnstreamer-examples \
                         imx-ebike \
@@ -34,9 +35,12 @@ DEMOS:append:mx93-nxp-bsp = "  imx-voice-player \
                         imx-car-navigation \
                         imx-wifi-selector \
 "
-DEMOS:append:mx95-nxp-bsp = " imx-video-to-texture \
-                        imx-nnstreamer-examples \
+DEMOS:append:mx95-nxp-bsp = " imx-nnstreamer-examples \
                         imx-camera-rotation \
+                        imx-ara2-vision-examples \
+                        imx-llm-edge-studio \
+                        imx-vlm-edge-studio \
+                        imx-smart-device-gateway \
 "
 DEMOS:append:mx8ulp-nxp-bsp = " imx-camera-rotation \
 "

@@ -13,7 +13,7 @@ DEPENDS = "\
 SRC_URI = "${NXP_IMX_LANE_DETECTION_SRC};branch=${SRCBRANCH}"
 NXP_IMX_LANE_DETECTION_SRC ?= "git://github.com/nxp-imx-support/imx-lane-detection.git;protocol=https"
 SRCBRANCH = "master"
-SRCREV = "07c4c8fe644218402b2105fd6acb67ec6ddad6ab"
+SRCREV = "2f0f0c90020f3ffc7624e80277cc47e85677ae3f"
 
 
 inherit pkgconfig cmake
@@ -25,7 +25,7 @@ IMX_LANE_DETECTION_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/imx_lane_
 
 do_install() {
     install -d ${D}${IMX_LANE_DETECTION_DIR}
-    install -m 0755 ${B}/imx-lane-detection ${D}${IMX_LANE_DETECTION_DIR}
+    install -m 0755 ${B}/lane_detection ${D}${IMX_LANE_DETECTION_DIR}
 }
 
 FILES:${PN} += "${IMX_LANE_DETECTION_DIR}"

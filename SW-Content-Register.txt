@@ -1,17 +1,17 @@
 NXP Software Content Register
 
 Release: GoPoint for i.MX Applications Processors
-Version: 4.16
-Date: March 2026
+Version: 4.17
+Date: June 2026
 Outgoing License: LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025
 License File: LICENSE.txt
 
 --------------- THIS PACKAGE ---------------
 
 Package:                    meta-nxp-demo-experience
-Release branch:             whinlatter-6.18.2-1.0.
+Release branch:             wrynose-6.18.20-2.0.0
 Outgoing License:           MIT
-License File:               ./licenses/MIT.txt
+License File:               ./licenses/LICENSE.txt
 Package Category:           Software build scripts
 Type of content:            Bitbake recipes
 Description and comments:   Yocto Project meta layer used to integrate GoPoint into the i.MX BSP
@@ -21,7 +21,7 @@ Origin:                     NXP (MIT) Yocto Recipes
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                    nxp-demo-experience
-Release branch:             lf-6.18.2_1.0.0
+Release branch:             lf-6.12.49_2.2.0
 Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025
 License File:               nxp-demo-experience/LICENSE.txt
 Package Category:           Demo application
@@ -33,7 +33,7 @@ Origin:                     NXP (BSD-2-Clause)
                             The Qt Company Ltd. (BSD-3-Clause)
 
 Package:                    nxp-demo-experience-demos-list
-Release branch:             lf-6.18.2_1.0.0
+Release branch:             lf-6.12.49_2.2.0
 Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025
 License File:               nxp-demo-experience-demos-list/LICENSE.txt
 Package Category:           Configuration
@@ -44,7 +44,7 @@ Origin:                     NXP (Proprietary, BSD-3-Clause, Apache-2.0)
                             Patrick Levin (MIT) https://github.com/patlevin/face-detection-tflite
 
 Package:                    nxp-demo-experience-assets
-Release branch:             lf-6.18.2_1.0.0
+Release branch:             lf-6.12.49_2.2.0
 Outgoing License:           LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025
 License File:               nxp-demo-experience-assets/LICENSE.txt
 Package Category:           Demo application
@@ -59,7 +59,7 @@ Origin:                     NXP (propietary)
                             MediaPipe (Apache-2.0) https://developers.google.com/mediapipe/solutions
 
 Package:                    nxp-nnstreamer-examples
-Version:                    1.7
+Version:                    1.8
 Release branch:             main
 Outgoing License:           BSD-3-Clause
 License File:               nxp-nnstreamer-examples/LICENSE

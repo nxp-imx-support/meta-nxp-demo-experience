@@ -8,7 +8,7 @@ IMX_SMART_FITNESS_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/imx_smart_
 
 NXP_IMX_SMART_FITNESS_SRC ?= "git://github.com/nxp-imx-support/imx-smart-fitness.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "5ac9a93c6c651e97278dffc0e2b979b3a6e16475"
+SRCREV = "134b576fd368131856048ea8f3f193d8e66fcda3"
 
 SRC_URI = "${NXP_IMX_SMART_FITNESS_SRC};branch=${SRCBRANCH}"
 

@@ -12,7 +12,7 @@ DEMODIR = "${GPNT_APPS_FOLDER}/scripts/security/ele"
 SRC_URI = "${NXP_ELE_DEMO_SRC};branch=${SRCBRANCH}\
 			file://0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch"
 
-SRCREV = "2134feeef0c7a89b02664c97b5083c6a47094b85"
+SRCREV = "11935c099946ca7368822e5896e4fc9024596044"
 
 
 DEMOS ?= ""

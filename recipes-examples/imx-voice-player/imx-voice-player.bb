@@ -15,7 +15,7 @@ S = "${UNPACKDIR}/${BP}/app"
 
 DEMOS ?= ""
 DEPENDS += "  packagegroup-qt6-imx qtdeclarative qtconnectivity qtsvg"
-RDEPENDS:${PN} += " msgq-voiceplayer voiceui-voiceplayer bash"
+RDEPENDS:${PN} += " msgq-voiceplayer bash"
 
 inherit qt6-qmake
 

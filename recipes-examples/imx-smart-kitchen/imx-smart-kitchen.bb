@@ -22,7 +22,7 @@ DEMOS ?= ""
 
 DEPENDS = "wayland libxkbcommon libxdg-shell wayland-protocols xdg-utils"
 
-RDEPENDS:${PN} += " bash voiceui-smart-kitchen python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
+RDEPENDS:${PN} += " bash python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
 
 do_patch() {
 	cp ${UNPACKDIR}/0001-Added-custom_tick_get-function.patch ${UNPACKDIR}/${BP}/lvgl
@@ -46,3 +46,6 @@ do_install() {
 FILES:${PN} += "${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen"
 
 TARGET_CC_ARCH += "${LDFLAGS}"
+
+INSANE_SKIP:${PN} += "buildpaths"
+INSANE_SKIP:${PN}-dbg += "buildpaths"

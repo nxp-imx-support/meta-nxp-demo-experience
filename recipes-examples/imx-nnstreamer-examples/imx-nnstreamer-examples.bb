@@ -2,13 +2,13 @@ SUMMARY = "NNStreamer Examples"
 DESCRIPTION = "Recipe for i.MX NNStreamer Examples"
 SECTION = "Machine Learning"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=df2d5c27ffc38b06ea00cd3edc2b4572"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=f8898960dba66bcffe95f21fb60cfcdb"
 
 IMX_NNSTREANER_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/nnstreamer"
 
 NXP_NNSTREAMER_EXAMPLES_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "61b7eef0f58d1564931cd06c25ab26e31c93ce59"
+SRCREV = "248ec543e64118bede5edc2b79afd2b877929d91"
 
 SRC_URI = "${NXP_NNSTREAMER_EXAMPLES_SRC};branch=${SRCBRANCH}"
 
@@ -38,7 +38,7 @@ do_install() {
     install -d ${D}${IMX_NNSTREANER_DIR}
 
     cp ${S}/LICENSE ${D}${IMX_NNSTREANER_DIR}
-    cp ${S}/SCR*.txt ${D}${IMX_NNSTREANER_DIR}
+    cp ${S}/SBOM* ${D}${IMX_NNSTREANER_DIR}
 
     install -d ${D}${IMX_NNSTREANER_DIR}/classification
     install -m 0755 ${WORKDIR}/build/classification/example_classification_mobilenet_v1_tflite ${D}${IMX_NNSTREANER_DIR}/classification

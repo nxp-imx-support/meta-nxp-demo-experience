@@ -11,6 +11,6 @@ SRC_URI[sha256sum] = "792084a93c138d5b2a406ddd2d4eb5ce208f03bd8fda60f81ad2bb8d56
 
 S = "${UNPACKDIR}/canopen-2.3.0"
 
-RDEPENDS:${PN} = "python-python-can"
+RDEPENDS_${PN} = "python-python-can"
 
 inherit setuptools3

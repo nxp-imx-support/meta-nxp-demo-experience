@@ -8,11 +8,12 @@ inherit setuptools3
 SRC_URI = "git://github.com/CANopenNode/CANopenLinux.git;branch=master;protocol=https"
 SRCREV = "52ffe7acb039dd669bc523440272296081fa8f00"
 
+RDEPENDS:${PN} += " python-canopen"
+
 TARGET_CC_ARCH += "${LDFLAGS}"
 
 
 do_configure[noexec] = "1"
-do_compile[network] = "1"
 
 do_compile() {
         cd ${S}
@@ -28,3 +29,4 @@ do_install() {
         install -m 0755 ${S}/canopend ${D}${bindir}/canopend
         install -m 0755 ${S}/cocomm/cocomm ${D}${bindir}/cocomm
 }
+INSANE_SKIP:${PN}-dbg += "buildpaths"

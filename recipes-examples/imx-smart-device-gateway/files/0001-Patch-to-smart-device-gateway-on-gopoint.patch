@@ -1,0 +1,81 @@
+From e1750933daeae835b3b16ff03c2a64e1f6973678 Mon Sep 17 00:00:00 2001
+From: Carlos Casillas <carlos.mora@nxp.com>
+Date: Mon, 1 Jun 2026 16:53:18 -0700
+Subject: [PATCH] Patch to remove uv_build, fix depend versions and update connector config
+
+Upstream-Status: Inappropriate [embedded specific]
+
+Signed-off-by: Carlos Casillas <carlos.mora@nxp.com>
+---
+ pyproject.toml                                   | 16 +++++++---------
+ src/smart_device_gateway/conf/server_config.json | 13 +++++++++++++
+ 2 files changed, 20 insertions(+), 9 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index bab6f8f..b4c6fad 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -9,7 +9,7 @@ authors = [
+     { name = "Ana Isabel Guillen", email = "anaisabel.guillen_1@nxp.com" },
+     { name = "Meghna Ghole", email = "meghna.ghole_1@nxp.com" },
+ ]
+-requires-python = "==3.13.9"
++requires-python = "==3.14.4"
+ dependencies = [
+     "fastapi==0.109.0",
+     "uvicorn[standard]==0.27.1",
+@@ -27,7 +27,7 @@ dependencies = [
+     "pygobject==3.52.2",
+     "pygobject-stubs>=2.16.0",
+     "websocket==0.2.1",
+-    "onnxruntime==1.23.2",
++    "onnxruntime==1.24.3",
+ ]
+ 
+ [project.scripts]
+@@ -35,13 +35,11 @@ gateway-server = "smart_device_gateway.server:main"
+ edge-voice = "smart_device_gateway.client:main"
+ 
+ [build-system]
+-requires = ["uv_build>=0.9.20,<0.10.0"]
+-build-backend = "uv_build"
+-
+-[tool.uv.workspace]
+-members = [
+-    "client",
+-]
++requires = ["setuptools>=61.0", "wheel"]
++build-backend = "setuptools.build_meta"
+ 
+ [lint]
+ ignore = ["E402"]
++
++[tool.setuptools.package-data]
++smart_device_gateway = ["server/database/*.json"]
+diff --git a/src/smart_device_gateway/conf/server_config.json b/src/smart_device_gateway/conf/server_config.json
+index 02f8087..0614257 100644
+--- a/src/smart_device_gateway/conf/server_config.json
++++ b/src/smart_device_gateway/conf/server_config.json
+@@ -15,6 +15,19 @@
+         "similarity_metric": "cosine"
+     },
+ 
++    "llm_params": {
++        "generate_max_tokens": 512,
++        "seed": 42,
++        "temperature": 0.0,
++        "top_k": 0,
++        "top_p": 0.0,
++        "repeat_penalty": 1.12,
++        "repeat_last_n": 32,
++        "ngram_penalty": 10,
++        "frequency_penalty": 1.12,
++        "suppress_penalty": 100.0
++    },
++
+     "available_models": [
+         {
+             "name": "Qwen2.5-7B-Instruct",
+-- 
+2.43.0
+
