@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d8ff2d641cc45adce1b1882be29d1e35"
 SRC_URI = "${ARA2_VISION_EXAMPLES_SRC};branch=${SRCBRANCH}"
 ARA2_VISION_EXAMPLES_SRC ?= "git://github.com/nxp-imx-support/ara2-vision-examples.git;protocol=https"
 SRCBRANCH = "main"
-SRCREV = "363f54e640fe44de2a007c14a69db68f719b76f1"
+SRCREV = "3c13834f9b28ed951cbb39f8cff039341834cc79"
 
 inherit cmake pkgconfig
 
